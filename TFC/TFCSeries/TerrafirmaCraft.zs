@@ -19,6 +19,8 @@ for gem in gems {
     }
 }
 
+<tfc:metal/ingot/manganese>.addTooltip("§fИзотавливается в наковальне из §e§lманганиевой крицы (пиролюзит)");
+
 // ------ // Корректировка обычных рецептов // ------ //
 // Бумага
 recipes.addShapeless(<minecraft:paper> * 4, [<tfctech:powder/wood>, <tfctech:powder/wood>, <immersiveengineering:material:7>, <tfc:wooden_bucket>.withTag({Fluid: {FluidName: "fresh_water", Amount: 1000}}).transformReplace(<tfc:wooden_bucket>)]);

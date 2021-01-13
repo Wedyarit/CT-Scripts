@@ -20,13 +20,12 @@ for tool in tools {
 }
 
 // Предметы для NPC
-var npcItems = [<immersiveengineering:drill>, <tfc:metal/ingot/beryllium>, <tfc:metal/ingot/manganese>, <tfc:metal/ingot/boron>]  as IItemStack[];
+var npcItems = [<immersiveengineering:drill>, <tfc:metal/ingot/beryllium>, <tfc:metal/ingot/boron>]  as IItemStack[];
 recipes.remove(<immersiveengineering:drill>);
 
 for item in npcItems {
 	item.addTooltip("§fПредмет можно получить у §e§lNPC на спавне");
 }
-
 
 // ------ // Замена предметов // ------ //
 // Кирпичи
