@@ -40,9 +40,6 @@ recipes.replaceAllOccurences(<minecraft:glowstone_dust>, <minecraft:torch>);
 // Волокно промышленной конопли
 recipes.replaceAllOccurences(<immersiveengineering:material:4>, <tfc:crop/product/jute_fiber>);
 
-// Ведро воды
-recipes.replaceAllOccurences(<minecraft:water_bucket>, <tfc:wooden_bucket>.withTag({Fluid: {FluidName: "fresh_water", Amount: 1000}}).transformReplace(<tfc:wooden_bucket>));
-
 // ------ Корректировка словарей руд // ------//
 var ores = ["plate", "gear", "ingot", "dust", "rod"] as string[];
 for ore in ores {
@@ -58,6 +55,7 @@ for ore in ores {
 val hammer = <ore:hammer>.transformDamage(4);
 val tongs = <tfctech:metal/iron_tongs>.reuse();
 val hindle = <tfc:spindle>.reuse();
+val water_bucket = <forge:bucketfilled>.withTag({FluidName: "fresh_water", Amount: 1000}).transformReplace(<minecraft:bucket>);
 
 // Битум
 recipes.addShapeless(<immersivepetroleum:material>, [<tfc:metal/dust/boron>, <minecraft:coal:1>]);
@@ -283,6 +281,24 @@ recipes.addShaped(<immersiveengineering:wooden_device0:6>,
  [[<ore:ingotZirconium>, <ore:ingotZirconium>, <ore:ingotZirconium>],
  [<ore:plankTreatedWood>, <ore:ingotIron>, <ore:plankTreatedWood>],
  [<ore:dustRedstone>, <immersiveengineering:metal_decoration0>, <ore:dustRedstone>]]);
+// Блок радиатора
+recipes.remove(<immersiveengineering:metal_decoration0:7> * 2);
+recipes.addShaped(<immersiveengineering:metal_decoration0:7> * 2,
+ [[<ore:ingotSteel>, <ore:ingotCopper>, <ore:ingotSteel>],
+ [<ore:ingotCopper>, water_bucket, <ore:ingotCopper>],
+ [<ore:ingotSteel>, <ore:ingotCopper>, <ore:ingotSteel>]]);
+// Асфальтобетон (8)
+recipes.remove(<immersivepetroleum:stone_decoration> * 8);
+recipes.addShaped(<immersivepetroleum:stone_decoration> * 8,
+ [[<ore:sand>, <minecraft:gravel>, <ore:sand>],
+  [<immersivepetroleum:material>, water_bucket, <immersivepetroleum:material>],
+  [<ore:sand>, <minecraft:gravel>, <ore:sand>]]);
+// Асфальтобетон (12)
+recipes.remove(<immersivepetroleum:stone_decoration> * 12);
+recipes.addShaped(<immersivepetroleum:stone_decoration> * 12,
+ [[<ore:itemSlag>, <minecraft:gravel>, <ore:itemSlag>],
+  [<immersivepetroleum:material>, water_bucket, <immersivepetroleum:material>],
+  [<ore:itemSlag>, <minecraft:gravel>, <ore:itemSlag>]]);
 
 
 // ------ // Корректировка рецептов механизмов // ------ //
