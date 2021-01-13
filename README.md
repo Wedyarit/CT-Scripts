@@ -1,7 +1,7 @@
 # CraftTweaker Scripts
 CraftTweaker scripts for client customization.
 
-## Useful Inforamtion
+## Useful Information
 ### [CourseForge](https://www.curseforge.com/minecraft/mc-mods/crafttweaker)
 ### [GitHub](https://github.com/CraftTweaker/CraftTweaker)
 ### [Wiki](https://docs.blamejared.com/)
