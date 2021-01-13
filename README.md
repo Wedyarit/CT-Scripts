@@ -8,7 +8,7 @@ CraftTweaker scripts for client customization.
 
 ## Basic Templates
 ### Remove recipes
-```
+```zenscript
 recipes.remove(output, NBTMatch);
 ```
 ### Add recipes
@@ -21,6 +21,6 @@ recipes.addShaped("name", output,
   [input, input, input]]);
 ```
 #### Shapeless Recipe
-```
+```zenscript
 recipes.addShapeless(output, [input, unput, input]);
 ```
