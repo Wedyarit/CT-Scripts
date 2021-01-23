@@ -316,6 +316,11 @@ MetalPress.addRecipe(<immersiveengineering:storage:8>, <ore:ingotSteel>, <immers
 MetalPress.addRecipe(<minecraft:iron_block>, <ore:ingotWroughtIron>, <immersiveengineering:mold:6>, 3000, 9);
 MetalPress.addRecipe(<minecraft:gold_block>, <ore:ingotGold>, <immersiveengineering:mold:6>, 3000, 9);
 
+// Железная пластина
+MetalPress.removeRecipe(<immersiveengineering:metal:39>);
+MetalPress.addRecipe(<immersiveengineering:metal:39>, <tfc:metal/ingot/wrought_iron>, <immersiveengineering:mold>, 2400);
+
+
 // ** Дробитель ** //
 // Слитки из блоков
 Crusher.addRecipe(<tfc:metal/ingot/copper> * 9, <immersiveengineering:storage>, 3000);
