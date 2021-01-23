@@ -152,12 +152,6 @@ recipes.addShaped(<immersiveengineering:metal_decoration0:1>,
  [[<immersiveengineering:wirecoil:1>, <immersiveengineering:wirecoil:1>, <immersiveengineering:wirecoil:1>],
  [<immersiveengineering:wirecoil:1>, <tfctech:metal/wrought_iron_long_rod>, <immersiveengineering:wirecoil:1>],
  [<immersiveengineering:wirecoil:1>, <immersiveengineering:wirecoil:1>, <immersiveengineering:wirecoil:1>]]);
-// Прочная ткань
-recipes.remove(<immersiveengineering:material:5>);
-recipes.addShaped(<immersiveengineering:material:5>,
- [[<tfc:animal/product/silk_cloth>, <minecraft:stick>, <tfc:animal/product/silk_cloth>],
- [<tfc:animal/product/silk_cloth>, <minecraft:stick>, <tfc:animal/product/silk_cloth>],
- [<tfc:animal/product/silk_cloth>, <minecraft:stick>, <tfc:animal/product/silk_cloth>]]);
 // Стеклоизоляция
  recipes.remove(<immersiveengineering:stone_decoration:8>);
  recipes.addShaped(<immersiveengineering:stone_decoration:8>,
@@ -302,9 +296,9 @@ recipes.addShaped(<immersivepetroleum:stone_decoration> * 12,
 // Прочная ткань
 recipes.remove(<immersiveengineering:material:5>);
 recipes.addShaped(<immersiveengineering:material:5>,
- [[null, <immersiveengineering:material>, null],
-  [<tfc:animal/product/silk_cloth>, <immersiveengineering:material>, <tfc:animal/product/silk_cloth>],
-  [null, <immersiveengineering:material>, null]]);
+ [[null, <minecraft:stick>, null],
+  [<tfc:animal/product/silk_cloth>, <minecraft:stick>, <tfc:animal/product/silk_cloth>],
+  [null, <minecraft:stick>, null]]);
 
 // ------ // Корректировка рецептов механизмов // ------ //
 // ** Металлический пресс ** //
