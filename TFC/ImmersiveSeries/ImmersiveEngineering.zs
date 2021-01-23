@@ -376,9 +376,9 @@ ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);
 ArcFurnace.addRecipe(<tfc:metal/ingot/steel>, <tfc:metal/ingot/wrought_iron>, <immersiveengineering:material:7>, 40, 1024, [<ore:dustCoke>]);
 
 // Кованное железо
-ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>>, <tfc:ore/hematite> * 4, null, 15, 512);
-ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>>, <tfc:ore/magnetite> * 4, null, 15, 512);
-ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>>, <tfc:ore/limonite> * 4, null, 15, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/hematite> * 4, null, 15, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/magnetite> * 4, null, 15, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/limonite> * 4, null, 15, 512);
 
 // Рецепты из руд
 ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);
