@@ -375,12 +375,15 @@ Fermenter.addRecipe(null, <liquid:ethanol> * 80, <tfc:food/sugarcane>, 6400);
 ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);
 ArcFurnace.addRecipe(<tfc:metal/ingot/steel>, <tfc:metal/ingot/wrought_iron>, <immersiveengineering:material:7>, 40, 1024, [<ore:dustCoke>]);
 
+// Кованное железо
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>>, <tfc:ore/hematite> * 4, null, 15, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>>, <tfc:ore/magnetite> * 4, null, 15, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>>, <tfc:ore/limonite> * 4, null, 15, 512);
+
 // Рецепты из руд
 ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);
 ArcFurnace.removeRecipe(<minecraft:gold_ingot> * 2);
 ArcFurnace.removeRecipe(<minecraft:iron_ingot> * 2);
-
-
 ArcFurnace.removeRecipe(<immersiveengineering:metal> * 2);
 ArcFurnace.removeRecipe(<immersiveengineering:metal:1> * 2);
 ArcFurnace.removeRecipe(<immersiveengineering:metal:2> * 2);
