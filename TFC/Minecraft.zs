@@ -11,7 +11,7 @@ recipes.remove(<minecraft:torch>);
 recipes.addShaped(<minecraft:enchanting_table>,
  [[<tfc:gem/diamond:4>, <minecraft:book>, <tfc:gem/diamond:4>],
  [<ore:sheetDoubleRedAlloy>, <immersiveengineering:maintenance_kit>, <ore:sheetDoubleRedAlloy>],
- [<ore:obsidian>, <ore:obsidian>, <ore:obsidian>]]);
+ [<tfc:metal/double_sheet/tungsten_steel>, <ore:obsidian>, <tfc:metal/double_sheet/tungsten_steel>]]);
 // Маяк
 recipes.addShaped(<minecraft:beacon>,
  [[<ore:sheetDoubleCobalt>, <ore:blockGlass>, <ore:sheetDoubleCobalt>],
