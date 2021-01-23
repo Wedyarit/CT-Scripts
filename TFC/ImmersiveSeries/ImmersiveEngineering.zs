@@ -367,12 +367,12 @@ Fermenter.addRecipe(null, <liquid:ethanol> * 80, <tfc:food/sugarcane>, 6400);
 // ** Дуговая печь ** //
 // Сталь
 ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);
-ArcFurnace.addRecipe(<tfc:metal/ingot/steel>, <tfc:metal/ingot/wrought_iron>, <immersiveengineering:material:7>, 40, 1024, [<ore:dustCoke>]);
+ArcFurnace.addRecipe(<tfc:metal/ingot/steel>, <tfc:metal/ingot/wrought_iron>, <immersiveengineering:material:7>, 400, 1024, [<ore:dustCoke>]);
 
 // Кованное железо
-ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/hematite> * 4, null, 15, 512);
-ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/magnetite> * 4, null, 15, 512);
-ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/limonite> * 4, null, 15, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/hematite> * 4, null, 150, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/magnetite> * 4, null, 150, 512);
+ArcFurnace.addRecipe(<tfc:metal/ingot/wrought_iron>, <tfc:ore/limonite> * 4, null, 150, 512);
 
 // Рецепты из руд
 ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);

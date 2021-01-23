@@ -19,7 +19,7 @@ for gem in gems {
     }
 }
 
-<tfc:metal/ingot/manganese>.addTooltip("§fИзготавливается в §e§lнаковальне&r&f из §e§lманганиевой крицы (пиролюзит)");
+<tfc:metal/ingot/manganese>.addTooltip("§fИзготавливается в §e§lнаковальне§r§f из §e§lманганиевой крицы (пиролюзит)");
 
 // ------ // Корректировка обычных рецептов // ------ //
 // Бумага
@@ -33,8 +33,8 @@ Barrel.removeRecipe(<immersiveengineering:treated_wood>, null);
 Barrel.addRecipe("treated_wood", <ore:logWood> * 8, <liquid:creosote> * 1000, <immersiveengineering:treated_wood> * 8, null, 5);
 
 // Вода
-Barrel.addRecipe("vanilla_water", <ore:categoryFruit>, <liquid:fresh_water> * 1000, null, <liquid:water> * 1000, 2);
-<minecraft:water_bucket>.addTooltip("§fПолучается в §e§lбочке&r&f из §e§lпресной воды и фруктов (ягод)");
+Barrel.addRecipe("vanilla_water", <immersiveengineering:metal:23>, <liquid:fresh_water> * 1000, null, <liquid:water> * 1000, 0.5);
+<minecraft:water_bucket>.addTooltip("§fПолучается в §e§lбочке§r§f из §e§lпресной воды и серебряного самородка");
 
 // ** // Сварка // ** //
 // Кирпич продвинутой доменной печи
