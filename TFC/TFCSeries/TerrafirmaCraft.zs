@@ -30,7 +30,10 @@ recipes.addShapeless(<minecraft:paper> * 4, [<tfctech:powder/wood>, <tfctech:pow
 // ** Бочка  ** //
 // Обработанное дерево в бочке с креозотом
 Barrel.removeRecipe(<immersiveengineering:treated_wood>, null);
-Barrel.addRecipe("treated_wood", <ore:logWood> * 8, <fluid:creosote> * 1000, <immersiveengineering:treated_wood> * 8, null, 5);
+Barrel.addRecipe("treated_wood", <ore:logWood> * 8, <liquid:creosote> * 1000, <immersiveengineering:treated_wood> * 8, null, 5);
+
+// Вода
+Barrel.addRecipe("vanilla_water", <tfc:food/green_apple>, <liquid:fresh_water> * 1000, null, <liquid:water>, 2);
 
 // ** // Сварка // ** //
 // Кирпич продвинутой доменной печи
