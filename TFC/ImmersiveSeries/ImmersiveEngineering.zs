@@ -7,6 +7,7 @@ import mods.immersiveengineering.CokeOven;
 import mods.immersiveengineering.BlastFurnace;
 import mods.immersiveengineering.Squeezer;
 import mods.immersiveengineering.Fermenter;
+import mods.immersiveengineering.ArcFurnace;
 
 print("Initializing 'Immersive Engineering'...");
 
@@ -360,4 +361,11 @@ Fermenter.removeByInput(<minecraft:reeds>);
 Fermenter.addRecipe(null, <liquid:ethanol> * 80, <tfc:food/potato>, 6400);
 Fermenter.addRecipe(null, <liquid:ethanol> * 80, <tfc:food/red_apple>, 6400);
 Fermenter.addRecipe(null, <liquid:ethanol> * 80, <tfc:food/sugarcane>, 6400);
+
+// ** Дуговая печь ** //
+// Сталь
+ArcFurnace.removeRecipe(<immersiveengineering:metal:8>);
+ArcFurnace.addRecipe(<tfc:metal/ingot/steel>, <tfc:metal/ingot/wrought_iron>, <immersiveengineering:material:7>, 40, 1024, [<ore:dustCoke>]);
+
+
 print("Initialized 'Immersive Engineering'");
