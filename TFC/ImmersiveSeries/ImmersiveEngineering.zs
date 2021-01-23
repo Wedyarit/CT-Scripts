@@ -299,7 +299,12 @@ recipes.addShaped(<immersivepetroleum:stone_decoration> * 12,
  [[<ore:itemSlag>, <minecraft:gravel>, <ore:itemSlag>],
   [<immersivepetroleum:material>, water_bucket, <immersivepetroleum:material>],
   [<ore:itemSlag>, <minecraft:gravel>, <ore:itemSlag>]]);
-
+// Прочная ткань
+recipes.remove(<immersiveengineering:material:5>);
+recipes.addShaped(<immersiveengineering:material:5>,
+ [[null, <immersiveengineering:material>, null],
+  [<tfc:animal/product/silk_cloth>, <immersiveengineering:material>, <tfc:animal/product/silk_cloth>],
+  [null, <immersiveengineering:material>, null]]);
 
 // ------ // Корректировка рецептов механизмов // ------ //
 // ** Металлический пресс ** //
