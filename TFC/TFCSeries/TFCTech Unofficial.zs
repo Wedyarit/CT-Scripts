@@ -21,5 +21,9 @@ recipes.addShaped(<tfctech:induction_crucible>,
  [[<ore:sheetSteel>, <ore:sheetTungsten>, <ore:sheetSteel>],
  [<ore:inductorCopper>, <tfc:crucible>, <ore:inductorCopper>],
  [<ore:sheetSteel>, <ore:wireCopper>, <ore:sheetSteel>]]);
+// Поташ
+recipes.remove(<tfctech:powder/potash>);
+recipes.addShapeless(<tfctech:powder/potash> * 2,
+ [<tfctech:pot_potash>]);
 
 print("Initialized 'TFCTech Unofficial'");

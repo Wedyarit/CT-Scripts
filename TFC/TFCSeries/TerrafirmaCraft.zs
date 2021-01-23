@@ -24,10 +24,6 @@ for gem in gems {
 // ------ // Корректировка обычных рецептов // ------ //
 // Бумага
 recipes.addShapeless(<minecraft:paper> * 4, [<tfctech:powder/wood>, <tfctech:powder/wood>, <immersiveengineering:material:7>, <tfc:wooden_bucket>.withTag({Fluid: {FluidName: "fresh_water", Amount: 1000}}).transformReplace(<tfc:wooden_bucket>)]);
-// Поташ
-recipes.remove(<tfctech:powder/potash>);
-recipes.addShapeless(<tfctech:powder/potash> * 2,
- [<tfctech:pot_potash>]);
 
 
 // ------ // Корректировка рецептов механизмов // ------ //
