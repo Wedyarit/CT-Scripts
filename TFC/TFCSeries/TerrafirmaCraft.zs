@@ -33,7 +33,7 @@ Barrel.removeRecipe(<immersiveengineering:treated_wood>, null);
 Barrel.addRecipe("treated_wood", <ore:logWood> * 8, <liquid:creosote> * 1000, <immersiveengineering:treated_wood> * 8, null, 5);
 
 // Вода
-Barrel.addRecipe("vanilla_water", <tfc:food/green_apple>, <liquid:fresh_water> * 1000, null, <liquid:water>, 2);
+Barrel.addRecipe("vanilla_water", <ore:categoryFruit>, <liquid:fresh_water> * 1000, null, <liquid:water>, 2);
 
 // ** // Сварка // ** //
 // Кирпич продвинутой доменной печи
