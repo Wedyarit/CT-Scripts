@@ -5,6 +5,8 @@ print("Initializing 'Minecraft'...");
 // ------ // Удаление предметов // ------ //
 // Факел
 recipes.remove(<minecraft:torch>);
+// Железо
+recipes.remove(<minecraft:iron_ingot>);
 
 // ------ // Корректировка обычных рецептов // ------ //
 // Стол зачарований
