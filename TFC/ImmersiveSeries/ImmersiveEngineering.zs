@@ -337,6 +337,41 @@ Crusher.addRecipe(<tfc:metal/ingot/steel> * 9, <immersiveengineering:storage:8>,
 Crusher.addRecipe(<tfc:metal/ingot/wrought_iron> * 9, <minecraft:iron_block>, 3000);
 Crusher.addRecipe(<tfc:metal/ingot/gold> * 9, <minecraft:gold_block>, 3000);
 
+// Крафты из жёрнова
+Crusher.removeRecipe(<tfc:powder/kaolinite>);
+Crusher.addRecipe(<tfc:powder/kaolinite> * 4, <tfc:ore/kaolinite>, 3000);
+Crusher.removeRecipe(<tfc:powder/graphite>);
+Crusher.addRecipe(<tfc:powder/graphite> * 4, <tfc:ore/graphite>, 3000);
+Crusher.addRecipe(<tfc:food/barley_flour>, <tfc:food/barley_grain>, 3000);
+Crusher.addRecipe(<tfc:food/oat_flour>, <tfc:food/oat_grain>, 3000);
+Crusher.addRecipe(<tfc:food/rice_flour>, <tfc:food/rice_grain>, 3000);
+Crusher.addRecipe(<tfc:food/rye_flour>, <tfc:food/rye_grain>, 3000);
+Crusher.addRecipe(<tfc:food/wheat_flour>, <tfc:food/wheat_grain>, 3000);
+Crusher.addRecipe(<tfc:food/cornmeal_flour>, <tfc:food/maize_grain>, 3000);
+Crusher.addRecipe(<tfc:food/olive_paste>, <tfc:food/olive>, 3000);
+Crusher.addRecipe(<tfc:powder/flux> * 2, <ore:rockFlux>, 3000);
+Crusher.addRecipe(<minecraft:redstone> * 8, <tfc:ore/cinnabar>, 3000);
+Crusher.addRecipe(<minecraft:redstone> * 8, <tfc:ore/cryolite>, 3000);
+Crusher.addRecipe(<tfc:powder/hematite> * 5, <tfc:ore/hematite>, 3000);
+Crusher.addRecipe(<tfc:powder/limonite> * 5, <tfc:ore/limonite>, 3000);
+Crusher.addRecipe(<tfc:powder/malachite> * 5, <tfc:ore/malachite>, 3000);
+Crusher.removeRecipe(<immersiveengineering:material:25>);
+Crusher.addRecipe(<tfc:powder/fertilizer> * 4, <tfc:ore/sylvite>, 3000);
+Crusher.addRecipe(<tfc:powder/sulfur> * 4, <tfc:ore/sulfur>, 3000);
+Crusher.addRecipe(<tfc:powder/salt> * 4, <tfc:rock/rocksalt>, 3000);
+Crusher.addRecipe(<tfc:powder/saltpeter> * 4, <tfc:ore/saltpeter>, 3000);
+Crusher.addRecipe(<tfc:powder/charcoal> * 4, <minecraft:coal:1>, 3000);
+Crusher.addRecipe(<tfc:powder/lapis_lazuli>, <tfc:ore/lapis_lazuli>, 3000);
+Crusher.addRecipe(<tfc:ore/gypsum>, <tfc:raw/limestone>, 3000);
+Crusher.addRecipe(<tfc:gem/diamond:2>, <tfc:ore/kimberlite>, 3000);
+Crusher.addRecipe(<ca:coffee_beans_green>, <ca:coffee_cherries_dried>, 3000);
+Crusher.addRecipe(<ca:coffee_ground>, <ca:coffee_beans>, 3000);
+Crusher.addRecipe(<tfcthings:whetstone>, <tfc:brick/quartzite>, 3000);
+Crusher.addRecipe(null, null, 3000);
+Crusher.addRecipe(null, null, 3000);
+Crusher.addRecipe(null, null, 3000);
+
+
 // ** Коксовая печь ** //
 // Коксовый уголь (и креозот)
 CokeOven.removeRecipe(<immersiveengineering:material:6>);

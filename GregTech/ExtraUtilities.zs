@@ -10,5 +10,4 @@ for item in items {
 	item.addTooltip("§4§lВ данной сборке этот предмет выключен");
 }
 
-
 print("Initialized 'DragonsRadio-server-0.1'");
