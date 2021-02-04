@@ -357,19 +357,17 @@ Crusher.addRecipe(<tfc:powder/limonite> * 5, <tfc:ore/limonite>, 3000);
 Crusher.addRecipe(<tfc:powder/malachite> * 5, <tfc:ore/malachite>, 3000);
 Crusher.removeRecipe(<immersiveengineering:material:25>);
 Crusher.addRecipe(<tfc:powder/fertilizer> * 4, <tfc:ore/sylvite>, 3000);
+Crusher.removeRecipe(<immersiveengineering:material:24>);
 Crusher.addRecipe(<tfc:powder/sulfur> * 4, <tfc:ore/sulfur>, 3000);
 Crusher.addRecipe(<tfc:powder/salt> * 4, <tfc:rock/rocksalt>, 3000);
 Crusher.addRecipe(<tfc:powder/saltpeter> * 4, <tfc:ore/saltpeter>, 3000);
 Crusher.addRecipe(<tfc:powder/charcoal> * 4, <minecraft:coal:1>, 3000);
-Crusher.addRecipe(<tfc:powder/lapis_lazuli>, <tfc:ore/lapis_lazuli>, 3000);
+Crusher.addRecipe(<tfc:powder/lapis_lazuli> * 4, <tfc:ore/lapis_lazuli>, 3000);
 Crusher.addRecipe(<tfc:ore/gypsum>, <tfc:raw/limestone>, 3000);
 Crusher.addRecipe(<tfc:gem/diamond:2>, <tfc:ore/kimberlite>, 3000);
 Crusher.addRecipe(<ca:coffee_beans_green>, <ca:coffee_cherries_dried>, 3000);
 Crusher.addRecipe(<ca:coffee_ground>, <ca:coffee_beans>, 3000);
 Crusher.addRecipe(<tfcthings:whetstone>, <tfc:brick/quartzite>, 3000);
-Crusher.addRecipe(null, null, 3000);
-Crusher.addRecipe(null, null, 3000);
-Crusher.addRecipe(null, null, 3000);
 
 
 // ** Коксовая печь ** //
