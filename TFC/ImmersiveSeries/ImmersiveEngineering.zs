@@ -21,7 +21,7 @@ for tool in tools {
 }
 
 // Предметы для NPC
-var npcItems = [<immersiveengineering:drill>, <tfc:metal/ingot/beryllium>, <tfc:metal/ingot/boron>]  as IItemStack[];
+var npcItems = [<immersiveengineering:drill>, <tfc:metal/ingot/beryllium>]  as IItemStack[];
 recipes.remove(<immersiveengineering:drill>);
 
 for item in npcItems {
