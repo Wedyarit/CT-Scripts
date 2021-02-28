@@ -20,8 +20,15 @@ FireCrafting.addRecipe(<minecraft:torch>, <minecraft:stick>);
 
 //----------// Default Recipes //----------//
 
-//железный слиток
-	furnace.remove(<minecraft:iron_ingot>, <bloodmagic:component:19>);
+// Nether Star
+recipes.remove(<minecraft:nether_star>);
+recipes.addShaped(<minecraft:nether_star>, 
+[[<alchemistry:element:71> * 32, <alchemistry:element:1> * 64, <alchemistry:element:22> * 32],
+ [<alchemistry:element:1> * 64, <alchemistry:element:1> * 64, <alchemistry:element:1> * 64],
+ [<alchemistry:element:66> * 32, <alchemistry:element:1> * 64, <alchemistry:element:101> * 32]]);
+
+// Iron Ingot
+furnace.remove(<minecraft:iron_ingot>, <bloodmagic:component:19>);
 
 // Dragon's Breath
 recipes.addShapeless(<minecraft:dragon_breath>, 
