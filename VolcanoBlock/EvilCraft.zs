@@ -88,6 +88,8 @@ BloodInfuser.addRecipe(<evilcraft:dark_block>, <liquid:evilcraftblood> * 160000,
 BloodInfuser.removeRecipesWithOutput(<minecraft:blaze_rod>);
 BloodInfuser.addRecipe(<ore:bone>, <liquid:evilcraftblood> * 2500, 3, <minecraft:blaze_rod>, 25, 2);
 
+// Niobium
+BloodInfuser.addRecipe(<alchemistry:ingot:41>, <liquid:evilcraftblood> * 10000, 2, <soulus:ingot_niobium>, 60, 10);
 
 //----------// EnvironmentalAccumulator Recipes //----------//
 
