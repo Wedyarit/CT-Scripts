@@ -7,6 +7,20 @@ print("Initializing 'IntegratedDynamics'...");
 
 //----------// Default Recipes //----------//
 
+// Crafting Interface
+recipes.remove(<integratedcrafting:part_interface_crafting_item>);
+recipes.addShaped(<integratedcrafting:part_interface_crafting_item>,
+[[<alchemistry:ingot:56>, <uniquecrops:seedartisia>, <alchemistry:ingot:56>],
+ [<integrateddynamics:variable_transformer>, <integrateddynamics:crystalized_menril_block>, <integrateddynamics:variable_transformer:1>],
+ [<alchemistry:ingot:56>, <uniquecrops:seedartisia>, <alchemistry:ingot:56>]]);
+
+// Crafting Writer
+recipes.remove(<integratedcrafting:part_crafting_writer_item>);
+recipes.addShaped(<integratedcrafting:part_crafting_writer_item>,
+[[<uniquecrops:seedartisia>, <uniquecrops:seedartisia>, <uniquecrops:seedartisia>],
+ [<minecraft:crafting_table>, <integrateddynamics:variable_transformer>, <minecraft:crafting_table>],
+ [<uniquecrops:seedartisia>, <uniquecrops:seedartisia>, <uniquecrops:seedartisia>]]);
+
 // Drying Bassin
 recipes.remove(<integrateddynamics:drying_basin>);
 
@@ -145,7 +159,7 @@ SeedCrafting.addRecipe(<integrateddynamics:drying_basin>, <minecraft:iron_ingot>
 
 // Sand
 mods.integrateddynamics.MechanicalSqueezer.removeRecipesWithOutput(<minecraft:flint> * 2);
-mods.integrateddynamics.MechanicalSqueezer.addRecipe(<minecraft:gravel>, <minecraft:sand>, Null, 20);
+mods.integrateddynamics.MechanicalSqueezer.addRecipe(<minecraft:gravel>, <minecraft:sand>, null, 20);
 
 
 print("Initializied 'IntegratedDynamics'");
