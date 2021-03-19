@@ -10,4 +10,43 @@ for item in items {
 	item.addTooltip("§4§lВ данной сборке этот предмет выключен");
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Мусорные баки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Мусорка (Предметы)
+recipes.remove(<extrautils2:trashcan>);
+recipes.addShaped("extrautils2:trashcan", <extrautils2:trashcan>,
+ [[<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:12184>, null, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:12184>, <minecraft:lava_bucket>, <gregtech:meta_item_1:12184>]]);
+
+// Мусорка (Жидкости)
+recipes.remove(<extrautils2:trashcanfluid>);
+recipes.addShaped("extrautils2:trashcanfluid", <extrautils2:trashcanfluid>,
+ [[<gregtech:meta_item_1:12233>, <gregtech:meta_item_1:12233>, <gregtech:meta_item_1:12233>],
+  [<gregtech:meta_item_1:12233>, <minecraft:bucket>, <gregtech:meta_item_1:12233>],
+  [<gregtech:meta_item_1:12233>, <extrautils2:klein>, <gregtech:meta_item_1:12233>]]);
+
+// Мусорка (Энергия)
+recipes.remove(<extrautils2:trashcanenergy>);
+recipes.addShaped("extrautils2:trashcanenergy", <extrautils2:trashcanenergy>,
+ [[<gregtech:meta_item_1:12232>, <gregtech:meta_item_1:12232>, <gregtech:meta_item_1:12232>],
+  [<gregtech:meta_item_1:12232>, <gregtech:cable:8237>, <gregtech:meta_item_1:12232>],
+  [<gregtech:meta_item_1:12232>, <minecraft:redstone_block>, <gregtech:meta_item_1:12232>]]);
+
+// Мусорный ящик 
+recipes.remove(<extrautils2:trashchest>);
+recipes.addShaped("extrautils2:trashchest", <extrautils2:trashcanenergy>,
+ [[<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:12184>, <minecraft:chest>, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:12184>, <extrautils2:trashcan>, <gregtech:meta_item_1:12184>]]);
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Бутылка Кляйна
+recipes.remove(<extrautils2:klein>);
+recipes.addShaped("extrautils2:klein", <extrautils2:klein>,
+ [[<gregtech:meta_item_2:32454>, <minecraft:ender_pearl>, <gregtech:meta_item_2:32454>],
+  [<minecraft:ender_pearl>, <minecraft:glass_bottle>, <minecraft:ender_pearl>],
+  [<gregtech:meta_item_2:32454>, <minecraft:ender_pearl>, <gregtech:meta_item_2:32454>]]);
+
+
 print("Initialized 'DragonsRadio-server-0.1'");
