@@ -1,7 +1,8 @@
+# Forestry
+
 import mods.gregtech.recipe.RecipeMap;
 import mods.forestry.Carpenter;
-
-# Forestry
+import mods.forestry.ThermionicFabricator;
 
 print("Initializing 'Forestry'...");
 
@@ -96,5 +97,29 @@ assembler.recipeBuilder()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+// Гибкий корпус
+ThermionicFabricator.removeCast(<forestry:flexible_casing>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12095>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <forestry:sturdy_machine>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>)
+    .outputs(<forestry:flexible_casing>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Паяльник
+Carpenter.removeRecipe(<forestry:soldering_iron>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:19391>, <gregtech:meta_item_1:19391>, <gregtech:meta_item_1:19391>, <gregtech:meta_item_1:14183>, <gregtech:meta_item_1:14183>, <gregtech:meta_item_2:32456>, <gregtech:meta_item_1:14071>, <gregtech:meta_item_1:19391>, <forestry:oak_stick>)
+    .outputs(<forestry:soldering_iron>)
+    .duration(12 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Дымарь
+recipes.remove(<forestry:smoker>);
+recipes.addShaped("forestry_smoker", <forestry:smoker>,
+ [[<minecraft:leather>, <minecraft:hay_block>, <gregtech:meta_item_1:12071>],
+  [<minecraft:leather>, <minecraft:flint_and_steel>, <gregtech:meta_item_1:12071>],
+  [<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>]]);
 
 print("Initialized 'Forestry'");

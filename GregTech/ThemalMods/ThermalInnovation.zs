@@ -15,7 +15,7 @@ recipes.remove(<thermalinnovation:drill>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:17094>, <gregtech:meta_item_2:8094>, <gregtech:meta_item_2:32576>,  <gregtech:meta_item_2:26094>, <gregtech:meta_item_1:32600>, <gregtech:meta_item_2:26094>,  <gregtech:meta_item_1:12094>, <thermalexpansion:capacitor>, <gregtech:meta_item_1:12094>)
     .outputs(<thermalinnovation:drill>)
-    .duration(600)
+    .duration(30 * 20)
     .EUt(128)
     .buildAndRegister();
 
@@ -24,7 +24,7 @@ recipes.remove(<thermalinnovation:drill:1>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:17183>, <gregtech:meta_item_2:8183>, <thermalfoundation:upgrade>,  <gregtech:meta_item_2:26183>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_2:26183>,  <gregtech:meta_item_1:12183>, <thermalinnovation:drill>, <gregtech:meta_item_1:12183>)
     .outputs(<thermalinnovation:drill:1>)
-    .duration(600)
+    .duration(30 * 20)
     .EUt(256)
     .buildAndRegister();
 
@@ -33,7 +33,7 @@ recipes.remove(<thermalinnovation:drill:2>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:17072>, <gregtech:meta_item_2:8072>, <thermalfoundation:upgrade:1>,  <gregtech:meta_item_2:26072>, <gregtech:meta_item_1:32602>, <gregtech:meta_item_2:26072>,  <gregtech:meta_item_1:12072>, <thermalinnovation:drill:1>, <gregtech:meta_item_1:12072>)
     .outputs(<thermalinnovation:drill:2>)
-    .duration(600)
+    .duration(30 * 20)
     .EUt(512)
     .buildAndRegister();
 
@@ -42,7 +42,7 @@ recipes.remove(<thermalinnovation:drill:3>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:17235>, <gregtech:meta_item_2:8235>, <thermalfoundation:upgrade:2>,  <gregtech:meta_item_2:26235>, <gregtech:meta_item_1:32603>, <gregtech:meta_item_2:26235>,  <gregtech:meta_item_1:12235>, <thermalinnovation:drill:2>, <gregtech:meta_item_1:12235>)
     .outputs(<thermalinnovation:drill:3>)
-    .duration(600)
+    .duration(30 * 20)
     .EUt(1024)
     .buildAndRegister();
 
@@ -51,7 +51,7 @@ recipes.remove(<thermalinnovation:drill:4>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:17308>, <gregtech:meta_item_2:8308>, <thermalfoundation:upgrade:3>,  <gregtech:meta_item_2:26308>, <gregtech:meta_item_1:32604>, <gregtech:meta_item_2:26308>,  <gregtech:meta_item_1:12308>, <thermalinnovation:drill:3>, <gregtech:meta_item_1:12308>)
     .outputs(<thermalinnovation:drill:4>)
-    .duration(600)
+    .duration(30 * 20)
     .EUt(2048)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
