@@ -1,6 +1,6 @@
-import mods.gregtech.recipe.RecipeMap;
-
 # ThermalInnovation
+
+import mods.gregtech.recipe.RecipeMap;
 
 print("Initializing 'ThermalInnovation'...");
 

@@ -1,6 +1,6 @@
-import mods.gregtech.recipe.RecipeMap;
-
 # ThermalFoundation
+
+import mods.gregtech.recipe.RecipeMap;
 
 print("Initializing 'ThermalFoundation'...");
 
