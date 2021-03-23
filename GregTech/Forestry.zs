@@ -122,4 +122,9 @@ recipes.addShaped("forestry_smoker", <forestry:smoker>,
   [<minecraft:leather>, <minecraft:flint_and_steel>, <gregtech:meta_item_1:12071>],
   [<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>]]);
 
+// Мультиферма
+for i in 0 to 11 {
+	recipes.replaceAllOccurences(<ore:ingotCopper>, <gregtech:meta_item_1:12018>, <forestry:ffarm>.withTag({FarmBlock: i}));
+}
+
 print("Initialized 'Forestry'");
