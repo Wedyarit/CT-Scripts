@@ -97,6 +97,28 @@ assembler.recipeBuilder()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Несоздаваемые предметы    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Проверенный садовый нож
+recipes.addShaped("forestry_grafter_proven", <forestry:grafter_proven>,
+ [[null, null>, <gregtech:meta_item_1:10183>],
+  [null, <forestry:oak_stick>, null],
+  [<forestry:oak_stick>, null, null]]);
+
+// Проверенная рамка
+recipes.addShaped("forestry_frame_proven", <forestry:frame_proven>,
+ [[<forestry:oak_stick>, <forestry:oak_stick>, <forestry:oak_stick>],
+  [<forestry:oak_stick>, <forestry:crafting_material:3>, <forestry:oak_stick>],
+  [<forestry:oak_stick>, <forestry:oak_stick>, <forestry:oak_stick>]]);
+
+// Рамка Нова
+recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
+ [[<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>],
+  [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:32724>, <gregtech:meta_item_1:14072>],
+  [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>]]);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 // Гибкий корпус
 ThermionicFabricator.removeCast(<forestry:flexible_casing>);
 assembler.recipeBuilder()
