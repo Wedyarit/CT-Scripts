@@ -6,6 +6,7 @@ print("Initializing 'ThermalFoundation'...");
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 val assembler = RecipeMap.getByName("assembler");
+val mixer = RecipeMap.getByName("mixer");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -75,6 +76,50 @@ assembler.recipeBuilder()
     .duration(7 * 20)
     .EUt(32)
     .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Порошки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Порошок Блитца
+mixer.recipeBuilder()
+    .inputs(<ore:dustSaltpeter>, <ore:dustSaltpeter>, <gregtech:meta_item_1:2219>, <ore:dustSaltpeter>)
+    .outputs(<thermalfoundation:material:2051>)
+    .duration(10 * 20)
+    .EUt(10)
+    .buildAndRegister();
+
+// Порошок Близза
+mixer.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2120>, <gregtech:meta_item_1:2120>, <gregtech:meta_item_1:2219>, <gregtech:meta_item_1:2120>)
+    .outputs(<thermalfoundation:material:2049>)
+    .duration(10 * 20)
+    .EUt(10)
+    .buildAndRegister();
+
+// Порошок Базальца
+mixer.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2138>, <gregtech:meta_item_1:2138>, <gregtech:meta_item_1:2219>, <gregtech:meta_item_1:2138>)
+    .outputs(<thermalfoundation:material:2053>)
+    .duration(10 * 20)
+    .EUt(10)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Стекла  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Усиленное свинцовое стекло
+recipes.remove(<thermalfoundation:glass:3>);
+recipes.addShaped("thermalfoundation_reinforced_lead_glass", <thermalfoundation:glass:3>,
+ [[<gregtech:meta_item_1:2138>, <gregtech:meta_item_1:2035>, <gregtech:meta_item_1:2138>],
+  [<gregtech:meta_item_1:2035>, <ore:blockGlass>, <gregtech:meta_item_1:2035>],
+  [<gregtech:meta_item_1:2138>, <minecraft:blaze_powder>, <gregtech:meta_item_1:2138>]]);
+
+// Усиленное инваровое стекло
+recipes.remove(<thermalfoundation:glass_alloy:2>);
+recipes.addShaped("thermalfoundation_reinforced_invar_glass", <thermalfoundation:glass_alloy:2>,
+ [[<gregtech:meta_item_1:2138>, <gregtech:meta_item_1:2126>, <gregtech:meta_item_1:2138>],
+  [<gregtech:meta_item_1:2126>, <ore:blockGlass>, <gregtech:meta_item_1:2126>],
+  [<gregtech:meta_item_1:2138>, <minecraft:blaze_powder>, <gregtech:meta_item_1:2138>]]);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 print("Initialized 'ThermalFoundation'");
