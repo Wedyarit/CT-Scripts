@@ -235,7 +235,7 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Предметные трубы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Предметная труба
 recipes.remove(<thermaldynamics:duct_32>);
-recipes.addShaped("thermaldynamics_item_tube", <thermaldynamics:duct_32>,
+recipes.addShaped("thermaldynamics_item_pipe", <thermaldynamics:duct_32>,
  [[<gregtech:meta_item_1:12071>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12071>],
   [hammer, null, wrench],
   [<gregtech:meta_item_1:12071>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12071>]]);
@@ -248,7 +248,7 @@ assembler.recipeBuilder()
 
 // Плотная предметная труба
 recipes.remove(<thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_solid", <thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_solid", <thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}),
  [[null, hammer, null],
   [<gregtech:meta_item_1:12035>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12035>],
   [null, wrench, null]]);
@@ -261,7 +261,7 @@ assembler.recipeBuilder()
 
 // Вакуумная предметная труба 
 recipes.remove(<thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_vacuum", <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_vacuum", <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}),
  [[null, hammer, null],
   [<gregtech:meta_item_1:12062>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12062>],
   [null, wrench, null]]);
@@ -274,7 +274,7 @@ assembler.recipeBuilder()
 
 // Предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:1>);
-recipes.addShaped("thermaldynamics_item_tube_opaque", <thermaldynamics:duct_32:1>,
+recipes.addShaped("thermaldynamics_item_pipe_opaque", <thermaldynamics:duct_32:1>,
  [[<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12071>],
   [hammer, null, wrench],
   [<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12071>]]);
@@ -287,7 +287,7 @@ assembler.recipeBuilder()
 
 // Плотная предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_solid_opaque", <thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_solid_opaque", <thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}),
  [[null, hammer, null],
   [<gregtech:meta_item_1:12035>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12035>],
   [null, wrench, null]]);
@@ -300,7 +300,7 @@ assembler.recipeBuilder()
 
 // Вакуумная предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:1>.withTag({DenseType: 2 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_vacuum_opaque", <thermaldynamics:duct_32:1>.withTag({DenseType: 2 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_vacuum_opaque", <thermaldynamics:duct_32:1>.withTag({DenseType: 2 as byte}),
  [[null, hammer, null],
   [<gregtech:meta_item_1:12062>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12062>],
   [null, wrench, null]]);
@@ -313,7 +313,7 @@ assembler.recipeBuilder()
 
 // Импульсная предметная труба
 recipes.remove(<thermaldynamics:duct_32:2>);
-recipes.addShaped("thermaldynamics_item_tube_impulse", <thermaldynamics:duct_32:2>,
+recipes.addShaped("thermaldynamics_item_pipe_impulse", <thermaldynamics:duct_32:2>,
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -326,7 +326,7 @@ assembler.recipeBuilder()
 
 // Импульсная плотная предметная труба
 recipes.remove(<thermaldynamics:duct_32:2>.withTag({DenseType: 1 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 1 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 1 as byte}),
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}), <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -339,7 +339,7 @@ assembler.recipeBuilder()
 
 // Импульсная вакуумная предметная труба
 recipes.remove(<thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}),
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -352,7 +352,7 @@ assembler.recipeBuilder()
 
 // Импульсная предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:3>);
-recipes.addShaped("thermaldynamics_item_tube_impulse_opaque", <thermaldynamics:duct_32:3>,
+recipes.addShaped("thermaldynamics_item_pipe_impulse_opaque", <thermaldynamics:duct_32:3>,
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -365,7 +365,7 @@ assembler.recipeBuilder()
 
 // Импульсная плотная предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:3>.withTag({DenseType: 1 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 1 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 1 as byte}),
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}), <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -378,13 +378,86 @@ assembler.recipeBuilder()
 
 // Импульсная вакуумная предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}));
-recipes.addShaped("thermaldynamics_item_tube_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}),
  [[null, wrench, null],
-  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>)
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>)
     .outputs(<thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Жидкостные трубы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Основная жидкостная труба
+recipes.remove(<thermaldynamics:duct_16>);
+recipes.addShaped("thermaldynamics_liquid_pipe_base", <thermaldynamics:duct_16>,
+ [[<gregtech:meta_item_1:12018>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12018>],
+  [hammer, null, wrench],
+  [<gregtech:meta_item_1:12018>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12018>]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12018>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12018>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12018>)
+    .outputs(<thermaldynamics:duct_16>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Усиленная жидкостная труба
+recipes.remove(<thermaldynamics:duct_16:2>);
+recipes.addShaped("thermaldynamics_liquid_pipe_reinforced", <thermaldynamics:duct_16:2>,
+ [[<gregtech:meta_item_1:12126>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12126>],
+  [hammer, null, wrench],
+  [<gregtech:meta_item_1:12126>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12126>]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12126>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12126>, <gregtech:meta_item_1:12126>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12126>)
+    .outputs(<thermaldynamics:duct_16:2>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Сверхпластичная жидкостная труба
+recipes.remove(<thermaldynamics:duct_16:6>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12330>, <thermalfoundation:glass_alloy:2>, <thermaldynamics:duct_16:2>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12330>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_16:6>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Основная жидкостная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_16:1>);
+recipes.addShaped("thermaldynamics_liquid_pipe_base_opaque", <thermaldynamics:duct_16:1>,
+ [[<gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12018>],
+  [hammer, null, wrench],
+  [<gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12018>]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12018>)
+    .outputs(<thermaldynamics:duct_16:1>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Усиленная жидкостная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_16:3>);
+recipes.addShaped("thermaldynamics_liquid_pipe_reinforced_opaque", <thermaldynamics:duct_16:3>,
+ [[<gregtech:meta_item_1:12126>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12126>],
+  [hammer, null, wrench],
+  [<gregtech:meta_item_1:12126>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12126>]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12126>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12126>, <gregtech:meta_item_1:12126>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12126>)
+    .outputs(<thermaldynamics:duct_16:3>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Сверхпластичная жидкостная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_16:7>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12330>, <thermalfoundation:glass_alloy:2>, <thermaldynamics:duct_16:3>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12330>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_16:7>)
     .duration(25 * 20)
     .EUt(32)
     .buildAndRegister();
