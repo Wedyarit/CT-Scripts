@@ -48,4 +48,33 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Катушки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Красная принимающая катушка
+recipes.remove(<thermalfoundation:material:513>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:16237>, <gregtech:meta_item_2:16026>, <gregtech:meta_item_2:16237>, <gregtech:cable:1026>, <gregtech:cable:1026>, <gregtech:cable:1026>, <gregtech:meta_item_2:16237>, <gregtech:meta_item_2:16026>, <gregtech:meta_item_2:16237>)
+    .outputs(<thermalfoundation:material:513>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Красная отдающая катушка
+recipes.remove(<thermalfoundation:material:514>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:16237>, <gregtech:meta_item_2:16062>, <gregtech:meta_item_2:16237>, <gregtech:cable:1062>, <gregtech:cable:1062>, <gregtech:cable:1062>, <gregtech:meta_item_2:16237>, <gregtech:meta_item_2:16062>, <gregtech:meta_item_2:16237>)
+    .outputs(<thermalfoundation:material:514>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Красная проводящая катушка
+recipes.remove(<thermalfoundation:material:515>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:16237>, <gregtech:meta_item_2:16112>, <gregtech:meta_item_2:16237>, <gregtech:cable:1112>, <gregtech:cable:1112>, <gregtech:cable:1112>, <gregtech:meta_item_2:16237>, <gregtech:meta_item_2:16112>, <gregtech:meta_item_2:16237>)
+    .outputs(<thermalfoundation:material:515>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 print("Initialized 'ThermalFoundation'");
