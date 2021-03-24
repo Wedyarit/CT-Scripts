@@ -232,4 +232,164 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Предметные трубы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Предметная труба
+recipes.remove(<thermaldynamics:duct_32>);
+recipes.addShaped("thermaldynamics_item_tube", <thermaldynamics:duct_32>,
+ [[<gregtech:meta_item_1:12071>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12071>],
+  [hammer, null, wrench],
+  [<gregtech:meta_item_1:12071>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12071>]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12071>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>, <thermalfoundation:glass:3>, <gregtech:meta_item_1:12071>)
+    .outputs(<thermaldynamics:duct_32>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Плотная предметная труба
+recipes.remove(<thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_solid", <thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}),
+ [[null, hammer, null],
+  [<gregtech:meta_item_1:12035>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12035>],
+  [null, wrench, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12035>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12035>)
+    .outputs(<thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Вакуумная предметная труба 
+recipes.remove(<thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_vacuum", <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}),
+ [[null, hammer, null],
+  [<gregtech:meta_item_1:12062>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12062>],
+  [null, wrench, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12062>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12062>)
+    .outputs(<thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Предметная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_32:1>);
+recipes.addShaped("thermaldynamics_item_tube_opaque", <thermaldynamics:duct_32:1>,
+ [[<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12071>],
+  [hammer, null, wrench],
+  [<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12071>]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12035>, <gregtech:meta_item_1:12071>)
+    .outputs(<thermaldynamics:duct_32:1>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Плотная предметная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_solid_opaque", <thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}),
+ [[null, hammer, null],
+  [<gregtech:meta_item_1:12035>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12035>],
+  [null, wrench, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12035>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12035>)
+    .outputs(<thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Вакуумная предметная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_32:1>.withTag({DenseType: 2 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_vacuum_opaque", <thermaldynamics:duct_32:1>.withTag({DenseType: 2 as byte}),
+ [[null, hammer, null],
+  [<gregtech:meta_item_1:12062>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12062>],
+  [null, wrench, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12062>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12062>)
+    .outputs(<thermaldynamics:duct_32:1>.withTag({DenseType: 2 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Импульсная предметная труба
+recipes.remove(<thermaldynamics:duct_32:2>);
+recipes.addShaped("thermaldynamics_item_tube_impulse", <thermaldynamics:duct_32:2>,
+ [[null, wrench, null],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12330>],
+  [null, hammer, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>, <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_32:2>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Импульсная плотная предметная труба
+recipes.remove(<thermaldynamics:duct_32:2>.withTag({DenseType: 1 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 1 as byte}),
+ [[null, wrench, null],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}), <gregtech:meta_item_1:12330>],
+  [null, hammer, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 1 as byte}), <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_32:2>.withTag({DenseType: 1 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Импульсная вакуумная предметная труба
+recipes.remove(<thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}),
+ [[null, wrench, null],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
+  [null, hammer, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Импульсная предметная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_32:3>);
+recipes.addShaped("thermaldynamics_item_tube_impulse_opaque", <thermaldynamics:duct_32:3>,
+ [[null, wrench, null],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12330>],
+  [null, hammer, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:1>, <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_32:3>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Импульсная плотная предметная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_32:3>.withTag({DenseType: 1 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 1 as byte}),
+ [[null, wrench, null],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}), <gregtech:meta_item_1:12330>],
+  [null, hammer, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:1>.withTag({DenseType: 1 as byte}), <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_32:3>.withTag({DenseType: 1 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Импульсная вакуумная предметная труба (Непрозрачная)
+recipes.remove(<thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}));
+recipes.addShaped("thermaldynamics_item_tube_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}),
+ [[null, wrench, null],
+  [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
+  [null, hammer, null]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>)
+    .outputs(<thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}))
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 print("Initialized 'ThermalDynamics'");
