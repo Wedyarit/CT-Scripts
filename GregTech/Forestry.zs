@@ -36,7 +36,6 @@ assembler.recipeBuilder()
 recipes.remove(<forestry:apiary>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:17018> * 6, <forestry:bee_house>, <forestry:frame_untreated>, <forestry:frame_untreated>, <forestry:frame_untreated>)
-    .fluidInputs([<liquid:glue> * 200])
     .outputs(<forestry:apiary>)
     .duration(10 * 20)
     .EUt(24)
@@ -112,8 +111,6 @@ assembler.recipeBuilder()
     .duration(10 * 20)
     .EUt(96)
     .buildAndRegister();
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -135,7 +132,6 @@ recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
  [[<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>],
   [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:32724>, <gregtech:meta_item_1:14072>],
   [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>]]);
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
