@@ -11,8 +11,8 @@ for item in items {
     recipes.remove(item);
 	item.addTooltip("§4§lВ данной сборке этот предмет выключен");
 }
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Мусорные баки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Мусорные баки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Мусорка (Предметы)
 recipes.remove(<extrautils2:trashcan>);
 recipes.addShaped("extrautils2_trashcan", <extrautils2:trashcan>,
@@ -40,6 +40,37 @@ recipes.addShaped("extrautils2_trashchest", <extrautils2:trashchest>,
  [[<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>],
   [<gregtech:meta_item_1:12184>, <minecraft:chest>, <gregtech:meta_item_1:12184>],
   [<gregtech:meta_item_1:12184>, <extrautils2:trashcan>, <gregtech:meta_item_1:12184>]]);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Бочки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Каменная бочка
+recipes.remove(<extrautils2:drum>);
+recipes.addShaped("extrautils2_stone_barrel", <extrautils2:drum>,
+ [[<gtadditions:ga_meta_item:33>, <minecraft:stone_slab>, <gtadditions:ga_meta_item:33>],
+  [<gtadditions:ga_meta_item:231>, <minecraft:cauldron>, <gtadditions:ga_meta_item:231>],
+  [<gtadditions:ga_meta_item:33>, <minecraft:stone_slab>, <gtadditions:ga_meta_item:33>]]);
+
+// Железная бочка
+recipes.remove(<extrautils2:drum:1>);
+recipes.addShaped("extrautils2_iron_barrel", <extrautils2:drum:1>,
+ [[<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12183>, <gtadditions:ga_meta_item:32>],
+  [<gtadditions:ga_meta_item:33>, <extrautils2:drum>, <gtadditions:ga_meta_item:33>],
+  [<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12183>, in<gtadditions:ga_meta_item:32>]]);
+  
+// Укрепленная бочка
+recipes.remove(<extrautils2:drum:2>);
+recipes.addShaped("extrautils2_fortified_barrel", <extrautils2:drum:2>,
+ [[<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12228>, <gtadditions:ga_meta_item:32>],
+  [<gtadditions:ga_meta_item:207>, <extrautils2:drum:1, <gtadditions:ga_meta_item:207>],
+  [<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12228>, <gtadditions:ga_meta_item:32>]]);
+  
+// Демоническая бочка
+recipes.remove(<extrautils2:drum:3>);
+recipes.addShaped("extrautils2_demonic_barrel", <extrautils2:drum:3>,
+ [[<gtadditions:ga_meta_item:22>, <extrautils2:klein>, <gtadditions:ga_meta_item:22>],
+  [<gtadditions:ga_meta_item:52>, <extrautils2:drum:3>, <gtadditions:ga_meta_item:52>],
+  [<gtadditions:ga_meta_item:22>, <extrautils2:klein>, <gtadditions:ga_meta_item:22>]]);
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
