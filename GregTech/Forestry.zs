@@ -15,13 +15,32 @@ val assembler = RecipeMap.getByName("assembler");
 // Пропитанный корпус
 Carpenter.removeRecipe(<forestry:impregnated_casing>);
 assembler.recipeBuilder()
-    .inputs(<ore:logWood> * 8, <gregtech:meta_item_1:12095> * 4, <gregtech:meta_item_1:17018> * 16)
+    .inputs(<gregtech:meta_item_1:17018> * 16, <gregtech:meta_item_1:12095> * 4, <ore:logWood> * 8)
     .fluidInputs([<liquid:seed.oil> * 1000])
     .outputs(<forestry:impregnated_casing>)
     .duration(20 * 20)
     .EUt(24)
     .buildAndRegister();
 
+// Пчелиный домик
+recipes.remove(<forestry:bee_house>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12196> * 8, <gregtech:meta_item_1:17018> * 2, <forestry:impregnated_casing>, <forestry:frame_untreated>)
+    .fluidInputs([<liquid:glue> * 200])
+    .outputs(<forestry:bee_house>)
+    .duration(20 * 20)
+    .EUt(24)
+    .buildAndRegister();
+
+// Пасека
+recipes.remove(<forestry:apiary>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17018> * 6, <forestry:bee_house>, <forestry:frame_untreated>, <forestry:frame_untreated>, <forestry:frame_untreated>)
+    .fluidInputs([<liquid:glue> * 200])
+    .outputs(<forestry:apiary>)
+    .duration(10 * 20)
+    .EUt(24)
+    .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
