@@ -56,7 +56,7 @@ recipes.remove(<extrautils2:drum:1>);
 recipes.addShaped("extrautils2_iron_barrel", <extrautils2:drum:1>,
  [[<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12183>, <gtadditions:ga_meta_item:32>],
   [<gtadditions:ga_meta_item:33>, <extrautils2:drum>, <gtadditions:ga_meta_item:33>],
-  [<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12183>, in<gtadditions:ga_meta_item:32>]]);
+  [<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12183>, <gtadditions:ga_meta_item:32>]]);
   
 // Укрепленная бочка
 recipes.remove(<extrautils2:drum:2>);
