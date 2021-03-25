@@ -1,6 +1,8 @@
 # ThermalDynamics
 
+import mods.thermalexpansion.Transposer;
 import mods.gregtech.recipe.RecipeMap;
+import crafttweaker.item.IItemStack;
 
 print("Initializing 'ThermalDynamics'...");
 
@@ -339,7 +341,7 @@ assembler.recipeBuilder()
 
 // Импульсная вакуумная предметная труба
 recipes.remove(<thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}));
-recipes.addShaped("thermaldynamics_item_pipe_impulse_solid", <thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_impulse_vacuum", <thermaldynamics:duct_32:2>.withTag({DenseType: 2 as byte}),
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -378,7 +380,7 @@ assembler.recipeBuilder()
 
 // Импульсная вакуумная предметная труба (Непрозрачная)
 recipes.remove(<thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}));
-recipes.addShaped("thermaldynamics_item_pipe_impulse_solid_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}),
+recipes.addShaped("thermaldynamics_item_pipe_impulse_vacuuum_opaque", <thermaldynamics:duct_32:3>.withTag({DenseType: 2 as byte}),
  [[null, wrench, null],
   [<gregtech:meta_item_1:12330>, <thermaldynamics:duct_32>.withTag({DenseType: 2 as byte}), <gregtech:meta_item_1:12330>],
   [null, hammer, null]]);
@@ -461,7 +463,71 @@ assembler.recipeBuilder()
     .duration(25 * 20)
     .EUt(32)
     .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Флаксовые трубы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Свинцовая флаксовая труба
+recipes.remove(<thermaldynamics:duct_0>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:cable:2035>, <thermalfoundation:glass:3>, <gregtech:cable:2035>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>)
+    .outputs(<thermaldynamics:duct_0>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Усиленная флаксовая труба
+recipes.remove(<thermaldynamics:duct_0:1>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:cable:2044>, <thermaldynamics:duct_0>, <gregtech:cable:2044>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>)
+    .outputs(<thermaldynamics:duct_0:1>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Красная энергетическая флаксовая труба
+Transposer.removeFillRecipe(<thermaldynamics:duct_0:6>, <liquid:redstone>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:cable:2112>, <thermaldynamics:duct_0:1>, <gregtech:cable:2112>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>)
+    .outputs(<thermaldynamics:duct_0:2>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Сигналовая флаксовая труба
+Transposer.removeFillRecipe(<thermaldynamics:duct_0:7>, <liquid:redstone>);
+recipes.remove(<thermaldynamics:duct_0:3>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:cable:2133>, <thermaldynamics:duct_0:2>, <gregtech:cable:2133>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>)
+    .outputs(<thermaldynamics:duct_0:3>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+ // Резонирующая флаксовая труба
+Transposer.removeFillRecipe(<thermaldynamics:duct_0:8>, <liquid:redstone>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:cable:2047>, <thermaldynamics:duct_0:3>, <gregtech:cable:2047>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12237>)
+    .outputs(<thermaldynamics:duct_0:4>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+ // Криостабилизированная флаксовая труба
+Transposer.removeFillRecipe(<thermaldynamics:duct_0:9>, <liquid:cryotheum>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12218>, <gregtech:meta_item_2:32435>, <gregtech:cable:2047>, <thermaldynamics:duct_0:4>, <gregtech:cable:2047>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12218>, <gregtech:meta_item_2:32435>)
+    .outputs(<thermaldynamics:duct_0:5>)
+    .duration(7 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Ненужные трубы
+var items = [<thermaldynamics:duct_16:4>, <thermaldynamics:duct_16:5>, <thermaldynamics:duct_0:6>, <thermaldynamics:duct_0:7>, <thermaldynamics:duct_0:8>, <thermaldynamics:duct_0:9>, <thermaldynamics:duct_32:4>, <thermaldynamics:duct_32:5>, <thermaldynamics:duct_32:6>, <thermaldynamics:duct_32:7>] as IItemStack[];
+for item in items {
+    mods.jei.JEI.removeAndHide(item);
+	item.addTooltip("§cВ данной сборке этот предмет выключен");
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
