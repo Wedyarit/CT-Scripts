@@ -62,14 +62,14 @@ recipes.addShaped("extrautils2_iron_barrel", <extrautils2:drum:1>,
 recipes.remove(<extrautils2:drum:2>);
 recipes.addShaped("extrautils2_fortified_barrel", <extrautils2:drum:2>,
  [[<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12228>, <gtadditions:ga_meta_item:32>],
-  [<gtadditions:ga_meta_item:207>, <extrautils2:drum:1, <gtadditions:ga_meta_item:207>],
+  [<gtadditions:ga_meta_item:207>, <extrautils2:drum:1>, <gtadditions:ga_meta_item:207>],
   [<gtadditions:ga_meta_item:32>, <gregtech:meta_item_1:12228>, <gtadditions:ga_meta_item:32>]]);
   
 // Демоническая бочка
 recipes.remove(<extrautils2:drum:3>);
 recipes.addShaped("extrautils2_demonic_barrel", <extrautils2:drum:3>,
  [[<gtadditions:ga_meta_item:22>, <extrautils2:klein>, <gtadditions:ga_meta_item:22>],
-  [<gtadditions:ga_meta_item:52>, <extrautils2:drum:3>, <gtadditions:ga_meta_item:52>],
+  [<gtadditions:ga_meta_item:52>, <extrautils2:drum:2>, <gtadditions:ga_meta_item:52>],
   [<gtadditions:ga_meta_item:22>, <extrautils2:klein>, <gtadditions:ga_meta_item:22>]]);
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
