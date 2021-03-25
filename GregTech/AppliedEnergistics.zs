@@ -89,6 +89,15 @@ metal_bender.recipeBuilder()
     .EUt(24)
     .buildAndRegister();
 
+// Отпечатанный кремний
+Inscriber.removeRecipe(<appliedenergistics2:material:20>); 
+metal_bender.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12061>, <gregtech:meta_item_1:32766>.withTag({Configuration: 11}))
+    .outputs(<appliedenergistics2:material:20>)
+    .duration(5 * 20)
+    .EUt(24)
+    .buildAndRegister();
+
 // Логический процессор
 Inscriber.removeRecipe(<appliedenergistics2:material:22>); 
 Etcher.removeRecipe(<appliedenergistics2:material:22>); 
