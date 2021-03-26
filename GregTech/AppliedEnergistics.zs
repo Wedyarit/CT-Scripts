@@ -11,6 +11,7 @@ val assembler = RecipeMap.getByName("assembler");
 val mixer = RecipeMap.getByName("mixer");
 val chemical_reactor = RecipeMap.getByName("chemical_reactor");
 val metal_bender = RecipeMap.getByName("metal_bender");
+val blast_furnace = mods.gregtech.recipe.RecipeMap.getByName("blast_furnace");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -404,7 +405,72 @@ assembler.recipeBuilder()
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Кабели    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Кварцевое оптическое волокно
+recipes.remove(<appliedenergistics2:part:140>);
+blast_furnace.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32453>, <appliedenergistics2:material:3>)
+    .fluidInputs([<liquid:oxygen> * 1000])
+    .outputs(<appliedenergistics2:part:140>)
+    .property("temperature", 1200)
+    .duration(15 * 20)
+    .EUt(64)
+    .buildAndRegister();
 
+// МЭ стеклянный кабель - Изменчивый
+recipes.remove(<appliedenergistics2:part:16>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:140>, <appliedenergistics2:material:8>)
+    .fluidInputs([<liquid:glue> * 100])
+    .outputs(<appliedenergistics2:part:16>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ закрытый кабель - Изменчивый
+recipes.remove(<appliedenergistics2:part:36>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:16>, <minecraft:string> * 8, <gregtech:meta_item_1:18152> * 2)
+    .outputs(<appliedenergistics2:part:36>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ умный кабель - Изменчивый
+recipes.remove(<appliedenergistics2:part:56>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:36>, <minecraft:redstone>, <minecraft:glowstone_dust>)
+    .fluidInputs([<liquid:glue> * 100])
+    .outputs(<appliedenergistics2:part:56>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ плотный закрытый кабель - Изменчивый
+recipes.remove(<appliedenergistics2:part:516>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:36> * 4)
+    .fluidInputs([<liquid:glue> * 200])
+    .outputs(<appliedenergistics2:part:516>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ плотный умный кабель - Изменчивый
+recipes.remove(<appliedenergistics2:part:76>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:56> * 4)
+    .fluidInputs([<liquid:glue> * 200])
+    .outputs(<appliedenergistics2:part:76>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:516>, <minecraft:redstone> * 2, <minecraft:glowstone_dust> * 2)
+    .fluidInputs([<liquid:glue> * 200])
+    .outputs(<appliedenergistics2:part:76>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
