@@ -544,6 +544,153 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~    Карты улучшений    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Базовая карта
+recipes.remove(<appliedenergistics2:material:25>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:26> * 3, <gregtech:cable:237> * 3, <gregtech:meta_item_1:12026>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:19033>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:25>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:26> * 3, <gregtech:cable:237> * 3, <gregtech:meta_item_1:12026>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:19033>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:25>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Продвинутая карта
+recipes.remove(<appliedenergistics2:material:28>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:1> * 3, <gregtech:cable:237> * 3, <gregtech:cable:237>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12071>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:28>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:1> * 3, <gregtech:cable:237> * 3, <gregtech:cable:237>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12071>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:28>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Карта емкости
+recipes.remove(<appliedenergistics2:material:27>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:25>, <gregtech:meta_item_1:12202>, <gregtech:cable:237>, <gregtech:cable:26>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:27>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:25>, <gregtech:meta_item_1:12202>, <gregtech:cable:237>, <gregtech:cable:26>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:27>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Карта крафта
+recipes.remove(<appliedenergistics2:material:53>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:25>, <minecraft:crafting_table>, <gregtech:cable:237>, <gregtech:cable:26>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:53>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:25>, <minecraft:crafting_table>, <gregtech:cable:237>, <gregtech:cable:26>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:53>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Карта красного камня
+recipes.remove(<appliedenergistics2:material:26>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:25>, <gregtech:meta_item_1:12237>, <gregtech:cable:237>, <gregtech:cable:26>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:26>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:25>, <gregtech:meta_item_1:12237>, <gregtech:cable:237>, <gregtech:cable:26>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:26>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Карта инвертирования
+recipes.remove(<appliedenergistics2:material:31>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:28>, <gregtech:meta_item_1:12237>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:31>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:28>, <gregtech:meta_item_1:12237>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:31>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Карта нечеткости
+recipes.remove(<appliedenergistics2:material:29>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:28>, <forestry:crafting_material:1>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:29>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:28>, <forestry:crafting_material:1>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:29>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Карта ускорения
+recipes.remove(<appliedenergistics2:material:30>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:28>, <appliedenergistics2:material:9>, <gregtech:cable:237>, <gregtech:cable:1>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:30>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:28>, <appliedenergistics2:material:9>, <gregtech:cable:237>, <gregtech:cable:1>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:30>)
+    .duration(5 * 20)
+    .EUt(64)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Другое    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Гаечный ключ из незер-кварца
 recipes.remove(<appliedenergistics2:nether_quartz_wrench>);
