@@ -61,6 +61,7 @@ assembler.recipeBuilder()
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Процессоры    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Отпечатанный вычислительный контур
 Inscriber.removeRecipe(<appliedenergistics2:material:16>); 
@@ -186,5 +187,145 @@ assembler.recipeBuilder()
     .EUt(320)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~    Компоненты хранения    ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// 1К МЭ компонент хранения
+recipes.remove(<appliedenergistics2:material:35>);
+assembler.recipeBuilder()
+    .inputs(<ore:crystalCertusQuartz> * 4, <gregtech:meta_item_1:12237> * 4, <appliedenergistics2:material:22>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:35>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<ore:crystalCertusQuartz> * 4, <gregtech:meta_item_1:12237> * 4, <appliedenergistics2:material:22>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:35>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 4К МЭ компонент хранения
+recipes.remove(<appliedenergistics2:material:36>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:35> * 4, <gregtech:meta_item_1:12237> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:36>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:35> * 4, <gregtech:meta_item_1:12237> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:36>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 16К МЭ компонент хранения
+recipes.remove(<appliedenergistics2:material:37>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:36> * 4, <gregtech:meta_item_1:12330> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:37>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:36> * 4, <gregtech:meta_item_1:12330> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:37>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 64К МЭ компонент хранения
+recipes.remove(<appliedenergistics2:material:38>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:37> * 4, <gregtech:meta_item_1:12330> * 4, <appliedenergistics2:material:24>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:38>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:37> * 4, <gregtech:meta_item_1:12330> * 4, <appliedenergistics2:material:24>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:38>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 1К МЭ жидкостный компонент хранения
+recipes.remove(<appliedenergistics2:material:54>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:10> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:22>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:54>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:10> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:22>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:54>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 4К МЭ жидкостный компонент хранения
+recipes.remove(<appliedenergistics2:material:55>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:54> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:55>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:54> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:55>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 16К МЭ жидкостный компонент хранения
+recipes.remove(<appliedenergistics2:material:56>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:55> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:56>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:55> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:56>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// 64К МЭ жидкостный компонент хранения
+recipes.remove(<appliedenergistics2:material:57>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:56> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:24>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:soldering_alloy> * 72])
+    .outputs(<appliedenergistics2:material:57>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:56> * 4, <gregtech:meta_item_1:12128> * 4, <appliedenergistics2:material:24>, <gregtech:meta_item_1:12209>)
+    .fluidInputs([<liquid:tin> * 144])
+    .outputs(<appliedenergistics2:material:57>)
+    .duration(10 * 20)
+    .EUt(256)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 print("Initialized 'Applied Energistics 2'");
