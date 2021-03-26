@@ -1,16 +1,24 @@
 # Extra Utilities 2
 
 import crafttweaker.item.IItemStack;
+import mods.gregtech.recipe.RecipeMap;
 
 print("Initializing 'ExtraUtilities'...");
 
-// ------ // Удаление предметов // ------ //
-// Запрещенные предметы
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+val assembler = RecipeMap.getByName("assembler");
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Запрещенные и ненужные предметы
 var items = [<extrautils2:bagofholding>, <extrautils2:goldenlasso>, <extrautils2:goldenlasso:1>, <extrautils2:chickenring>, <extrautils2:chickenring:1>, <extrautils2:angelring>, <extrautils2:angelring:1>, <extrautils2:angelring:2>, <extrautils2:angelring:3>, <extrautils2:angelring:4>, <extrautils2:angelring:5>] as IItemStack[];
 for item in items {
-    recipes.remove(item);
-	item.addTooltip("§4§lВ данной сборке этот предмет выключен");
+    mods.jei.JEI.removeAndHide(item);
+	  item.addTooltip("§cВ данной сборке этот предмет выключен");
 }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Мусорные баки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Мусорка (Предметы)
@@ -71,8 +79,61 @@ recipes.addShaped("extrautils2_demonic_barrel", <extrautils2:drum:3>,
  [[<gtadditions:ga_meta_item:22>, <extrautils2:klein>, <gtadditions:ga_meta_item:22>],
   [<gtadditions:ga_meta_item:52>, <extrautils2:drum:2>, <gtadditions:ga_meta_item:52>],
   [<gtadditions:ga_meta_item:22>, <extrautils2:klein>, <gtadditions:ga_meta_item:22>]]);
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Шипы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Деревянный шип
+recipes.remove(<extrautils2:spike_wood>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12196> * 5, <gregtech:meta_item_1:14033> * 8, <gregtech:meta_item_1:17033> * 12, <gregtech:meta_item_1:18033>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:spike_wood>)
+    .duration(15 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
+// Каменный шип
+recipes.remove(<extrautils2:spike_stone>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:spike_wood>, <gregtech:meta_item_1:17033> * 12, <gregtech:meta_item_1:12328> * 5)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:spike_stone>)
+    .duration(15 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
+// Золотой шип
+recipes.remove(<extrautils2:spike_gold>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17184> * 12, <gregtech:meta_item_1:12026> * 5, <extrautils2:spike_stone>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:spike_gold>)
+    .duration(15 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
+// Железный шип
+recipes.remove(<extrautils2:spike_iron>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17072> * 12, <gregtech:meta_item_1:12033> * 5, <extrautils2:spike_gold>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:spike_iron>)
+    .duration(15 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
+// Алмазный шип
+recipes.remove(<extrautils2:spike_diamond>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17235> * 12, <gregtech:meta_item_1:12111> * 5, <extrautils2:spike_iron>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:spike_diamond>)
+    .duration(15 * 20)
+    .EUt(48)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 // Бутылка Кляйна
 recipes.remove(<extrautils2:klein>);
