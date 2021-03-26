@@ -86,10 +86,10 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 // Флаксомагнит (Синаловый)
-recipes.remove(<thermalinnovation:magnet:4>);
+recipes.remove(<thermalinnovation:magnet:3>);
 assembler.recipeBuilder()
     .inputs(<thermalinnovation:magnet:2>, <thermalfoundation:upgrade:2>, <gregtech:meta_item_1:14235> * 4, <gregtech:meta_item_1:14299> * 9, <gregtech:meta_item_1:19235> * 3, <gregtech:cable:1> * 2, <gregtech:meta_item_1:19237> * 2)
-    .outputs(<thermalinnovation:magnet:4>)
+    .outputs(<thermalinnovation:magnet:3>)
     .duration(20 * 20)
     .EUt(512)
     .buildAndRegister();
