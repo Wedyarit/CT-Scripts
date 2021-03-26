@@ -328,4 +328,84 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Терминалы    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Осветительная панель
+recipes.remove(<appliedenergistics2:part:180>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12237>, <gregtech:cable:237> * 4, <gregtech:meta_item_1:12330>, <gregtech:meta_item_1:12209>)
+    .outputs(<appliedenergistics2:part:180>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+
+// МЭ монитор хранения
+recipes.remove(<appliedenergistics2:part:400>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:180>, <appliedenergistics2:part:280>, <gregtech:cable:237>)
+    .outputs(<appliedenergistics2:part:400>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+    
+// МЭ монитор преобразования
+recipes.remove(<appliedenergistics2:part:420>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:400>, <appliedenergistics2:material:43>, <appliedenergistics2:material:44>, <gregtech:cable:18> * 2)
+    .outputs(<appliedenergistics2:part:420>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+
+// МЭ терминал
+recipes.remove(<appliedenergistics2:part:380>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:180>, <appliedenergistics2:material:22>, <appliedenergistics2:material:43>, <appliedenergistics2:material:44>, <gregtech:cable:18> * 4)
+    .outputs(<appliedenergistics2:part:380>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+
+// МЭ терминал крафта
+recipes.remove(<appliedenergistics2:part:360>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:380>, <appliedenergistics2:material:23>, <appliedenergistics2:material:53>, <gregtech:cable:18> * 2)
+    .outputs(<appliedenergistics2:part:360>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+
+// МЭ терминал интерфейсов
+recipes.remove(<appliedenergistics2:part:480>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:180>, <appliedenergistics2:material:24>, <appliedenergistics2:interface>, <gregtech:cable:26> * 2)
+    .outputs(<appliedenergistics2:part:480>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+
+// МЭ терминал шаблонов
+recipes.remove(<appliedenergistics2:part:340>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:360>, <appliedenergistics2:material:24>, <gregtech:cable:26>)
+    .outputs(<appliedenergistics2:part:340>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+
+// МЭ жидкостный терминал интерфейсов 
+recipes.remove(<appliedenergistics2:part:520>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:380>, <appliedenergistics2:part:420>, <appliedenergistics2:material:22>, <gregtech:meta_item_1:12128>, <gregtech:cable:18> * 4)
+    .outputs(<appliedenergistics2:part:520>)
+    .duration(20 * 20)
+    .EUt(196)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Кабели    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 print("Initialized 'Applied Energistics 2'");
