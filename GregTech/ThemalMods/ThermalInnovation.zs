@@ -9,7 +9,7 @@ val assembler = RecipeMap.getByName("assembler");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Буры    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Флаксобуры    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Флаксобур (основной)
 recipes.remove(<thermalinnovation:drill>);
 assembler.recipeBuilder()
@@ -53,6 +53,54 @@ assembler.recipeBuilder()
     .outputs(<thermalinnovation:drill:4>)
     .duration(30 * 20)
     .EUt(2048)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Флаксомагниты    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Флаксомагнит (Основной)
+recipes.remove(<thermalinnovation:magnet>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32518>, <thermalfoundation:material:515>, <gregtech:meta_item_1:14297> * 8, <gregtech:meta_item_1:14035> * 4, <gregtech:meta_item_1:19035> * 3, <gregtech:cable:71> * 2, <gregtech:meta_item_1:19237> * 2)
+    .outputs(<thermalinnovation:magnet>)
+    .duration(20 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Флаксомагнит (Усиленный)
+recipes.remove(<thermalinnovation:magnet:1>);
+assembler.recipeBuilder()
+    .inputs(<thermalinnovation:magnet>, <thermalfoundation:upgrade>, <gregtech:meta_item_1:14298> * 8, <gregtech:meta_item_1:14183> * 4, <gregtech:meta_item_1:19183> * 3, <gregtech:cable:18> * 2, <gregtech:meta_item_1:19237> * 2)
+    .outputs(<thermalinnovation:magnet:1>)
+    .duration(20 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// Флаксомагнит (Укрепленный)
+recipes.remove(<thermalinnovation:magnet:2>);
+assembler.recipeBuilder()
+    .inputs(<thermalinnovation:magnet:1>, <thermalfoundation:upgrade:1>, <gregtech:meta_item_1:14298> * 8, <gregtech:meta_item_1:14072> * 4, <gregtech:meta_item_1:19072> * 3, <gregtech:cable:112> * 2, <gregtech:meta_item_1:19237> * 2)
+    .outputs(<thermalinnovation:magnet:2>)
+    .duration(20 * 20)
+    .EUt(512)
+    .buildAndRegister();
+
+// Флаксомагнит (Синаловый)
+recipes.remove(<thermalinnovation:magnet:4>);
+assembler.recipeBuilder()
+    .inputs(<thermalinnovation:magnet:2>, <thermalfoundation:upgrade:2>, <gregtech:meta_item_1:14235> * 4, <gregtech:meta_item_1:14299> * 9, <gregtech:meta_item_1:19235> * 3, <gregtech:cable:1> * 2, <gregtech:meta_item_1:19237> * 2)
+    .outputs(<thermalinnovation:magnet:4>)
+    .duration(20 * 20)
+    .EUt(512)
+    .buildAndRegister();
+
+// Флаксомагнит (Резонирующий)
+recipes.remove(<thermalinnovation:magnet:4>);
+assembler.recipeBuilder()
+    .inputs(<thermalinnovation:magnet:3>, <thermalfoundation:upgrade:3>, <gregtech:meta_item_1:14308> * 4, <gregtech:meta_item_1:14299> * 9, <gregtech:meta_item_1:19308> * 3, <gregtech:cable:51> * 2, <gregtech:meta_item_1:19237> * 2)
+    .outputs(<thermalinnovation:magnet:4>)
+    .duration(20 * 20)
+    .EUt(512)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
