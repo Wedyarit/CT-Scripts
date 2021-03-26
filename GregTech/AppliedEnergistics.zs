@@ -474,4 +474,69 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Шины    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// МЭ шина экспорта
+recipes.remove(<appliedenergistics2:part:260>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12033> * 4, <appliedenergistics2:material:43>, <gregtech:meta_item_1:32632>)
+    .outputs(<appliedenergistics2:part:260>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ жидкостная шина экспорта
+recipes.remove(<appliedenergistics2:part:261>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12033> * 2, <appliedenergistics2:material:43>, <gregtech:meta_item_1:32612>, <gregtech:meta_item_1:12128> * 2)
+    .outputs(<appliedenergistics2:part:261>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ шина импорта
+recipes.remove(<appliedenergistics2:part:240>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12033> * 4, <appliedenergistics2:material:44>, <gregtech:meta_item_1:32632>)
+    .outputs(<appliedenergistics2:part:240>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ жидкостная шина импорта
+recipes.remove(<appliedenergistics2:part:241>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12033> * 2, <appliedenergistics2:material:44>, <gregtech:meta_item_1:32612>, <gregtech:meta_item_1:12128> * 2)
+    .outputs(<appliedenergistics2:part:241>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ излучатель уровня
+recipes.remove(<appliedenergistics2:part:280>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:140>, <appliedenergistics2:material:23>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:32450>, <gregtech:meta_item_1:19237> * 2)
+    .outputs(<appliedenergistics2:part:280>)
+    .duration(15 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ жидкостный излучатель уровня
+recipes.remove(<appliedenergistics2:part:281>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:140>, <appliedenergistics2:material:23>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:32450>, <gregtech:meta_item_1:19237> * 2, <gregtech:meta_item_1:15216>)
+    .outputs(<appliedenergistics2:part:281>)
+    .duration(15 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// МЭ шина переключения
+recipes.remove(<appliedenergistics2:part:80>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:part:16> * 2, <gregtech:meta_item_1:19237> * 2, <gregtech:meta_item_2:16237>)
+    .outputs(<appliedenergistics2:part:80>)
+    .duration(15 * 20)
+    .EUt(64)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 print("Initialized 'Applied Energistics 2'");
