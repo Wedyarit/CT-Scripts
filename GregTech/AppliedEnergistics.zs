@@ -14,6 +14,10 @@ val metal_bender = RecipeMap.getByName("metal_bender");
 val blast_furnace = mods.gregtech.recipe.RecipeMap.getByName("blast_furnace");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+val hammer = <ore:craftingToolHardHammer>.transformDamage(4);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Материалы    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Небесный камень
@@ -538,5 +542,68 @@ assembler.recipeBuilder()
     .EUt(64)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Другое    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Гаечный ключ из незер-кварца
+recipes.remove(<appliedenergistics2:nether_quartz_wrench>);
+recipes.addShaped("appliedenergistics2_nether_quartz_wrench", <appliedenergistics2:nether_quartz_wrench>,
+ [[<gregtech:meta_item_1:12201>, hammer, <gregtech:meta_item_1:12201>],
+  [null, <gregtech:meta_item_1:12201>, null],
+  [<gregtech:meta_item_1:12201>, null, <gregtech:meta_item_1:12201>]]);
+
+// Гаечный ключ из истинного кварца
+recipes.remove(<appliedenergistics2:certus_quartz_wrench>);
+recipes.addShaped("appliedenergistics2_certus_quartz_wrench", <appliedenergistics2:certus_quartz_wrench>,
+ [[<gregtech:meta_item_1:12202>, hammer, <gregtech:meta_item_1:12202>],
+  [null, <gregtech:meta_item_1:12202>, null],
+  [<gregtech:meta_item_1:12202>, null, <gregtech:meta_item_1:12202>]]);
+
+// Сетевой инструмент
+recipes.remove(<appliedenergistics2:network_tool>);
+assembler.recipeBuilder()
+    .inputs(<ore:itemQuartzWrench>, <appliedenergistics2:part:180>, <appliedenergistics2:material:23>, <gregtech:cable:18> * 2)
+    .outputs(<appliedenergistics2:network_tool>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Пустой шаблон
+recipes.remove(<appliedenergistics2:material:52>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:quartz_glass>, <gregtech:meta_item_1:12330> * 4, <appliedenergistics2:material:10>, <gregtech:meta_item_1:12033> * 4)
+    .outputs(<appliedenergistics2:material:52>)
+    .duration(5 * 20)
+    .EUt(96)
+    .buildAndRegister();
+
+// МЭ корпус ячейки хранения
+recipes.remove(<appliedenergistics2:material:39>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:quartz_glass>, <gregtech:meta_item_1:12237> * 4, <gregtech:meta_item_1:12184> * 4)
+    .outputs(<appliedenergistics2:material:39>)
+    .duration(5 * 20)
+    .EUt(96)
+    .buildAndRegister();
+
+// Биометрическая карта
+recipes.remove(<appliedenergistics2:biometric_card>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:24>, <gregtech:cable:26>, <gregtech:cable:237>, <gregtech:meta_item_2:16026> * 2, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_1:19033> * 4)
+    .outputs(<appliedenergistics2:biometric_card>)
+    .duration(10 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Карта памяти
+recipes.remove(<appliedenergistics2:memory_card>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:26>, <gregtech:cable:237>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16026> * 2, <gregtech:meta_item_1:19033> * 2)
+    .outputs(<appliedenergistics2:memory_card>)
+    .duration(10 * 20)
+    .EUt(128)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 print("Initialized 'Applied Energistics 2'");
