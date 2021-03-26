@@ -1,7 +1,7 @@
 # DragonsRadio
 
-print("Initializing 'DragonsRadio-0.1'...");
+print("Initializing 'DragonsRadio'...");
 
 recipes.remove(<dragons_radio:radio>);
 
-print("Initialized 'DragonsRadio-server-0.1'");
+print("Initialized 'DragonsRadio-server'");

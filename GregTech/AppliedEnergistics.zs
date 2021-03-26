@@ -46,6 +46,17 @@ chemical_reactor.recipeBuilder()
     .EUt(24)
     .buildAndRegister();
 
+// Изменчивая жемчужина
+recipes.remove(<appliedenergistics2:material:9>);
+blast_furnace.recipeBuilder()
+    .inputs(<appliedenergistics2:material:8> * 8, <minecraft:ender_pearl>)
+    .fluidInputs([<liquid:nitrogen> * 1000])
+    .outputs(<appliedenergistics2:material:9>)
+    .property("temperature", 1500)
+    .duration(60 * 20)
+    .EUt(120)
+    .buildAndRegister();
+
 // Ядро формирования
 recipes.remove(<appliedenergistics2:material:43>); 
 assembler.recipeBuilder()
@@ -369,6 +380,15 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:part:520>)
     .duration(20 * 20)
     .EUt(196)
+    .buildAndRegister();
+
+// Беспроводной терминал
+recipes.remove(<appliedenergistics2:wireless_terminal>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:dense_energy_cell>, <appliedenergistics2:part:380>, <appliedenergistics2:material:41>, <appliedenergistics2:part:16> * 2, <gregtech:cable:26> * 2, <gregtech:meta_item_2:32435> * 2)
+    .outputs(<appliedenergistics2:wireless_terminal>)
+    .duration(20 * 20)
+    .EUt(1024)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -1054,6 +1074,34 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:light_detector>)
     .duration(3 * 20)
     .EUt(24)
+    .buildAndRegister();
+
+// Беспроводной приемник
+recipes.remove(<appliedenergistics2:material:41>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32692>, <appliedenergistics2:material:9>, <appliedenergistics2:part:16> * 2, <gregtech:cable:26> * 2, <gregtech:meta_item_1:14184> * 3, <gregtech:meta_item_1:18184> * 2, <gregtech:meta_item_1:17184> * 2, <gregtech:meta_item_1:19071> * 2)
+    .outputs(<appliedenergistics2:material:41>)
+    .duration(15 * 20)
+    .EUt(320)
+    .buildAndRegister();
+
+
+// МЭ беспроводная точка доступа
+recipes.remove(<appliedenergistics2:wireless_access_point>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:material:41>, <appliedenergistics2:material:23>, <gregtech:meta_item_1:12184> * 4, <appliedenergistics2:part:16> * 2, <gregtech:cable:26> * 2, <gregtech:meta_item_1:18152> * 2)
+    .outputs(<appliedenergistics2:wireless_access_point>)
+    .duration(20 * 20)
+    .EUt(512)
+    .buildAndRegister();
+
+// Беспроводной усилитель
+recipes.remove(<appliedenergistics2:material:42>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32692>, <gregtech:cable:26> * 4, <gregtech:meta_item_1:19184> * 4, <gregtech:meta_item_1:19237> * 4, <gregtech:meta_item_1:19237>, <gregtech:meta_item_1:19237>)
+    .outputs(<appliedenergistics2:material:42>)
+    .duration(10 * 20)
+    .EUt(512)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
