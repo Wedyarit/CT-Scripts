@@ -54,11 +54,28 @@ assembler.recipeBuilder()
     .duration(20 * 20)
     .EUt(2048)
     .buildAndRegister();
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Механизмы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Рамка энергетической ячейки
+recipes.remove(<thermalexpansion:frame:128>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:14035> * 48, <gregtech:meta_item_1:19112> * 24, <gregtech:meta_item_1:18184> * 24)
+    .outputs(<thermalexpansion:frame:128>)
+    .duration(60 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Энергетическая ячейка
+recipes.remove(<thermalexpansion:cell>);
+assembler.recipeBuilder()
+    .inputs(<thermalfoundation:material:515> * 6, <appliedenergistics2:energy_cell> * 5, <thermalexpansion:frame:128>, <gregtech:meta_item_1:12237> * 6)
+    .outputs(<thermalexpansion:cell>)
+    .duration(20 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
 // Магмовый тигель
 recipes.remove(<thermalexpansion:machine:6>);
 recipes.addShaped("thermalexpansion_magma_crucible", <thermalexpansion:machine:6>,
@@ -86,7 +103,6 @@ recipes.addShaped("thermalexpansion_water_storage", <thermalexpansion:device>,
  [[<gregtech:meta_item_1:12001>, <minecraft:bucket>, <gregtech:meta_item_1:12001>],
   [<ore:blockGlass>, <gregtech:machine:501>, <ore:blockGlass>],
   [<gregtech:meta_item_1:12001>, <gregtech:meta_item_1:32610>, <gregtech:meta_item_1:12001>]]);
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -125,8 +141,111 @@ recipes.addShaped("thermalexpansion_extension_fragmentation", <thermalexpansion:
  [[<gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>],
   [<thermalfoundation:material:1026>, <thermalfoundation:material:515>, <thermalfoundation:material:1026>],
   [<gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>]]);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Резервуары  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Переносной резервуар
+recipes.remove(<thermalexpansion:tank>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12087> * 2, <gregtech:meta_item_1:14087> * 8, <gregtech:meta_item_1:17087> * 8, <gregtech:meta_item_1:14184> * 4, <gregtech:meta_item_1:18184> * 8, <gregtech:meta_item_1:18184> * 4, <minecraft:glass_pane> * 4)
+    .outputs(<thermalexpansion:tank>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Резервуар (Основной)
+recipes.remove(<thermalexpansion:reservoir>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32454> * 2, <gtadditions:ga_meta_item:87> * 2, <gregtech:meta_item_1:12087> * 2, <gregtech:meta_item_1:18001> * 2)
+    .outputs(<thermalexpansion:reservoir>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Резервуар (Усиленный)
+recipes.remove(<thermalexpansion:reservoir:1>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12183> * 2, <gtadditions:ga_meta_item:183> * 2, <thermalexpansion:reservoir>)
+    .outputs(<thermalexpansion:reservoir:1>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Резервуар (Укрепленный)
+recipes.remove(<thermalexpansion:reservoir:2>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12072> * 2, <gtadditions:ga_meta_item:72> * 2, <thermalexpansion:reservoir:1>)
+    .outputs(<thermalexpansion:reservoir:2>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Резервуар (Синаловый)
+recipes.remove(<thermalexpansion:reservoir:3>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12235> * 2, <gtadditions:ga_meta_item:235> * 2, <thermalexpansion:reservoir:2>)
+    .outputs(<thermalexpansion:reservoir:3>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Резервуар (Резонирующий)
+recipes.remove(<thermalexpansion:reservoir:4>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12308> * 2, <gtadditions:ga_meta_item:308> * 2, <thermalexpansion:reservoir:3>)
+    .outputs(<thermalexpansion:reservoir:4>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Лейки ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Лейка (Основная)
+recipes.remove(<thermalcultivation:watering_can>);
+assembler.recipeBuilder()
+    .inputs(<thermalexpansion:reservoir>, <gtadditions:ga_meta_item:87> * 2, <gregtech:meta_item_1:12087> * 2, <gregtech:meta_item_1:18095>)
+    .outputs(<thermalcultivation:watering_can>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Лейка (Усиленная)
+recipes.remove(<thermalcultivation:watering_can:1>);
+assembler.recipeBuilder()
+    .inputs(<thermalexpansion:reservoir:1>, <gregtech:meta_item_1:19183> * 4, <thermalcultivation:watering_can>)
+    .outputs(<thermalcultivation:watering_can:1>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Лейка (Укрепленная)
+recipes.remove(<thermalcultivation:watering_can:2>);
+assembler.recipeBuilder()
+    .inputs(<thermalexpansion:reservoir:2>, <gregtech:meta_item_1:19072> * 4, <thermalcultivation:watering_can:1>)
+    .outputs(<thermalcultivation:watering_can:2>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Лейка (Синаловая)
+recipes.remove(<thermalcultivation:watering_can:3>);
+assembler.recipeBuilder()
+    .inputs(<thermalexpansion:reservoir:3>, <gregtech:meta_item_1:19235> * 4, <thermalcultivation:watering_can:2>)
+    .outputs(<thermalcultivation:watering_can:3>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Лейка (Резонирующая)
+recipes.remove(<thermalcultivation:watering_can:4>);
+assembler.recipeBuilder()
+    .inputs(<thermalexpansion:reservoir:4>, <gregtech:meta_item_1:19308> * 4, <thermalcultivation:watering_can:3>)
+    .outputs(<thermalcultivation:watering_can:4>)
+    .duration(16 * 20)
+    .EUt(16)
+    .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 print("Initialized 'ThermalExpansion'");
