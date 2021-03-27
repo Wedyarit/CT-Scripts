@@ -103,6 +103,13 @@ recipes.addShaped("thermalexpansion_water_storage", <thermalexpansion:device>,
  [[<gregtech:meta_item_1:12001>, <minecraft:bucket>, <gregtech:meta_item_1:12001>],
   [<ore:blockGlass>, <gregtech:machine:501>, <ore:blockGlass>],
   [<gregtech:meta_item_1:12001>, <gregtech:meta_item_1:32610>, <gregtech:meta_item_1:12001>]]);
+
+// Лексический трансмутатор
+recipes.remove(<thermalexpansion:device:7>);
+recipes.addShaped("thermalexpansion_lexical_transmutator", <thermalexpansion:device:7>,
+ [[<gregtech:meta_item_1:12001>, <thermalfoundation:tome_lexicon>, <gregtech:meta_item_1:12001>],
+  [<gregtech:meta_item_1:32630>, <gregtech:machine:501>, <gregtech:meta_item_1:32630>],
+  [<gregtech:meta_item_1:12001>, <gregtech:meta_item_1:12001>, <gregtech:meta_item_1:12001>]]);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
