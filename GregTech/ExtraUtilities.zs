@@ -7,6 +7,7 @@ print("Initializing 'ExtraUtilities'...");
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 val assembler = RecipeMap.getByName("assembler");
+val blast_furnace = mods.gregtech.recipe.RecipeMap.getByName("blast_furnace");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -134,6 +135,65 @@ assembler.recipeBuilder()
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+// Жидкостный фильтр
+recipes.remove(<extrautils2:filterfluids>);
+assembler.recipeBuilder()
+    .inputs(<ore:stickWood> * 4, <gregtech:meta_item_1:12128> * 4, <forestry:crafting_material:3>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:filterfluids>)
+    .duration(5 * 20)
+    .EUt(20)
+    .buildAndRegister();
+
+// Фильтр
+recipes.remove(<extrautils2:filter>);
+assembler.recipeBuilder()
+    .inputs(<ore:stickWood> * 4, <gregtech:meta_item_1:12215> * 4, <forestry:crafting_material:3>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:filter>)
+    .duration(5 * 20)
+    .EUt(20)
+    .buildAndRegister();
+
+// Жезл строителя
+recipes.remove(<extrautils2:itembuilderswand>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32694>, <gregtech:meta_item_1:32674>, <forestry:crafting_material:1>, <gregtech:cable:51> * 8, <gregtech:meta_item_1:19228> * 2, <forestry:oak_stick>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:itembuilderswand>)
+    .duration(15 * 20)
+    .EUt(8192)
+    .buildAndRegister();
+
+// Жезл разрушения
+recipes.remove(<extrautils2:itemdestructionwand>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32684>, <gregtech:meta_item_1:32674>, <forestry:crafting_material:1>, <gregtech:cable:51> * 8, <gregtech:meta_item_1:19228> * 2, <forestry:oak_stick>)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<extrautils2:itemdestructionwand>)
+    .duration(15 * 20)
+    .EUt(8192)
+    .buildAndRegister();
+
+// Эндер лилия
+blast_furnace.recipeBuilder()
+    .inputs(<appliedenergistics2:material:10>, <forestry:crafting_material:1> * 5)
+    .fluidInputs([<liquid:helium> * 7000])
+    .outputs(<extrautils2:enderlilly>)
+    .property("temperature", 3000)
+    .duration(300 * 20)
+    .EUt(480)
+    .buildAndRegister();
+
+// Красная орхидея
+blast_furnace.recipeBuilder()
+    .inputs(<appliedenergistics2:material:10>, <gregtech:meta_item_1:12215> * 5)
+    .fluidInputs([<liquid:argon> * 3000])
+    .outputs(<extrautils2:redorchid>)
+    .property("temperature", 1000)
+    .duration(30 * 20)
+    .EUt(120)
+    .buildAndRegister();
 
 // Бутылка Кляйна
 recipes.remove(<extrautils2:klein>);

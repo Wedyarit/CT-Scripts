@@ -11,6 +11,11 @@ val assembler = RecipeMap.getByName("assembler");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+val hammer = <ore:craftingToolHardHammer>.transformDamage(4);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Пчеловодство    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Пропитанный корпус
 Carpenter.removeRecipe(<forestry:impregnated_casing>);
@@ -134,6 +139,74 @@ recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
   [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>]]);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+// Экран среды обитания
+Carpenter.removeRecipe(<forestry:habitat_screen>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32489>, <gregtech:meta_item_2:32489> * 2, <gregtech:meta_item_1:12184> * 6)
+    .outputs(<forestry:habitat_screen>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
+// Секретер
+Carpenter.removeRecipe(<forestry:escritoire>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12196> * 6, <forestry:oak_stick> * 4, <gregtech:meta_item_1:19095> * 4, <gregtech:meta_item_1:17095> * 4, <gregtech:meta_item_1:16095> * 4)
+    .fluidInputs([<liquid:seed.oil> * 500])
+    .outputs(<forestry:escritoire>)
+    .duration(10 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Темная свеча
+Carpenter.removeRecipe(<forestry:candle>);
+assembler.recipeBuilder()
+    .inputs(<forestry:crafting_material:2>, <forestry:crafting_material:2>)
+    .fluidInputs([<liquid:water> * 100])
+    .outputs(<forestry:candle>)
+    .duration(3 * 20)
+    .EUt(10)
+    .buildAndRegister();
+
+// Тканный шелк
+Carpenter.removeRecipe(<forestry:crafting_material:3>);
+assembler.recipeBuilder()
+    .inputs(<forestry:crafting_material:2> * 9)
+    .fluidInputs([<liquid:water> * 500])
+    .outputs(<forestry:crafting_material:3>)
+    .duration(10 * 20)
+    .EUt(24)
+    .buildAndRegister();
+
+// Рассеивающий заряд
+Carpenter.removeRecipe(<forestry:crafting_material:4>);
+assembler.recipeBuilder()
+    .inputs(<forestry:honeydew> * 2, <forestry:royal_jelly> * 4, <forestry:can>, <minecraft:gunpowder> * 2)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<forestry:crafting_material:4>)
+    .duration(20 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Капсула йода
+Carpenter.removeRecipe(<forestry:iodine_capsule>);
+assembler.recipeBuilder()
+    .inputs(<forestry:honey_drop> * 2, <forestry:pollen> * 4, <forestry:pollen>, <forestry:pollen> * 2)
+    .fluidInputs([<liquid:water> * 1000])
+    .outputs(<forestry:iodine_capsule>)
+    .duration(20 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Пропитанная обшивка
+Carpenter.removeRecipe(<forestry:crafting_material:6>);
+assembler.recipeBuilder()
+    .inputs(<forestry:pollen>, <forestry:royal_jelly>, <gregtech:meta_item_1:12196> * 3, <forestry:beeswax> * 4)
+    .fluidInputs([<liquid:water> * 500])
+    .outputs(<forestry:crafting_material:6>)
+    .duration(30 * 20)
+    .EUt(256)
+    .buildAndRegister();
 
 // Гибкий корпус
 ThermionicFabricator.removeCast(<forestry:flexible_casing>);
@@ -149,9 +222,39 @@ Carpenter.removeRecipe(<forestry:soldering_iron>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:19391>, <gregtech:meta_item_1:19391>, <gregtech:meta_item_1:19391>, <gregtech:meta_item_1:14183>, <gregtech:meta_item_1:14183>, <gregtech:meta_item_2:32456>, <gregtech:meta_item_1:14071>, <gregtech:meta_item_1:19391>, <forestry:oak_stick>)
     .outputs(<forestry:soldering_iron>)
+    .duration(5 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Очки
+Carpenter.removeRecipe(<forestry:naturalist_helmet>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:15209> * 2, <gregtech:cable:71> * 3)
+    .outputs(<forestry:naturalist_helmet>)
     .duration(12 * 20)
     .EUt(32)
     .buildAndRegister();
+
+// Бывшая среда обитания
+recipes.remove(<forestry:habitat_former>);
+recipes.addShaped("forestry_habitat_former", <forestry:habitat_former>,
+ [[<ore:blockGlass>, <forestry:chipsets:3>, <ore:blockGlass>],
+  [<gregtech:meta_item_1:32612>, <forestry:hardened_machine>, <gregtech:meta_item_1:32612>],
+  [<gregtech:meta_item_2:32491>, <gregtech:meta_item_1:32612>, <gregtech:meta_item_2:32491>]]);
+
+// Бак для дождя
+recipes.remove(<forestry:raintank>);
+recipes.addShaped("forestry_raintank", <forestry:raintank>,
+ [[<gregtech:meta_item_1:12184>, null, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:12184>, hammer, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>]]);
+
+// Пипетка
+recipes.remove(<forestry:pipette>);
+recipes.addShaped("forestry_pipette", <forestry:pipette>,
+ [[null, null, <gregtech:meta_item_1:9152>],
+  [null, <gregtech:meta_item_1:18152>, null],
+  [<gregtech:meta_item_2:32454>, null, null]]);
 
 // Дымарь
 recipes.remove(<forestry:smoker>);
