@@ -103,6 +103,14 @@ mixer.recipeBuilder()
     .duration(10 * 20)
     .EUt(10)
     .buildAndRegister();
+
+// Стержень Близза
+mixer.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2219>, <forestry:crafting_material:5>)
+    .outputs(<thermalfoundation:material:2048>)
+    .duration(15 * 20)
+    .EUt(32)
+    .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 

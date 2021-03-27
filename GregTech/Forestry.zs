@@ -139,6 +139,36 @@ recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
   [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>]]);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Cans  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Банка
+Carpenter.removeRecipe(<forestry:can>);
+assembler.recipeBuilder()
+    .inputs(<ore:paneGlass>, <gregtech:meta_item_1:12071> * 2)
+    .outputs(<forestry:can> * 2)
+    .duration(12 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Восковая капсула
+Carpenter.removeRecipe(<forestry:capsule>);
+assembler.recipeBuilder()
+    .inputs(<ore:paneGlass>, <forestry:beeswax> * 2)
+    .outputs(<forestry:capsule>)
+    .duration(12 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Огнеупорная капсула
+Carpenter.removeRecipe(<forestry:refractory>);
+assembler.recipeBuilder()
+    .inputs(<ore:paneGlass>, <forestry:refractory_wax> * 2)
+    .outputs(<forestry:refractory>)
+    .duration(12 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+
 // Экран среды обитания
 Carpenter.removeRecipe(<forestry:habitat_screen>);
 assembler.recipeBuilder()
@@ -147,6 +177,7 @@ assembler.recipeBuilder()
     .duration(10 * 20)
     .EUt(64)
     .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Секретер
 Carpenter.removeRecipe(<forestry:escritoire>);
@@ -231,8 +262,8 @@ Carpenter.removeRecipe(<forestry:naturalist_helmet>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:15209> * 2, <gregtech:cable:71> * 3)
     .outputs(<forestry:naturalist_helmet>)
-    .duration(12 * 20)
-    .EUt(32)
+    .duration(5 * 20)
+    .EUt(12)
     .buildAndRegister();
 
 // Бывшая среда обитания
