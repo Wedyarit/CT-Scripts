@@ -1,13 +1,7 @@
+#priority 1
 # ThermalFoundation
 
-import mods.gregtech.recipe.RecipeMap;
-
 print("Initializing 'ThermalFoundation'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-val mixer = RecipeMap.getByName("mixer");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Наборы обновления  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

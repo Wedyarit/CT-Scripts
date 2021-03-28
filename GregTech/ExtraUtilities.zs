@@ -1,14 +1,9 @@
+#priority 1
 # Extra Utilities 2
 
 import crafttweaker.item.IItemStack;
-import mods.gregtech.recipe.RecipeMap;
 
 print("Initializing 'ExtraUtilities'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-val blast_furnace = mods.gregtech.recipe.RecipeMap.getByName("blast_furnace");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

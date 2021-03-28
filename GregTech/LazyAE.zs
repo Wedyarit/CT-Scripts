@@ -1,14 +1,11 @@
+#priority 1
 # Lazy AE2
 
-import mods.gregtech.recipe.RecipeMap;
 import mods.appliedenergistics2.Inscriber;
 import mods.threng.Etcher;
 
 print("Initializing 'Lazy AE2'...");
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Материалы    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Изменчивая логическая единица

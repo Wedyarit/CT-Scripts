@@ -1,12 +1,8 @@
+#priority 1
 # Scannable
-
-import mods.gregtech.recipe.RecipeMap;
 
 print("Initializing 'Scannable'...");
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Сканер
 recipes.remove(<scannable:scanner>);

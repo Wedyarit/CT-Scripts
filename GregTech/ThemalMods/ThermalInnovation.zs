@@ -1,12 +1,7 @@
+#priority 1
 # ThermalInnovation
 
-import mods.gregtech.recipe.RecipeMap;
-
 print("Initializing 'ThermalInnovation'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Флаксобуры    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

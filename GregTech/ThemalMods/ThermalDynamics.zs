@@ -1,20 +1,10 @@
+#priority 1
 # ThermalDynamics
 
 import mods.thermalexpansion.Transposer;
-import mods.gregtech.recipe.RecipeMap;
 import crafttweaker.item.IItemStack;
 
 print("Initializing 'ThermalDynamics'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val hammer = <ore:craftingToolHardHammer>.transformDamage(4);
-val wrench = <ore:craftingToolWrench>.transformDamage(4);
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Фильтры  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

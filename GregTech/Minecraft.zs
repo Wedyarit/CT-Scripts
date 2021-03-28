@@ -1,3 +1,4 @@
+#priority 1
 # Minecraft
 
 import crafttweaker.item.IItemStack;

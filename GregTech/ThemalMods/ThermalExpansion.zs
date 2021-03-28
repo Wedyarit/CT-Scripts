@@ -1,12 +1,7 @@
+#priority 1
 # ThermalExpansion
 
-import mods.gregtech.recipe.RecipeMap;
-
 print("Initializing 'ThermalExpansion'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Конденсаторы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -76,12 +71,19 @@ assembler.recipeBuilder()
     .EUt(256)
     .buildAndRegister();
 
-// Магмовый тигель
-recipes.remove(<thermalexpansion:machine:6>);
-recipes.addShaped("thermalexpansion_magma_crucible", <thermalexpansion:machine:6>,
+// Лесопилка
+recipes.remove(<thermalexpansion:machine:2>);
+recipes.addShaped("thermalexpansion_sawmill", <thermalexpansion:machine:2>,
  [[<gregtech:meta_item_1:12183>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12183>],
   [<gregtech:meta_item_1:12183>, <gregtech:machine:502>, <gregtech:meta_item_1:12183>],
   [<thermalfoundation:material:513>, <gregtech:meta_item_2:32489>, <thermalfoundation:material:513>]]);
+
+// Магмовый тигель
+recipes.remove(<thermalexpansion:machine:6>);
+recipes.addShaped("thermalexpansion_magma_crucible", <thermalexpansion:machine:6>,
+ [[<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32721>, <gregtech:meta_item_1:12183>],
+  [<gregtech:meta_item_1:32631>, <gregtech:machine_casing:2>, <gregtech:meta_item_1:32631>],
+  [<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_1:12183>]]);
 
 // Энергетический зарядник
 recipes.remove(<thermalexpansion:machine:9>);

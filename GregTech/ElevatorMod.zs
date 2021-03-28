@@ -1,12 +1,8 @@
+#priority 1
 # ElevatorMod
-
-import mods.gregtech.recipe.RecipeMap;
 
 print("Initializing 'ElevatorMod'...");
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Лифт
 recipes.remove(<elevatorid:elevator_white>);

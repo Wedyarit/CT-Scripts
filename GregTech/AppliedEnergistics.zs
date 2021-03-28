@@ -1,21 +1,10 @@
-# AppliedEnergistics
+#priority 1
+# Applied Energistics 2
 
-import mods.gregtech.recipe.RecipeMap;
 import mods.appliedenergistics2.Inscriber;
 import mods.threng.Etcher;
 
 print("Initializing 'Applied Energistics 2'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-val chemical_reactor = RecipeMap.getByName("chemical_reactor");
-val metal_bender = RecipeMap.getByName("metal_bender");
-val blast_furnace = mods.gregtech.recipe.RecipeMap.getByName("blast_furnace");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val hammer = <ore:craftingToolHardHammer>.transformDamage(4);
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Материалы    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

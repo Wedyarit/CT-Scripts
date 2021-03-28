@@ -1,19 +1,11 @@
+#priority 1
 # Forestry
 
-import mods.gregtech.recipe.RecipeMap;
 import mods.forestry.Carpenter;
 import mods.forestry.ThermionicFabricator;
+import mods.forestry.Centrifuge;
 
 print("Initializing 'Forestry'...");
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~  Machine Recipe Builders  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val assembler = RecipeMap.getByName("assembler");
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-val hammer = <ore:craftingToolHardHammer>.transformDamage(4);
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Пчеловодство    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -140,7 +132,7 @@ recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Cans  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Банки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Банка
 Carpenter.removeRecipe(<forestry:can>);
 assembler.recipeBuilder()
@@ -168,7 +160,6 @@ assembler.recipeBuilder()
     .EUt(32)
     .buildAndRegister();
 
-
 // Экран среды обитания
 Carpenter.removeRecipe(<forestry:habitat_screen>);
 assembler.recipeBuilder()
@@ -178,6 +169,65 @@ assembler.recipeBuilder()
     .EUt(64)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Капли меда  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Кислотная капля -> Серная кислота
+fluid_extractor.recipeBuilder()
+    .inputs(<extrabees:honey_drop:1>)
+    .fluidOutputs([<liquid:sulfuric_acid> * 200])
+    .chancedOutput(<gregtech:meta_item_1:2065>, 5000, 5000)
+    .duration(6.4 * 20)
+    .EUt(5)
+    .buildAndRegister();
+
+// Ореховая капля -> Растительное масло
+fluid_extractor.recipeBuilder()
+    .inputs(<extrabees:honey_drop:7>)
+    .fluidOutputs([<liquid:seed.oil> * 200])
+    .chancedOutput(<forestry:mulch>, 1000, 1000)
+    .duration(6.4 * 20)
+    .EUt(5)
+    .buildAndRegister();
+
+// Ледяная капля -> Молотый лед
+fluid_extractor.recipeBuilder()
+    .inputs(<extrabees:honey_drop:5>)
+    .fluidOutputs([<liquid:ice> * 200])
+    .chancedOutput(<forestry:crafting_material:5>, 5000, 5000)
+    .duration(6.4 * 20)
+    .EUt(5)
+    .buildAndRegister();
+
+// Энергетическая капля -> Дестабилизированный красный камень
+fluid_extractor.recipeBuilder()
+    .inputs(<extrabees:honey_drop>)
+    .fluidOutputs([<liquid:redstone> * 200])
+    .chancedOutput(<gregtech:meta_item_2:32572>, 5000, 5000)
+    .duration(6.4 * 20)
+    .EUt(5)
+    .buildAndRegister();
+
+// Ядовитая капля -> Радон
+/*fluid_extractor.findRecipe(5, [<extrabees:honey_drop:2>], null).remove();
+fluid_extractor.recipeBuilder()
+    .inputs(<extrabees:honey_drop:2>)
+    .fluidOutputs([<liquid:radon> * 1])
+    .duration(6.4 * 20)
+    .EUt(5)
+    .buildAndRegister();*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Облученные соты
+centrifuge.findRecipe(5, [<forestry:bee_combs:9> * 1], null).remove();
+centrifuge.recipeBuilder()
+    .inputs(<forestry:bee_combs:9>)
+    .chancedOutput(<gregtech:meta_item_1:5075>, 2500, 2500)
+    .chancedOutput(<forestry:honey_drop>, 2500, 2500)
+    .chancedOutput(<forestry:beeswax>, 2500, 2500)
+    .duration(6.4 * 20)
+    .EUt(5)
+    .buildAndRegister();
 
 // Секретер
 Carpenter.removeRecipe(<forestry:escritoire>);

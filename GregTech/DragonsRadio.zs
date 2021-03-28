@@ -1,3 +1,4 @@
+#priority 1
 # DragonsRadio
 
 print("Initializing 'DragonsRadio'...");
