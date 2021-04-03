@@ -1,8 +1,16 @@
 #priority 1
 # ThermalExpansion
 
+import crafttweaker.item.IItemStack;
+
 print("Initializing 'ThermalExpansion'...");
 
+// Ненужные предметы
+var items = [<thermalexpansion:strongbox>, <thermalexpansion:dynamo:4>, <thermalexpansion:dynamo:3>, <thermalexpansion:dynamo:2>, <thermalexpansion:dynamo:1>, <thermalexpansion:dynamo>, <thermalexpansion:florb:*>, <thermalexpansion:morb:*>] as IItemStack[];
+for item in items {
+    mods.jei.JEI.removeAndHide(item);
+	item.addTooltip("§cВ данной сборке этот предмет выключен");
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Конденсаторы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Флаксовый конденсатор (основной)

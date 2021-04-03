@@ -4,10 +4,17 @@
 import mods.forestry.Carpenter;
 import mods.forestry.ThermionicFabricator;
 import mods.forestry.Centrifuge;
+import crafttweaker.item.IItemStack;
 
 print("Initializing 'Forestry'...");
 
 
+// Ненужные и запрещенные предметы
+var items = [<forestry:kit_shovel>, <forestry:bronze_pickaxe>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:bottler>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>] as IItemStack[];
+for item in items {
+    mods.jei.JEI.removeAndHide(item);
+	item.addTooltip("§cВ данной сборке этот предмет выключен");
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Пчеловодство    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Пропитанный корпус
 Carpenter.removeRecipe(<forestry:impregnated_casing>);
@@ -219,7 +226,7 @@ fluid_extractor.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Облученные соты
-centrifuge.findRecipe(5, [<forestry:bee_combs:9> * 1], null).remove();
+//centrifuge.findRecipe(5, [<forestry:bee_combs:9> * 1], null).remove();
 centrifuge.recipeBuilder()
     .inputs(<forestry:bee_combs:9>)
     .chancedOutput(<gregtech:meta_item_1:5075>, 2500, 2500)
@@ -343,6 +350,13 @@ recipes.addShaped("forestry_smoker", <forestry:smoker>,
  [[<minecraft:leather>, <minecraft:hay_block>, <gregtech:meta_item_1:12071>],
   [<minecraft:leather>, <minecraft:flint_and_steel>, <gregtech:meta_item_1:12071>],
   [<gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>, <gregtech:meta_item_1:12071>]]);
+
+// Лимон
+recipes.addShaped("forestry_lemon", <forestry:fruits:3> * 3,
+ [[<extrabees:honey_drop:14>, <biomesoplenty:plant_0:11>, <extrabees:honey_drop:14>],
+  [<extratrees:food:17>, <gregtech:meta_item_1:32438>, <extratrees:food:17>],
+  [<extrabees:honey_drop:14>, <extratrees:food:17>, <extrabees:honey_drop:14>]]);
+<forestry:fruits:3>.addTooltip("§eБез ГМО!");
 
 // Мультиферма
 for i in 0 to 11 {

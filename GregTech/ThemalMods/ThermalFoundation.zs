@@ -1,8 +1,16 @@
 #priority 1
 # ThermalFoundation
 
+import crafttweaker.item.IItemStack;
+
 print("Initializing 'ThermalFoundation'...");
 
+// Ненужные и запрещенные предметы
+var items = [<thermalexpansion:frame:64>, <thermalexpansion:frame>, <thermalfoundation:material:1024>] as IItemStack[];
+for item in items {
+    mods.jei.JEI.removeAndHide(item);
+	item.addTooltip("§cВ данной сборке этот предмет выключен");
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Наборы обновления  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Усиленный набор обновления
@@ -122,6 +130,288 @@ recipes.addShaped("thermalfoundation_reinforced_invar_glass", <thermalfoundation
  [[<gregtech:meta_item_1:2138>, <gregtech:meta_item_1:2126>, <gregtech:meta_item_1:2138>],
   [<gregtech:meta_item_1:2126>, <ore:blockGlass>, <gregtech:meta_item_1:2126>],
   [<gregtech:meta_item_1:2138>, <minecraft:blaze_powder>, <gregtech:meta_item_1:2138>]]);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Инструменты  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Медный щит
+recipes.remove(<thermalfoundation:tool.shield_copper>);
+recipes.addShaped("thermalfoundation_shield_copper", <thermalfoundation:tool.shield_copper>,
+ [[<gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12018>],
+  [<gregtech:meta_item_1:12018>, <minecraft:shield>, <gregtech:meta_item_1:12018>],
+  [null, <gregtech:meta_item_1:12018>, null]]);
+
+// Медная удочка
+recipes.remove(<thermalfoundation:tool.fishing_rod_copper>);
+recipes.addShaped("thermalfoundation_fishing_rod_copper", <thermalfoundation:tool.fishing_rod_copper>,
+ [[null, null, <gregtech:meta_item_1:14018>],
+  [null, <gregtech:meta_item_1:14018>, <ore:string>],
+  [<gregtech:meta_item_1:14018>, <gregtech:meta_item_1:18033>, <ore:string>]]);
+
+// Медный укрепленный лук
+recipes.remove(<thermalfoundation:tool.bow_copper>);
+recipes.addShaped("thermalfoundation_fishing_bow_copper", <thermalfoundation:tool.bow_copper>,
+ [[null, <gregtech:meta_item_1:14018>, <ore:string>],
+  [<ore:stickWood>, null, <ore:string>],
+  [null, <gregtech:meta_item_1:14018>, <ore:string>]]);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Броня  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+recipes.remove(<thermalfoundation:armor.helmet_nickel>);
+recipes.addShaped(<thermalfoundation:armor.helmet_nickel>, [
+[<ore:plateNickel>, <ore:plateNickel>, <ore:plateNickel>], 
+[<ore:plateCurvedNickel>, hammer, <ore:plateCurvedNickel>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_nickel>);
+recipes.addShaped(<thermalfoundation:armor.plate_nickel>, [
+[<ore:plateNickel>, hammer, <ore:plateNickel>], 
+[<ore:plateCurvedNickel>, <ore:plateNickel>, <ore:plateCurvedNickel>], 
+[<ore:plateCurvedNickel>, <ore:plateNickel>, <ore:plateCurvedNickel>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_nickel>);
+recipes.addShaped(<thermalfoundation:armor.legs_nickel>, [
+[<ore:plateNickel>, <ore:plateCurvedNickel>, <ore:plateNickel>], 
+[<ore:plateCurvedNickel>, hammer, <ore:plateCurvedNickel>], 
+[<ore:plateCurvedNickel>, null, <ore:plateCurvedNickel>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_nickel>);
+recipes.addShaped(<thermalfoundation:armor.boots_nickel>, [
+[<ore:plateNickel>, null, <ore:plateNickel>], 
+[<ore:plateCurvedNickel>, hammer, <ore:plateCurvedNickel>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_copper>);
+recipes.addShaped(<thermalfoundation:armor.helmet_copper>, [
+[<ore:plateCopper>, <ore:plateCopper>, <ore:plateCopper>], 
+[<ore:plateCurvedCopper>, hammer, <ore:plateCurvedCopper>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_copper>);
+recipes.addShaped(<thermalfoundation:armor.plate_copper>, [
+[<ore:plateCopper>, hammer, <ore:plateCopper>], 
+[<ore:plateCurvedCopper>, <ore:plateCopper>, <ore:plateCurvedCopper>], 
+[<ore:plateCurvedCopper>, <ore:plateCopper>, <ore:plateCurvedCopper>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_copper>);
+recipes.addShaped(<thermalfoundation:armor.legs_copper>, [
+[<ore:plateCopper>, <ore:plateCurvedCopper>, <ore:plateCopper>], 
+[<ore:plateCurvedCopper>, hammer, <ore:plateCurvedCopper>], 
+[<ore:plateCurvedCopper>, null, <ore:plateCurvedCopper>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_copper>);
+recipes.addShaped(<thermalfoundation:armor.boots_copper>, [
+[<ore:plateCopper>, null, <ore:plateCopper>], 
+[<ore:plateCurvedCopper>, hammer, <ore:plateCurvedCopper>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_tin>);
+recipes.addShaped(<thermalfoundation:armor.helmet_tin>, [
+[<ore:plateTin>, <ore:plateTin>, <ore:plateTin>], 
+[<ore:plateCurvedTin>, hammer, <ore:plateCurvedTin>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_tin>);
+recipes.addShaped(<thermalfoundation:armor.plate_tin>, [
+[<ore:plateTin>, hammer, <ore:plateTin>], 
+[<ore:plateCurvedTin>, <ore:plateTin>, <ore:plateCurvedTin>], 
+[<ore:plateCurvedTin>, <ore:plateTin>, <ore:plateCurvedTin>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_tin>);
+recipes.addShaped(<thermalfoundation:armor.legs_tin>, [
+[<ore:plateTin>, <ore:plateCurvedTin>, <ore:plateTin>], 
+[<ore:plateCurvedTin>, hammer, <ore:plateCurvedTin>], 
+[<ore:plateCurvedTin>, null, <ore:plateCurvedTin>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_tin>);
+recipes.addShaped(<thermalfoundation:armor.boots_tin>, [
+[<ore:plateTin>, null, <ore:plateTin>], 
+[<ore:plateCurvedTin>, hammer, <ore:plateCurvedTin>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_silver>);
+recipes.addShaped(<thermalfoundation:armor.helmet_silver>, [
+[<ore:plateSilver>, <ore:plateSilver>, <ore:plateSilver>], 
+[<ore:plateCurvedSilver>, hammer, <ore:plateCurvedSilver>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_silver>);
+recipes.addShaped(<thermalfoundation:armor.plate_silver>, [
+[<ore:plateSilver>, hammer, <ore:plateSilver>], 
+[<ore:plateCurvedSilver>, <ore:plateSilver>, <ore:plateCurvedSilver>], 
+[<ore:plateCurvedSilver>, <ore:plateSilver>, <ore:plateCurvedSilver>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_silver>);
+recipes.addShaped(<thermalfoundation:armor.legs_silver>, [
+[<ore:plateSilver>, <ore:plateCurvedSilver>, <ore:plateSilver>], 
+[<ore:plateCurvedSilver>, hammer, <ore:plateCurvedSilver>], 
+[<ore:plateCurvedSilver>, null, <ore:plateCurvedSilver>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_silver>);
+recipes.addShaped(<thermalfoundation:armor.boots_silver>, [
+[<ore:plateSilver>, null, <ore:plateSilver>], 
+[<ore:plateCurvedSilver>, hammer, <ore:plateCurvedSilver>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_lead>);
+recipes.addShaped(<thermalfoundation:armor.helmet_lead>, [
+[<ore:plateLead>, <ore:plateLead>, <ore:plateLead>], 
+[<ore:plateCurvedLead>, hammer, <ore:plateCurvedLead>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_lead>);
+recipes.addShaped(<thermalfoundation:armor.plate_lead>, [
+[<ore:plateLead>, hammer, <ore:plateLead>], 
+[<ore:plateCurvedLead>, <ore:plateLead>, <ore:plateCurvedLead>], 
+[<ore:plateCurvedLead>, <ore:plateLead>, <ore:plateCurvedLead>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_lead>);
+recipes.addShaped(<thermalfoundation:armor.legs_lead>, [
+[<ore:plateLead>, <ore:plateCurvedLead>, <ore:plateLead>], 
+[<ore:plateCurvedLead>, hammer, <ore:plateCurvedLead>], 
+[<ore:plateCurvedLead>, null, <ore:plateCurvedLead>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_lead>);
+recipes.addShaped(<thermalfoundation:armor.boots_lead>, [
+[<ore:plateLead>, null, <ore:plateLead>], 
+[<ore:plateCurvedLead>, hammer, <ore:plateCurvedLead>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_aluminum>);
+recipes.addShaped(<thermalfoundation:armor.helmet_aluminum>, [
+[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>], 
+[<ore:plateCurvedAluminium>, hammer, <ore:plateCurvedAluminium>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_aluminum>);
+recipes.addShaped(<thermalfoundation:armor.plate_aluminum>, [
+[<ore:plateAluminium>, hammer, <ore:plateAluminium>], 
+[<ore:plateCurvedAluminium>, <ore:plateAluminium>, <ore:plateCurvedAluminium>], 
+[<ore:plateCurvedAluminium>, <ore:plateAluminium>, <ore:plateCurvedAluminium>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_aluminum>);
+recipes.addShaped(<thermalfoundation:armor.legs_aluminum>, [
+[<ore:plateAluminium>, <ore:plateCurvedAluminium>, <ore:plateAluminium>], 
+[<ore:plateCurvedAluminium>, hammer, <ore:plateCurvedAluminium>], 
+[<ore:plateCurvedAluminium>, null, <ore:plateCurvedAluminium>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_aluminum>);
+recipes.addShaped(<thermalfoundation:armor.boots_aluminum>, [
+[<ore:plateAluminium>, null, <ore:plateAluminium>], 
+[<ore:plateCurvedAluminium>, hammer, <ore:plateCurvedAluminium>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_platinum>);
+recipes.addShaped(<thermalfoundation:armor.helmet_platinum>, [
+[<ore:platePlatinum>, <ore:platePlatinum>, <ore:platePlatinum>], 
+[<ore:plateCurvedPlatinum>, hammer, <ore:plateCurvedPlatinum>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_platinum>);
+recipes.addShaped(<thermalfoundation:armor.plate_platinum>, [
+[<ore:platePlatinum>, hammer, <ore:platePlatinum>], 
+[<ore:plateCurvedPlatinum>, <ore:platePlatinum>, <ore:plateCurvedPlatinum>], 
+[<ore:plateCurvedPlatinum>, <ore:platePlatinum>, <ore:plateCurvedPlatinum>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_platinum>);
+recipes.addShaped(<thermalfoundation:armor.legs_platinum>, [
+[<ore:platePlatinum>, <ore:plateCurvedPlatinum>, <ore:platePlatinum>], 
+[<ore:plateCurvedPlatinum>, hammer, <ore:plateCurvedPlatinum>], 
+[<ore:plateCurvedPlatinum>, null, <ore:plateCurvedPlatinum>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_platinum>);
+recipes.addShaped(<thermalfoundation:armor.boots_platinum>, [
+[<ore:platePlatinum>, null, <ore:platePlatinum>], 
+[<ore:plateCurvedPlatinum>, hammer, <ore:plateCurvedPlatinum>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_steel>);
+recipes.addShaped(<thermalfoundation:armor.helmet_steel>, [
+[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>], 
+[<ore:plateCurvedSteel>, hammer, <ore:plateCurvedSteel>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_steel>);
+recipes.addShaped(<thermalfoundation:armor.plate_steel>, [
+[<ore:plateSteel>, hammer, <ore:plateSteel>], 
+[<ore:plateCurvedSteel>, <ore:plateSteel>, <ore:plateCurvedSteel>], 
+[<ore:plateCurvedSteel>, <ore:plateSteel>, <ore:plateCurvedSteel>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_steel>);
+recipes.addShaped(<thermalfoundation:armor.legs_steel>, [
+[<ore:plateSteel>, <ore:plateCurvedSteel>, <ore:plateSteel>], 
+[<ore:plateCurvedSteel>, hammer, <ore:plateCurvedSteel>], 
+[<ore:plateCurvedSteel>, null, <ore:plateCurvedSteel>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_steel>);
+recipes.addShaped(<thermalfoundation:armor.boots_steel>, [
+[<ore:plateSteel>, null, <ore:plateSteel>], 
+[<ore:plateCurvedSteel>, hammer, <ore:plateCurvedSteel>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_electrum>);
+recipes.addShaped(<thermalfoundation:armor.helmet_electrum>, [
+[<ore:plateElectrum>, <ore:plateElectrum>, <ore:plateElectrum>], 
+[<ore:plateCurvedElectrum>, hammer, <ore:plateCurvedElectrum>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_electrum>);
+recipes.addShaped(<thermalfoundation:armor.plate_electrum>, [
+[<ore:plateElectrum>, hammer, <ore:plateElectrum>], 
+[<ore:plateCurvedElectrum>, <ore:plateElectrum>, <ore:plateCurvedElectrum>], 
+[<ore:plateCurvedElectrum>, <ore:plateElectrum>, <ore:plateCurvedElectrum>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_electrum>);
+recipes.addShaped(<thermalfoundation:armor.legs_electrum>, [
+[<ore:plateElectrum>, <ore:plateCurvedElectrum>, <ore:plateElectrum>], 
+[<ore:plateCurvedElectrum>, hammer, <ore:plateCurvedElectrum>], 
+[<ore:plateCurvedElectrum>, null, <ore:plateCurvedElectrum>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_electrum>);
+recipes.addShaped(<thermalfoundation:armor.boots_electrum>, [
+[<ore:plateElectrum>, null, <ore:plateElectrum>], 
+[<ore:plateCurvedElectrum>, hammer, <ore:plateCurvedElectrum>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_invar>);
+recipes.addShaped(<thermalfoundation:armor.helmet_invar>, [
+[<ore:plateInvar>, <ore:plateInvar>, <ore:plateInvar>], 
+[<ore:plateCurvedInvar>, hammer, <ore:plateCurvedInvar>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_invar>);
+recipes.addShaped(<thermalfoundation:armor.plate_invar>, [
+[<ore:plateInvar>, hammer, <ore:plateInvar>], 
+[<ore:plateCurvedInvar>, <ore:plateInvar>, <ore:plateCurvedInvar>], 
+[<ore:plateCurvedInvar>, <ore:plateInvar>, <ore:plateCurvedInvar>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_invar>);
+recipes.addShaped(<thermalfoundation:armor.legs_invar>, [
+[<ore:plateInvar>, <ore:plateCurvedInvar>, <ore:plateInvar>], 
+[<ore:plateCurvedInvar>, hammer, <ore:plateCurvedInvar>], 
+[<ore:plateCurvedInvar>, null, <ore:plateCurvedInvar>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_invar>);
+recipes.addShaped(<thermalfoundation:armor.boots_invar>, [
+[<ore:plateInvar>, null, <ore:plateInvar>], 
+[<ore:plateCurvedInvar>, hammer, <ore:plateCurvedInvar>]
+]);
+
+recipes.remove(<thermalfoundation:armor.helmet_bronze>);
+recipes.addShaped(<thermalfoundation:armor.helmet_bronze>, [
+[<ore:plateBronze>, <ore:plateBronze>, <ore:plateBronze>], 
+[<ore:plateCurvedBronze>, hammer, <ore:plateCurvedBronze>]
+]);
+recipes.remove(<thermalfoundation:armor.plate_bronze>);
+recipes.addShaped(<thermalfoundation:armor.plate_bronze>, [
+[<ore:plateBronze>, hammer, <ore:plateBronze>], 
+[<ore:plateCurvedBronze>, <ore:plateBronze>, <ore:plateCurvedBronze>], 
+[<ore:plateCurvedBronze>, <ore:plateBronze>, <ore:plateCurvedBronze>]
+]);
+recipes.remove(<thermalfoundation:armor.legs_bronze>);
+recipes.addShaped(<thermalfoundation:armor.legs_bronze>, [
+[<ore:plateBronze>, <ore:plateCurvedBronze>, <ore:plateBronze>], 
+[<ore:plateCurvedBronze>, hammer, <ore:plateCurvedBronze>], 
+[<ore:plateCurvedBronze>, null, <ore:plateCurvedBronze>]
+]);
+recipes.remove(<thermalfoundation:armor.boots_bronze>);
+recipes.addShaped(<thermalfoundation:armor.boots_bronze>, [
+[<ore:plateBronze>, null, <ore:plateBronze>], 
+[<ore:plateCurvedBronze>, hammer, <ore:plateCurvedBronze>]
+]);
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 print("Initialized 'ThermalFoundation'");

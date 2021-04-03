@@ -4,6 +4,9 @@
 print("Initializing 'Scannable'...");
 
 
+<ore:gearCopper>.remove(<forestry:gear_bronze>);
+
+
 // Сканер
 recipes.remove(<scannable:scanner>);
 assembler.recipeBuilder()

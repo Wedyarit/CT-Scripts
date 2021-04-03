@@ -8,10 +8,12 @@ print("Initializing 'ExtraUtilities'...");
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Запрещенные и ненужные предметы
-var items = [<extrautils2:bagofholding>, <extrautils2:goldenlasso>, <extrautils2:goldenlasso:1>, <extrautils2:chickenring>, <extrautils2:chickenring:1>, <extrautils2:angelring>, <extrautils2:angelring:1>, <extrautils2:angelring:2>, <extrautils2:angelring:3>, <extrautils2:angelring:4>, <extrautils2:angelring:5>] as IItemStack[];
+var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal:*>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots:*>, <extrautils2:screen>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:grocket:*>, <extrautils2:pipe>, <extrautils2:powertransmitter>, <extrautils2:passivegenerator:*>, <extrautils2:machine:*>, <extrautils2:bagofholding>, <extrautils2:goldenlasso:*>, <extrautils2:chickenring:*>, <extrautils2:angelring:*>, <extrautils2:luxsaber:*>] as IItemStack[];
 for item in items {
-    mods.jei.JEI.removeAndHide(item);
-	  item.addTooltip("§cВ данной сборке этот предмет выключен");
+    for subItem in item.definition.subItems {
+        mods.jei.JEI.removeAndHide(subItem);
+	    subItem.addTooltip("§cВ данной сборке этот предмет выключен");
+    }
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -129,6 +131,40 @@ assembler.recipeBuilder()
     .EUt(48)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Серпы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Каменный серп
+recipes.remove(<extrautils2:sickle_stone>);
+recipes.addShaped("extrautils2_sickle_stone", <extrautils2:sickle_stone>,
+ [[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
+  [null, null, <ore:cobblestone>],
+  [<forestry:oak_stick>, <ore:cobblestone>, <ore:cobblestone>]]);
+
+// Золотой серп
+recipes.remove(<extrautils2:sickle_gold>);
+recipes.addShaped("extrautils2_sickle_gold", <extrautils2:sickle_gold>,
+ [[<gregtech:meta_item_1:14026>, <gregtech:meta_item_1:14026>, <gregtech:meta_item_1:14026>],
+  [null, null, <gregtech:meta_item_1:14026>],
+  [<forestry:oak_stick>, <gregtech:meta_item_1:14026>, <gregtech:meta_item_1:14026>]]);
+
+// Железный серп
+recipes.remove(<extrautils2:sickle_iron>);
+recipes.addShaped("extrautils2_sickle_iron", <extrautils2:sickle_iron>,
+ [[<gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>],
+  [null, null, <gregtech:meta_item_1:14033>],
+  [<forestry:oak_stick>, <gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>]]);
+
+// Алмазный серп
+recipes.remove(<extrautils2:sickle_diamond>);
+recipes.addShaped("extrautils2_sickle_diamond", <extrautils2:sickle_diamond>,
+ [[<gregtech:meta_item_1:14111>, <gregtech:meta_item_1:14111>, <gregtech:meta_item_1:14111>],
+  [null, null, <gregtech:meta_item_1:14111>],
+  [<forestry:oak_stick>, <gregtech:meta_item_1:14111>, <gregtech:meta_item_1:14111>]]);
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 // Жидкостный фильтр
 recipes.remove(<extrautils2:filterfluids>);

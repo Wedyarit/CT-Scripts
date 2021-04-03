@@ -3,9 +3,17 @@
 
 import mods.appliedenergistics2.Inscriber;
 import mods.threng.Etcher;
+import crafttweaker.item.IItemStack;
 
 print("Initializing 'Applied Energistics 2'...");
 
+
+// Ненужные предметы
+var items = [<appliedenergistics2:certus_quartz_spade>, <appliedenergistics2:certus_quartz_axe>, <appliedenergistics2:certus_quartz_hoe>, <appliedenergistics2:certus_quartz_sword>, <appliedenergistics2:nether_quartz_pickaxe>, <appliedenergistics2:nether_quartz_spade>, <appliedenergistics2:nether_quartz_axe>, <appliedenergistics2:nether_quartz_hoe>, <appliedenergistics2:nether_quartz_sword>, <appliedenergistics2:certus_quartz_pickaxe>, <appliedenergistics2:inscriber>, <appliedenergistics2:quantum_ring>, <appliedenergistics2:quantum_link>, <appliedenergistics2:condenser>, <appliedenergistics2:entropy_manipulator>, <appliedenergistics2:charged_staff>, <appliedenergistics2:color_applicator>, <threng:machine:2>] as IItemStack[];
+for item in items {
+    mods.jei.JEI.removeAndHide(item);
+	item.addTooltip("§cВ данной сборке этот предмет выключен");
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Материалы    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Небесный камень
@@ -838,6 +846,42 @@ assembler.recipeBuilder()
     .EUt(256)
     .buildAndRegister();
 
+// МЭ контроллер
+recipes.remove(<appliedenergistics2:controller>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:energy_acceptor>, <gregtech:meta_item_2:32491> * 4, <appliedenergistics2:part:16> * 8, <gregtech:cable:237> * 16, <gregtech:meta_item_1:12330> * 6, <gregtech:meta_item_1:12204> * 6)
+    .outputs(<appliedenergistics2:controller>)
+    .duration(10 * 20)
+    .EUt(512)
+    .buildAndRegister();
+
+// МЭ накопитель
+recipes.remove(<appliedenergistics2:drive>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:machine:503>, <appliedenergistics2:material:24> * 2, <appliedenergistics2:part:16> * 4, <gregtech:meta_item_2:32491> * 2, <gregtech:meta_item_2:32506> * 10, <gregtech:meta_item_1:12152> * 10, <gregtech:meta_item_1:12183> * 5)
+    .outputs(<appliedenergistics2:drive>)
+    .duration(10 * 20)
+    .EUt(512)
+    .buildAndRegister();
+
+// Приемщик энергии
+recipes.remove(<appliedenergistics2:energy_acceptor>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:machine:503>, <gregtech:cable:26> * 2, <gregtech:cable:237> * 32, <gregtech:meta_item_1:12183> * 6)
+    .outputs(<appliedenergistics2:energy_acceptor>)
+    .duration(10 * 20)
+    .EUt(512)
+    .buildAndRegister();
+
+// МЭ сундук
+recipes.remove(<appliedenergistics2:chest>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:machine:503>, <gregtech:meta_item_2:32491> * 2, <appliedenergistics2:part:380>, <appliedenergistics2:part:16> * 4, <gregtech:meta_item_2:32506>, <gregtech:meta_item_1:12152>, <gregtech:meta_item_1:12183> * 5)
+    .outputs(<appliedenergistics2:chest>)
+    .duration(10 * 20)
+    .EUt(512)
+    .buildAndRegister();
+    
 // МЭ жидкостный интерфейс
 recipes.remove(<appliedenergistics2:fluid_interface>);
 assembler.recipeBuilder()
@@ -918,6 +962,8 @@ assembler.recipeBuilder()
     .duration(20 * 20)
     .EUt(256)
     .buildAndRegister();
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -987,7 +1033,7 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Другое    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Инструменты    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Гаечный ключ из незер-кварца
 recipes.remove(<appliedenergistics2:nether_quartz_wrench>);
 recipes.addShaped("appliedenergistics2_nether_quartz_wrench", <appliedenergistics2:nether_quartz_wrench>,
@@ -1019,7 +1065,10 @@ assembler.recipeBuilder()
     .duration(5 * 20)
     .EUt(96)
     .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Другое    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // МЭ корпус ячейки хранения
 recipes.remove(<appliedenergistics2:material:39>);
 assembler.recipeBuilder()
@@ -1073,7 +1122,6 @@ assembler.recipeBuilder()
     .duration(15 * 20)
     .EUt(320)
     .buildAndRegister();
-
 
 // МЭ беспроводная точка доступа
 recipes.remove(<appliedenergistics2:wireless_access_point>);
