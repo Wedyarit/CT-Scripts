@@ -82,16 +82,16 @@ assembler.recipeBuilder()
 // Лесопилка
 recipes.remove(<thermalexpansion:machine:2>);
 recipes.addShaped("thermalexpansion_sawmill", <thermalexpansion:machine:2>,
- [[<gregtech:meta_item_1:12183>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12183>],
-  [<gregtech:meta_item_1:12183>, <gregtech:machine:502>, <gregtech:meta_item_1:12183>],
-  [<thermalfoundation:material:513>, <gregtech:meta_item_2:32489>, <thermalfoundation:material:513>]]);
+ [[<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32721>, <gregtech:meta_item_1:12183>],
+  [<gregtech:meta_item_1:32631>, <gregtech:machine_casing:2>, <gregtech:meta_item_1:32631>],
+  [<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_1:12183>]]);
 
 // Магмовый тигель
 recipes.remove(<thermalexpansion:machine:6>);
 recipes.addShaped("thermalexpansion_magma_crucible", <thermalexpansion:machine:6>,
- [[<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32721>, <gregtech:meta_item_1:12183>],
-  [<gregtech:meta_item_1:32631>, <gregtech:machine_casing:2>, <gregtech:meta_item_1:32631>],
-  [<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_1:12183>]]);
+ [[<gregtech:meta_item_1:12183>, <thermalfoundation:glass_alloy:2>, <gregtech:meta_item_1:12183>],
+  [<gregtech:meta_item_1:12183>, <gregtech:machine:502>, <gregtech:meta_item_1:12183>],
+  [<thermalfoundation:material:513>, <gregtech:meta_item_2:32489>, <thermalfoundation:material:513>]]);
 
 // Энергетический зарядник
 recipes.remove(<thermalexpansion:machine:9>);
@@ -165,7 +165,7 @@ recipes.addShaped("thermalexpansion_extension_fragmentation", <thermalexpansion:
 // Переносной резервуар
 recipes.remove(<thermalexpansion:tank>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12087> * 2, <gregtech:meta_item_1:14087> * 8, <gregtech:meta_item_1:17087> * 8, <gregtech:meta_item_1:14184> * 4, <gregtech:meta_item_1:18184> * 8, <gregtech:meta_item_1:18184> * 4, <minecraft:glass_pane> * 4)
+    .inputs(<gregtech:meta_item_1:12087> * 2, <gregtech:meta_item_1:14087> * 8, <gregtech:meta_item_1:17087> * 8, <gregtech:meta_item_1:14184> * 4, <gregtech:meta_item_1:18184> * 8, <gregtech:meta_item_1:19184> * 4, <minecraft:glass_pane> * 4)
     .outputs(<thermalexpansion:tank>)
     .duration(15 * 20)
     .EUt(128)

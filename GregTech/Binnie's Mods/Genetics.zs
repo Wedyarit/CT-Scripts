@@ -72,18 +72,19 @@ assembler.recipeBuilder()
     .EUt(256)
     .buildAndRegister();
 
-// Флуоресцентный краситель
+// Краситель ДНК
 recipes.remove(<genetics:misc:1>);
-recipes.addShaped("genetics_fluorescent_dye", <genetics:misc:1> * 8,
+recipes.addShaped("genetics_dna_dye", <genetics:misc:1> * 8,
  [[<minecraft:dye:9>, <gregtech:meta_item_1:2050>, <minecraft:dye:9>],
-  [<minecraft:dye:5>, <gregtech:meta_item_1:31>, <gregtech:meta_item_1:3214>],
+  [<minecraft:dye:5>, <gregtech:meta_item_1:31>, <gregtech:meta_item_1:2214>],
   [<minecraft:dye:9>, <minecraft:glowstone_dust>, <minecraft:dye:9>]]);
 
-// Краситель ДНК
+
+// Флуоресцентный краситель
 recipes.remove(<genetics:misc:2>);
-recipes.addShaped("genetics_dna_dye", <genetics:misc:2> * 8,
+recipes.addShaped("genetics_fluorescent_dye", <genetics:misc:2> * 8,
  [[<minecraft:dye:11>, <gregtech:meta_item_1:2050>, <minecraft:dye:11>],
-  [<minecraft:dye:14>, <minecraft:blaze_powder>, <gregtech:meta_item_1:2087>],
+  [<minecraft:dye:14>, <minecraft:blaze_powder>, <gregtech:meta_item_1:2190>],
   [<minecraft:dye:11>, <minecraft:glowstone_dust>, <minecraft:dye:11>]]);
 
 // Пустая последовательность
@@ -160,7 +161,7 @@ recipes.addShaped("genetics_polymerizer", <genetics:machine:2>,
 recipes.remove(<genetics:machine:3>);
 recipes.addShaped("genetics_inoculator", <genetics:machine:3>,
  [[<gregtech:meta_item_1:12051>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12051>],
-  [<gregtech:meta_item_1:32612>, <genetics:misc>, <gregtech:meta_item_1:32692>],
+  [<gregtech:meta_item_1:32612>, <genetics:misc>, <genetics:misc:8>],
   [<gregtech:meta_item_1:12113>, <genetics:misc:8>, <gregtech:meta_item_1:12113>]]);
 
 // Лабораторный стенд

@@ -10,7 +10,7 @@ print("Initializing 'Forestry'...");
 
 
 // Ненужные и запрещенные предметы
-var items = [<forestry:kit_shovel>, <forestry:bronze_pickaxe>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:bottler>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>] as IItemStack[];
+var items = [<forestry:kit_shovel>, <forestry:bronze_pickaxe>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:bottler>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>, <forestry:gear_bronze>, <forestry:gear_copper>, <forestry:gear_tin>] as IItemStack[];
 for item in items {
     mods.jei.JEI.removeAndHide(item);
 	item.addTooltip("§cВ данной сборке этот предмет выключен");
@@ -68,14 +68,14 @@ assembler.recipeBuilder()
 // Продвинутая печатная плата
 Carpenter.removeRecipe(<forestry:chipsets:1>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:cable:5071>, <gregtech:meta_item_2:32447>, <gregtech:cable:5071>, <gregtech:cable:5071>, <gregtech:meta_item_2:32447>, <gregtech:cable:5071>, <gregtech:cable:5071>, <gregtech:meta_item_2:32447>, <gregtech:cable:5071>)
+    .inputs(<gregtech:cable:71>, <gregtech:meta_item_2:32447>, <gregtech:cable:71>, <gregtech:cable:71>, <gregtech:meta_item_2:32447>, <gregtech:cable:71>, <gregtech:cable:71>, <gregtech:meta_item_2:32447>, <gregtech:cable:71>)
     .fluidInputs([<liquid:soldering_alloy> * 72])
     .outputs(<forestry:chipsets:1>)
     .duration(10 * 20)
     .EUt(48)
     .buildAndRegister();
 assembler.recipeBuilder()
-    .inputs(<gregtech:cable:5071>, <gregtech:meta_item_2:32447>, <gregtech:cable:5071>, <gregtech:cable:5071>, <gregtech:meta_item_2:32447>, <gregtech:cable:5071>, <gregtech:cable:5071>, <gregtech:meta_item_2:32447>, <gregtech:cable:5071>)
+    .inputs(<gregtech:cable:71>, <gregtech:meta_item_2:32447>, <gregtech:cable:71>, <gregtech:cable:71>, <gregtech:meta_item_2:32447>, <gregtech:cable:71>, <gregtech:cable:71>, <gregtech:meta_item_2:32447>, <gregtech:cable:71>)
     .fluidInputs([<liquid:tin> * 144])
     .outputs(<forestry:chipsets:1>)
     .duration(10 * 20)
@@ -141,7 +141,7 @@ recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Банки  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Банка
-Carpenter.removeRecipe(<forestry:can>);
+recipes.remove(<forestry:can>);
 assembler.recipeBuilder()
     .inputs(<ore:paneGlass>, <gregtech:meta_item_1:12071> * 2)
     .outputs(<forestry:can> * 2)
@@ -151,6 +151,7 @@ assembler.recipeBuilder()
 
 // Восковая капсула
 Carpenter.removeRecipe(<forestry:capsule>);
+recipes.remove(<forestry:capsule>);
 assembler.recipeBuilder()
     .inputs(<ore:paneGlass>, <forestry:beeswax> * 2)
     .outputs(<forestry:capsule>)
@@ -170,7 +171,7 @@ assembler.recipeBuilder()
 // Экран среды обитания
 Carpenter.removeRecipe(<forestry:habitat_screen>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_2:32489>, <gregtech:meta_item_2:32489> * 2, <gregtech:meta_item_1:12184> * 6)
+    .inputs(<gregtech:meta_item_2:32489>, <ore:paneGlass> * 2, <gregtech:meta_item_1:12184> * 6)
     .outputs(<forestry:habitat_screen>)
     .duration(10 * 20)
     .EUt(64)
@@ -183,7 +184,7 @@ assembler.recipeBuilder()
 fluid_extractor.recipeBuilder()
     .inputs(<extrabees:honey_drop:1>)
     .fluidOutputs([<liquid:sulfuric_acid> * 200])
-    .chancedOutput(<gregtech:meta_item_1:2065>, 5000, 5000)
+    .chancedOutput(<gregtech:meta_item_1:2065>, 5000, 1000)
     .duration(6.4 * 20)
     .EUt(5)
     .buildAndRegister();
@@ -201,7 +202,7 @@ fluid_extractor.recipeBuilder()
 fluid_extractor.recipeBuilder()
     .inputs(<extrabees:honey_drop:5>)
     .fluidOutputs([<liquid:ice> * 200])
-    .chancedOutput(<forestry:crafting_material:5>, 5000, 5000)
+    .chancedOutput(<forestry:crafting_material:5>, 5000, 1000)
     .duration(6.4 * 20)
     .EUt(5)
     .buildAndRegister();
@@ -210,28 +211,18 @@ fluid_extractor.recipeBuilder()
 fluid_extractor.recipeBuilder()
     .inputs(<extrabees:honey_drop>)
     .fluidOutputs([<liquid:redstone> * 200])
-    .chancedOutput(<gregtech:meta_item_2:32572>, 5000, 5000)
+    .chancedOutput(<gregtech:meta_item_2:32572>, 5000, 1000)
     .duration(6.4 * 20)
     .EUt(5)
     .buildAndRegister();
-
-// Ядовитая капля -> Радон
-/*fluid_extractor.findRecipe(5, [<extrabees:honey_drop:2>], null).remove();
-fluid_extractor.recipeBuilder()
-    .inputs(<extrabees:honey_drop:2>)
-    .fluidOutputs([<liquid:radon> * 1])
-    .duration(6.4 * 20)
-    .EUt(5)
-    .buildAndRegister();*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Облученные соты
-//centrifuge.findRecipe(5, [<forestry:bee_combs:9> * 1], null).remove();
 centrifuge.recipeBuilder()
     .inputs(<forestry:bee_combs:9>)
-    .chancedOutput(<gregtech:meta_item_1:5075>, 2500, 2500)
-    .chancedOutput(<forestry:honey_drop>, 2500, 2500)
-    .chancedOutput(<forestry:beeswax>, 2500, 2500)
+    .chancedOutput(<gregtech:meta_item_1:5075>, 2500, 1000)
+    .chancedOutput(<forestry:honey_drop>, 2500, 1000)
+    .chancedOutput(<forestry:beeswax>, 2500, 1000)
     .duration(6.4 * 20)
     .EUt(5)
     .buildAndRegister();
@@ -249,7 +240,7 @@ assembler.recipeBuilder()
 // Темная свеча
 Carpenter.removeRecipe(<forestry:candle>);
 assembler.recipeBuilder()
-    .inputs(<forestry:crafting_material:2>, <forestry:crafting_material:2>)
+    .inputs(<forestry:crafting_material:2>, <forestry:beeswax>)
     .fluidInputs([<liquid:water> * 100])
     .outputs(<forestry:candle>)
     .duration(3 * 20)
@@ -268,23 +259,11 @@ assembler.recipeBuilder()
 
 // Рассеивающий заряд
 Carpenter.removeRecipe(<forestry:crafting_material:4>);
-assembler.recipeBuilder()
-    .inputs(<forestry:honeydew> * 2, <forestry:royal_jelly> * 4, <forestry:can>, <minecraft:gunpowder> * 2)
-    .fluidInputs([<liquid:water> * 1000])
-    .outputs(<forestry:crafting_material:4>)
-    .duration(20 * 20)
-    .EUt(128)
-    .buildAndRegister();
+<forestry:crafting_material:4>.addTooltip("§cВ данной сборке этот предмет выключен");
 
 // Капсула йода
 Carpenter.removeRecipe(<forestry:iodine_capsule>);
-assembler.recipeBuilder()
-    .inputs(<forestry:honey_drop> * 2, <forestry:pollen> * 4, <forestry:pollen>, <forestry:pollen> * 2)
-    .fluidInputs([<liquid:water> * 1000])
-    .outputs(<forestry:iodine_capsule>)
-    .duration(20 * 20)
-    .EUt(128)
-    .buildAndRegister();
+<forestry:iodine_capsule>.addTooltip("§cВ данной сборке этот предмет выключен");
 
 // Пропитанная обшивка
 Carpenter.removeRecipe(<forestry:crafting_material:6>);
@@ -315,7 +294,7 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 // Очки
-Carpenter.removeRecipe(<forestry:naturalist_helmet>);
+recipes.remove(<forestry:naturalist_helmet>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:15209> * 2, <gregtech:cable:71> * 3)
     .outputs(<forestry:naturalist_helmet>)

@@ -97,14 +97,14 @@ assembler.recipeBuilder()
 // Модуль "Структуры"
 recipes.remove(<scannable:module_structure>);
 assembler.recipeBuilder()
-    .inputs(<scannable:module_blank>, <gregtech:meta_item_2:32492>, <forestry:crafting_material:1>, <gregtech:meta_item_2:16112> * 12, <gregtech:meta_item_2:16112>)
+    .inputs(<scannable:module_blank>, <gregtech:meta_item_2:32492>, <forestry:crafting_material:1>, <gregtech:meta_item_2:16112> * 12, <gregtech:meta_item_2:25113>)
     .fluidInputs([<liquid:soldering_alloy> * 72])
     .outputs(<scannable:module_structure>)
     .duration(20 * 20)
     .EUt(256)
     .buildAndRegister();
 assembler.recipeBuilder()
-    .inputs(<scannable:module_blank>, <gregtech:meta_item_2:32492>, <forestry:crafting_material:1>, <gregtech:meta_item_2:16112> * 12, <gregtech:meta_item_2:16112>)
+    .inputs(<scannable:module_blank>, <gregtech:meta_item_2:32492>, <forestry:crafting_material:1>, <gregtech:meta_item_2:16112> * 12, <gregtech:meta_item_2:25113>)
     .fluidInputs([<liquid:tin> * 144])
     .outputs(<scannable:module_structure>)
     .duration(20 * 20)
@@ -145,7 +145,7 @@ assembler.recipeBuilder()
     .EUt(256)
     .buildAndRegister();
 
-// Модуль "Монстры"
+// Модуль "Животные"
 recipes.remove(<scannable:module_animal>);
 assembler.recipeBuilder()
     .inputs(<scannable:module_blank>, <minecraft:leather>, <gregtech:meta_item_2:32492>, <gregtech:meta_item_2:16112> * 8, <gregtech:meta_item_1:19112> * 2)
@@ -167,14 +167,14 @@ recipes.remove(<scannable:module_entity>);
 assembler.recipeBuilder()
     .inputs(<scannable:module_monster>, <scannable:module_animal>, <gregtech:meta_item_2:32492>, <gregtech:meta_item_2:16112> * 8)
     .fluidInputs([<liquid:soldering_alloy> * 72])
-    .outputs(<scannable:module_animal>)
+    .outputs(<scannable:module_entity>)
     .duration(20 * 20)
     .EUt(256)
     .buildAndRegister();
 assembler.recipeBuilder()
     .inputs(<scannable:module_monster>, <scannable:module_animal>, <gregtech:meta_item_2:32492>, <gregtech:meta_item_2:16112> * 8)
     .fluidInputs([<liquid:tin> * 144])
-    .outputs(<scannable:module_animal>)
+    .outputs(<scannable:module_entity>)
     .duration(20 * 20)
     .EUt(256)
     .buildAndRegister();

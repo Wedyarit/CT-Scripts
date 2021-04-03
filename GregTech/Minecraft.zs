@@ -10,7 +10,7 @@ print("Initializing 'Minecraft'...");
 // Рельсы
 recipes.remove(<minecraft:rail>); 
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_2:19033> * 2, <gregtech:meta_item_2:19184> * 2, <ore:slabWood> * 4)
+    .inputs(<gregtech:meta_item_2:19033> * 2, <gregtech:meta_item_2:19196> * 2, <gregtech:meta_item_2:19184> * 2, <ore:slabWood> * 4)
     .fluidInputs([<liquid:creosote> * 1000])
     .outputs(<minecraft:rail> * 4)
     .duration(10 * 20)
@@ -30,7 +30,7 @@ assembler.recipeBuilder()
 // Активирующие рельсы
 recipes.remove(<minecraft:activator_rail>); 
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:19237> * 8, <gregtech:meta_item_2:19184> * 2, <gregtech:meta_item_2:19033> * 2, <gregtech:cable:237> * 3, <ore:slabWood> * 4)
+    .inputs(<gregtech:meta_item_1:19237> * 8, <gregtech:meta_item_2:19189> * 2, <gregtech:meta_item_2:19184> * 2, <gregtech:meta_item_2:19033> * 2, <gregtech:cable:237> * 3, <ore:slabWood> * 4)
     .fluidInputs([<liquid:creosote> * 1000])
     .outputs(<minecraft:activator_rail> * 4)
     .duration(10 * 20)
@@ -113,6 +113,25 @@ recipes.addShaped("minecraft_brewing_stand", <minecraft:brewing_stand>,
  [[<gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>],
   [<gregtech:meta_item_1:19018>, <minecraft:blaze_rod>, <gregtech:meta_item_1:19018>],
   [<gregtech:meta_item_1:12328>, <gregtech:meta_item_1:12328>, <gregtech:meta_item_1:12328>]]);
+
+// Жемчуг эндера
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:15209>, <forestry:crafting_material:1> * 3)
+    .outputs(<minecraft:ender_pearl>)
+    .duration(5 * 20)
+    .EUt(256)
+    .buildAndRegister();
+
+// Редстоуновый фонарь
+recipes.remove(<minecraft:redstone_lamp>);
+assembler.findRecipe(1, [<minecraft:glowstone_dust> * 4, <minecraft:redstone> * 4], null).remove();
+assembler.recipeBuilder()
+    .inputs(<minecraft:glowstone>, <gregtech:meta_item_1:12215> * 6)
+    .outputs(<minecraft:redstone_lamp>)
+    .duration(20 * 20)
+    .EUt(1)
+    .buildAndRegister();
+
 
 // Алмазная броня
 recipes.remove(<minecraft:diamond_helmet>);

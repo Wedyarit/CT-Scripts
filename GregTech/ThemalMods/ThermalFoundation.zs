@@ -12,6 +12,13 @@ for item in items {
 	item.addTooltip("§cВ данной сборке этот предмет выключен");
 }
 
+// Шестеренки
+var gears = [<thermalfoundation:material:22>, <thermalfoundation:material:23>, <thermalfoundation:material:24>, <thermalfoundation:material:25>, <thermalfoundation:material:26>, <thermalfoundation:material:27>, <thermalfoundation:material:256>, <thermalfoundation:material:257>, <thermalfoundation:material:258>, <thermalfoundation:material:259>, <thermalfoundation:material:260>, <thermalfoundation:material:262>, <thermalfoundation:material:263>, <thermalfoundation:material:264>, <thermalfoundation:material:288>, <thermalfoundation:material:289>, <thermalfoundation:material:290>, <thermalfoundation:material:291>] as IItemStack[];
+for gear in gears {
+    mods.jei.JEI.removeAndHide(gear);
+	gear.addTooltip("§cВ данной сборке этот предмет выключен");
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Наборы обновления  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Усиленный набор обновления
 recipes.remove(<thermalfoundation:upgrade>);
@@ -25,7 +32,7 @@ assembler.recipeBuilder()
 // Укрепленный набор обновления
 recipes.remove(<thermalfoundation:upgrade:1>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12112>, <gregtech:meta_item_1:12183>, <gregtech:meta_item_1:12112>,  <gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32612>, <gregtech:meta_item_1:12183>,  <gregtech:meta_item_1:12112>, <gregtech:meta_item_1:12183>, <gregtech:meta_item_1:12112>)
+    .inputs(<gregtech:meta_item_1:12112>, <gregtech:meta_item_1:12183>, <gregtech:meta_item_1:12112>,  <gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32602>, <gregtech:meta_item_1:12183>,  <gregtech:meta_item_1:12112>, <gregtech:meta_item_1:12183>, <gregtech:meta_item_1:12112>)
     .outputs(<thermalfoundation:upgrade:1>)
     .duration(10 * 20)
     .EUt(512)

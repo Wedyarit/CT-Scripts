@@ -64,10 +64,10 @@ assembler.recipeBuilder()
 recipes.remove(<thermaldynamics:filter:4>);
 recipes.addShaped("thermaldynamics_resonant_filter", <thermaldynamics:filter:4>,
  [[hammer, null, wrench],
-  [<gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12032>],
-  [<gregtech:meta_item_1:12074>, <thermaldynamics:filter:3>, <gregtech:meta_item_1:12074>]]);
+  [<gregtech:meta_item_2:32435>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_2:32435>],
+  [<gregtech:meta_item_1:12235>, <thermaldynamics:filter:3>, <gregtech:meta_item_1:12235>]]);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12074>, <thermaldynamics:filter:3>, <gregtech:meta_item_1:12074>)
+    .inputs(<gregtech:meta_item_2:32435>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12235>, <thermaldynamics:filter:3>, <gregtech:meta_item_1:12235>)
     .outputs(<thermaldynamics:filter:4>)
     .duration(25 * 20)
     .EUt(32)
@@ -132,10 +132,10 @@ assembler.recipeBuilder()
 recipes.remove(<thermaldynamics:retriever:4>);
 recipes.addShaped("thermaldynamics_resonant_retriever", <thermaldynamics:retriever:4>,
  [[hammer, null, wrench],
-  [<gregtech:meta_item_1:12032>, <thermaldynamics:filter:4>, <gregtech:meta_item_1:12032>],
-  [<gregtech:meta_item_1:12074>, <thermaldynamics:retriever:3>, <gregtech:meta_item_1:12074>]]);
+  [<gregtech:meta_item_2:32435>, <thermaldynamics:filter:4>, <gregtech:meta_item_2:32435>],
+  [<gregtech:meta_item_1:12235>, <thermaldynamics:retriever:3>, <gregtech:meta_item_1:12235>]]);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12032>, <thermaldynamics:filter:4>, <gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12074>, <thermaldynamics:retriever:3>, <gregtech:meta_item_1:12074>)
+    .inputs(<gregtech:meta_item_2:32435>, <thermaldynamics:filter:4>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12235>, <thermaldynamics:retriever:3>, <gregtech:meta_item_1:12235>)
     .outputs(<thermaldynamics:retriever:4>)
     .duration(25 * 20)
     .EUt(32)
@@ -200,10 +200,10 @@ assembler.recipeBuilder()
 recipes.remove(<thermaldynamics:servo:4>);
 recipes.addShaped("thermaldynamics_resonant_servo", <thermaldynamics:servo:4>,
  [[hammer, null, wrench],
-  [<gregtech:meta_item_1:12032>, <thermaldynamics:filter:4>, <gregtech:meta_item_1:12032>],
-  [<gregtech:meta_item_1:12074>, <thermaldynamics:servo:3>, <gregtech:meta_item_1:12074>]]);
+  [<gregtech:meta_item_2:32435>, <thermaldynamics:filter:4>, <gregtech:meta_item_2:32435>],
+  [<gregtech:meta_item_1:12235>, <thermaldynamics:servo:3>, <gregtech:meta_item_1:12235>]]);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12032>, <thermaldynamics:filter:4>, <gregtech:meta_item_1:12032>, <gregtech:meta_item_1:12074>, <thermaldynamics:servo:3>, <gregtech:meta_item_1:12074>)
+    .inputs(<gregtech:meta_item_2:32435>, <thermaldynamics:filter:4>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12235>, <thermaldynamics:servo:3>, <gregtech:meta_item_1:12235>)
     .outputs(<thermaldynamics:servo:4>)
     .duration(25 * 20)
     .EUt(32)
@@ -506,7 +506,7 @@ assembler.recipeBuilder()
  // Криостабилизированная флаксовая труба
 Transposer.removeFillRecipe(<thermaldynamics:duct_0:9>, <liquid:cryotheum>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12218>, <gregtech:meta_item_2:32435>, <gregtech:cable:2047>, <thermaldynamics:duct_0:4>, <gregtech:cable:2047>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12218>, <gregtech:meta_item_2:32435>)
+    .inputs(<gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12218>, <gregtech:meta_item_2:32435>, <gregtech:cable:2354>, <thermaldynamics:duct_0:4>, <gregtech:cable:2354>, <gregtech:meta_item_2:32435>, <gregtech:meta_item_1:12218>, <gregtech:meta_item_2:32435>)
     .outputs(<thermaldynamics:duct_0:5>)
     .duration(7 * 20)
     .EUt(32)

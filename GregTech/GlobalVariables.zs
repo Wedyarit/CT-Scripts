@@ -17,9 +17,9 @@ global mixer as RecipeMap = RecipeMap.getByName("mixer");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-global hammer as IIngredient = <ore:craftingToolHardHammer>.transformDamage(4);
-global wrench as IIngredient = <ore:craftingToolWrench>.transformDamage(4);
-global file as IIngredient = <ore:craftingToolFile>.transformDamage(4);
+global hammer as IIngredient = <ore:craftingToolHardHammerEmptyTag>;
+global wrench as IIngredient = <ore:craftingToolWrenchEmptyTag>;
+global file as IIngredient = <ore:craftingToolFileEmptyTag>;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-print("Initialized 'Global Variable'");
+print("Initialized 'Global Variables'");
