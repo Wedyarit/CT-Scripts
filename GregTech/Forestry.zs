@@ -259,7 +259,13 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 // Укрепленный корпус
-Carpenter.addRecipe(<forestry:hardened_machine>, [[<ore:gemDiamond>, null, <ore:gemDiamond>], [null, <forestry:sturdy_machine>, null], [<ore:gemDiamond>, null, <ore:gemDiamond>]], 60, <liquid:water> * 5000)
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12111> * 8, <forestry:sturdy_machine>)
+    .fluidInputs([<liquid:water> * 5000])
+    .outputs(<forestry:hardened_machine>)
+    .duration(10 * 20)
+    .EUt(128)
+    .buildAndRegister();
 
 // Рассеивающий заряд
 Carpenter.removeRecipe(<forestry:crafting_material:4>);
@@ -282,7 +288,7 @@ assembler.recipeBuilder()
 // Гибкий корпус
 ThermionicFabricator.removeCast(<forestry:flexible_casing>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12095>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <forestry:sturdy_machine>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>)
+    .inputs(<gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <forestry:sturdy_machine>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>, <minecraft:slime_ball>, <gregtech:meta_item_1:12095>)
     .outputs(<forestry:flexible_casing>)
     .duration(15 * 20)
     .EUt(128)
