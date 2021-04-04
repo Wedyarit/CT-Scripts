@@ -17,7 +17,7 @@ mixer.recipeBuilder()
     .inputs(<gregtech:meta_item_1:2069>)
     .fluidInputs([<liquid:poison> * 2000])
     .fluidOutputs([<liquid:radon> * 100])
-    .duration(150 * 20)
+    .duration(300 * 20)
     .EUt(32)
     .buildAndRegister();
 

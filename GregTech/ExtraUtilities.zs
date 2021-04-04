@@ -8,13 +8,15 @@ print("Initializing 'ExtraUtilities'...");
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Запрещенные и ненужные предметы
-var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal:*>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots:*>, <extrautils2:screen>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:grocket:*>, <extrautils2:pipe>, <extrautils2:powertransmitter>, <extrautils2:passivegenerator:*>, <extrautils2:machine:*>, <extrautils2:bagofholding>, <extrautils2:goldenlasso:*>, <extrautils2:chickenring:*>, <extrautils2:angelring:*>, <extrautils2:luxsaber:*>] as IItemStack[];
+var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal:*>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots:*>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:grocket:*>, <extrautils2:pipe>, <extrautils2:powertransmitter>, <extrautils2:machine:*>, <extrautils2:bagofholding>, <extrautils2:goldenlasso:*>, <extrautils2:chickenring:*>, <extrautils2:angelring:*>, <extrautils2:luxsaber:*>] as IItemStack[];
 for item in items {
     for subItem in item.definition.subItems {
         mods.jei.JEI.removeAndHide(subItem);
-	    subItem.addTooltip("§cВ данной сборке этот предмет выключен");
+	      subItem.addTooltip("§cВ данной сборке этот предмет выключен");
     }
 }
+mods.jei.JEI.removeAndHide(<extrautils2:passivegenerator:7>);
+<extrautils2:passivegenerator:7>.addTooltip("§cВ данной сборке этот предмет выключен");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -163,6 +165,69 @@ recipes.addShaped("extrautils2_sickle_diamond", <extrautils2:sickle_diamond>,
   [<forestry:oak_stick>, <gregtech:meta_item_1:14111>, <gregtech:meta_item_1:14111>]]);
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Мельницы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Солнечная панель
+recipes.remove(<extrautils2:passivegenerator>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:smooth_sky_stone_slab>, <gregtech:cable:18> * 4, <gregtech:meta_item_1:12001>, <gregtech:meta_item_1:32752>, <gregtech:meta_item_1:12092>)
+    .outputs(<extrautils2:passivegenerator>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Лунарная солнечная панель
+recipes.remove(<extrautils2:passivegenerator:1>);
+assembler.recipeBuilder()
+    .inputs(<appliedenergistics2:smooth_sky_stone_slab>, <gregtech:cable:18> * 4, <gregtech:meta_item_1:12001>, <gregtech:meta_item_1:32752>, <gregtech:meta_item_1:12214>)
+    .outputs(<extrautils2:passivegenerator:1>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Лавовая мельница 
+recipes.remove(<extrautils2:passivegenerator:2>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:14184> * 24, <gregtech:meta_item_1:12001> * 6, <gregtech:meta_item_1:12145> * 12, <gregtech:meta_item_1:12062> * 6, <extrautils2:klein>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_1:19016> * 8)
+    .outputs(<extrautils2:passivegenerator:2>)
+    .duration(60 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Водяная мельница 
+recipes.remove(<extrautils2:passivegenerator:3>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:14184> * 24, <gregtech:meta_item_1:12001> * 6, <gregtech:meta_item_1:12145> * 12, <gregtech:meta_item_2:18184> * 4, <gregtech:meta_item_1:32601> * 4, <gregtech:meta_item_1:19001> * 2)
+    .outputs(<extrautils2:passivegenerator:3>)
+    .duration(60 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Ветрянная мельница
+recipes.remove(<extrautils2:passivegenerator:4>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:14184> * 16, <gregtech:meta_item_1:14001> * 4, <gregtech:meta_item_1:12001> * 4, <gregtech:meta_item_1:12145> * 8, <gregtech:meta_item_2:18184>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_1:19112> * 8)
+    .outputs(<extrautils2:passivegenerator:4>)
+    .duration(60 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Огненная мельница
+recipes.remove(<extrautils2:passivegenerator:5>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:14184> * 16, <gregtech:meta_item_1:14001> * 4, <gregtech:meta_item_1:12001> * 4, <gregtech:meta_item_1:12145> * 8, <gregtech:meta_item_2:18184>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_1:19087> * 16)
+    .outputs(<extrautils2:passivegenerator:5>)
+    .duration(60 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Мельница драконьева яйца 
+recipes.remove(<extrautils2:passivegenerator:8>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:machine:493>, <gregtech:meta_item_1:12145> * 6, <gregtech:meta_item_1:19184> * 48, <gregtech:meta_item_1:19032> * 8, <gregtech:meta_item_1:19072> * 8)
+    .outputs(<extrautils2:passivegenerator:8>)
+    .duration(180 * 20)
+    .EUt(128)
+    .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -232,6 +297,15 @@ recipes.addShaped("extrautils2_klein", <extrautils2:klein>,
  [[<gregtech:meta_item_2:32454>, <minecraft:ender_pearl>, <gregtech:meta_item_2:32454>],
   [<minecraft:ender_pearl>, <minecraft:glass_bottle>, <minecraft:ender_pearl>],
   [<gregtech:meta_item_2:32454>, <minecraft:ender_pearl>, <gregtech:meta_item_2:32454>]]);
+
+// Экран
+recipes.remove(<extrautils2:screen>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:cable:18> * 4, <gregtech:meta_item_2:32489>, <gregtech:meta_item_1:32691>, <gregtech:meta_item_1:12001>, <gregtech:meta_item_1:12237>, <gregtech:meta_item_1:12061>, <gregtech:meta_item_1:12330>, <gregtech:meta_item_1:12209>)
+    .outputs(<extrautils2:screen>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
 
 
 print("Initialized 'ExtraUtilities'");

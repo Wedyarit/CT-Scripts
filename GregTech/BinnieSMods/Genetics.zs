@@ -79,7 +79,6 @@ recipes.addShaped("genetics_dna_dye", <genetics:misc:1> * 8,
   [<minecraft:dye:5>, <gregtech:meta_item_1:31>, <gregtech:meta_item_1:2214>],
   [<minecraft:dye:9>, <minecraft:glowstone_dust>, <minecraft:dye:9>]]);
 
-
 // Флуоресцентный краситель
 recipes.remove(<genetics:misc:2>);
 recipes.addShaped("genetics_fluorescent_dye", <genetics:misc:2> * 8,
@@ -134,6 +133,7 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Машины  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Изолятор

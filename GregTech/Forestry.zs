@@ -161,6 +161,7 @@ assembler.recipeBuilder()
 
 // Огнеупорная капсула
 Carpenter.removeRecipe(<forestry:refractory>);
+recipes.remove(<forestry:refractory>);
 assembler.recipeBuilder()
     .inputs(<ore:paneGlass>, <forestry:refractory_wax> * 2)
     .outputs(<forestry:refractory>)
@@ -256,6 +257,9 @@ assembler.recipeBuilder()
     .duration(10 * 20)
     .EUt(24)
     .buildAndRegister();
+
+// Укрепленный корпус
+Carpenter.addRecipe(<forestry:hardened_machine>, [[<ore:gemDiamond>, null, <ore:gemDiamond>], [null, <forestry:sturdy_machine>, null], [<ore:gemDiamond>, null, <ore:gemDiamond>]], 60, <liquid:water> * 5000)
 
 // Рассеивающий заряд
 Carpenter.removeRecipe(<forestry:crafting_material:4>);

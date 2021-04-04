@@ -140,32 +140,7 @@ recipes.addShaped("thermalfoundation_reinforced_invar_glass", <thermalfoundation
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Инструменты  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-// Медный щит
-recipes.remove(<thermalfoundation:tool.shield_copper>);
-recipes.addShaped("thermalfoundation_shield_copper", <thermalfoundation:tool.shield_copper>,
- [[<gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12018>, <gregtech:meta_item_1:12018>],
-  [<gregtech:meta_item_1:12018>, <minecraft:shield>, <gregtech:meta_item_1:12018>],
-  [null, <gregtech:meta_item_1:12018>, null]]);
-
-// Медная удочка
-recipes.remove(<thermalfoundation:tool.fishing_rod_copper>);
-recipes.addShaped("thermalfoundation_fishing_rod_copper", <thermalfoundation:tool.fishing_rod_copper>,
- [[null, null, <gregtech:meta_item_1:14018>],
-  [null, <gregtech:meta_item_1:14018>, <ore:string>],
-  [<gregtech:meta_item_1:14018>, <gregtech:meta_item_1:18033>, <ore:string>]]);
-
-// Медный укрепленный лук
-recipes.remove(<thermalfoundation:tool.bow_copper>);
-recipes.addShaped("thermalfoundation_fishing_bow_copper", <thermalfoundation:tool.bow_copper>,
- [[null, <gregtech:meta_item_1:14018>, <ore:string>],
-  [<ore:stickWood>, null, <ore:string>],
-  [null, <gregtech:meta_item_1:14018>, <ore:string>]]);
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Броня  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 recipes.remove(<thermalfoundation:armor.helmet_nickel>);
 recipes.addShaped(<thermalfoundation:armor.helmet_nickel>, [
 [<ore:plateNickel>, <ore:plateNickel>, <ore:plateNickel>], 
