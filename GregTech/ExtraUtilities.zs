@@ -8,11 +8,11 @@ print("Initializing 'ExtraUtilities'...");
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Запрещенные и ненужные предметы
-var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal:*>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots:*>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:grocket:*>, <extrautils2:pipe>, <extrautils2:powertransmitter>, <extrautils2:machine:*>, <extrautils2:bagofholding>, <extrautils2:goldenlasso:*>, <extrautils2:chickenring:*>, <extrautils2:angelring:*>, <extrautils2:luxsaber:*>] as IItemStack[];
+var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:powertransmitter>, <extrautils2:machine:*>, <extrautils2:bagofholding>, <extrautils2:goldenlasso>, <extrautils2:chickenring>, <extrautils2:angelring>, <extrautils2:luxsaber>] as IItemStack[];
 for item in items {
     for subItem in item.definition.subItems {
         mods.jei.JEI.removeAndHide(subItem);
-	      subItem.addTooltip("§cВ данной сборке этот предмет выключен");
+	    subItem.addTooltip("§cВ данной сборке этот предмет выключен");
     }
 }
 mods.jei.JEI.removeAndHide(<extrautils2:passivegenerator:7>);
@@ -135,6 +135,138 @@ assembler.recipeBuilder()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Улучшения  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Улучшение основа
+recipes.remove(<extrautils2:ingredients:9>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12215> * 2, <gregtech:meta_item_1:12154>)
+    .outputs(<extrautils2:ingredients:9>)
+    .duration(20 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Улучшение добыча
+recipes.remove(<extrautils2:ingredients:8>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:ingredients:9>, <gregtech:meta_item_1:14026> * 2, <gregtech:meta_item_1:19026> * 2)
+    .outputs(<extrautils2:ingredients:8>)
+    .duration(20 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Улучшение стак
+recipes.remove(<extrautils2:ingredients:7>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:ingredients:9>, <gregtech:meta_item_1:14111> * 2, <gregtech:meta_item_1:19026> * 2)
+    .outputs(<extrautils2:ingredients:7>)
+    .duration(20 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Улучшение скорость
+recipes.remove(<extrautils2:ingredients:6>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:ingredients:9>, <gregtech:meta_item_1:12112>, <gregtech:meta_item_1:19112> * 4)
+    .outputs(<extrautils2:ingredients:6>)
+    .duration(20 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Улучшение скорость (Магическое)
+recipes.remove(<extrautils2:ingredients:15>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:ingredients:6>, <extrautils2:ingredients:12> * 4, <gregtech:meta_item_1:19228> * 4)
+    .outputs(<extrautils2:ingredients:15>)
+    .duration(20 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Улучшение скорость (Максимальное)
+recipes.remove(<extrautils2:ingredients:16>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:ingredients:15>, <gregtech:meta_item_1:12331>, <gregtech:meta_item_1:19074> * 4)
+    .outputs(<extrautils2:ingredients:16>)
+    .duration(20 * 20)
+    .EUt(32)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Трубы и узлы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Транспортный фильтр
+recipes.remove(<extrautils2:grocket:1>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32506> * 2, <gregtech:meta_item_1:12215> * 2, <extrautils2:filter>)
+    .outputs(<extrautils2:grocket:1>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Транспортный узел (предметы)
+recipes.remove(<extrautils2:grocket>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32506> * 4, <gregtech:meta_item_1:12145> * 2, <gregtech:meta_item_1:32630>)
+    .outputs(<extrautils2:grocket>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Транспортный узел (жидкости)
+recipes.remove(<extrautils2:grocket:2>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32506> * 4, <gregtech:meta_item_1:12145> * 2, <gregtech:meta_item_1:32610>)
+    .outputs(<extrautils2:grocket:2>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Поисковой узел (предметы)
+recipes.remove(<extrautils2:grocket:3>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:grocket>, <forestry:crafting_material:1>, <gregtech:meta_item_1:12113>)
+    .outputs(<extrautils2:grocket:3>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Труба перемещения фильтр
+recipes.remove(<extrautils2:grocket:5>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32506> * 2, <extrautils2:ingredients:9>, <extrautils2:filter>)
+    .outputs(<extrautils2:grocket:5>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Поисковой узел (жидкости)
+recipes.remove(<extrautils2:grocket:4>);
+assembler.recipeBuilder()
+    .inputs(<extrautils2:grocket:2>, <forestry:crafting_material:1>, <gregtech:meta_item_1:12216>)
+    .outputs(<extrautils2:grocket:4>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Узел перемещения (энергия)
+recipes.remove(<extrautils2:grocket:6>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_2:32506> * 4, <gregtech:meta_item_1:12145> * 2, <gregtech:meta_item_1:32630>, <gregtech:cable:354> * 4, <gregtech:meta_item_1:19228> * 4)
+    .outputs(<extrautils2:grocket:6>)
+    .duration(25 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
+// Транспортная труба
+recipes.remove(<extrautils2:pipe>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12141> * 2, <gregtech:meta_item_1:12145> * 2, <gregtech:meta_item_1:12144> * 2)
+    .outputs(<extrautils2:pipe>)
+    .duration(10 * 20)
+    .EUt(32)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Серпы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Каменный серп
 recipes.remove(<extrautils2:sickle_stone>);
@@ -230,6 +362,15 @@ assembler.recipeBuilder()
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+// Зачарованный слиток
+recipes.remove(<extrautils2:ingredients:12>);
+chemical_reactor.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:10228>, <minecraft:dye:4>)
+    .fluidInputs([<liquid:glowstone> * 250])
+    .outputs(<extrautils2:ingredients:12>)
+    .duration(60 * 20)
+    .EUt(32)
+    .buildAndRegister();
 
 // Жидкостный фильтр
 recipes.remove(<extrautils2:filterfluids>);

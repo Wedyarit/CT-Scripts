@@ -1,7 +1,20 @@
 #priority 1
 # ThermalInnovation
 
+import crafttweaker.item.IItemStack;
+
 print("Initializing 'ThermalInnovation'...");
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Запрещенные и ненужные предметы
+var items = [<thermalinnovation:saw>, <thermalinnovation:injector>] as IItemStack[];
+for item in items {
+    for subItem in item.definition.subItems {
+        mods.jei.JEI.removeAndHide(subItem);
+	    subItem.addTooltip("§cВ данной сборке этот предмет выключен");
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Флаксобуры    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

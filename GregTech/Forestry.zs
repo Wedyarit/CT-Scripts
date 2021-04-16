@@ -10,7 +10,7 @@ print("Initializing 'Forestry'...");
 
 
 // Ненужные и запрещенные предметы
-var items = [<forestry:kit_shovel>, <forestry:bronze_pickaxe>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:bottler>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>, <forestry:gear_bronze>, <forestry:gear_copper>, <forestry:gear_tin>] as IItemStack[];
+var items = [<extratrees:machine>, <forestry:kit_shovel>, <forestry:bronze_pickaxe>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:bottler>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>, <forestry:gear_bronze>, <forestry:gear_copper>, <forestry:gear_tin>] as IItemStack[];
 for item in items {
     mods.jei.JEI.removeAndHide(item);
 	item.addTooltip("§cВ данной сборке этот предмет выключен");

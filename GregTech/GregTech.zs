@@ -5,7 +5,7 @@ import crafttweaker.item.IItemStack;
 
 print("Initializing 'GregTech'...");
 
-// Вырезаем сундуки - https://youtu.be/p-Ab5VJjiIA
+// Удаление сундуков
 var items = [<gregtech:machine:802>, <gregtech:machine:803>, <gregtech:machine:805>, <gregtech:machine:806>, <gregtech:machine:807>, <gregtech:machine:808>] as IItemStack[];
 for item in items {
     mods.jei.JEI.removeAndHide(item);
