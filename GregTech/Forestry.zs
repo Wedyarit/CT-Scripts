@@ -133,9 +133,9 @@ recipes.addShaped("forestry_frame_proven", <forestry:frame_proven>,
 
 // Рамка Новы
 recipes.addShaped("extrabees_hive_frame_debug", <extrabees:hive_frame.debug>,
- [[<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>],
-  [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:32724>, <gregtech:meta_item_1:14072>],
-  [<gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>, <gregtech:meta_item_1:14072>]]);
+ [[<gregtech:meta_item_1:14304>, <gregtech:meta_item_1:14304>, <gregtech:meta_item_1:14304>],
+  [<gregtech:meta_item_1:14304>, <gregtech:meta_item_1:32725>, <gregtech:meta_item_1:14304>],
+  [<gregtech:meta_item_1:14304>, <gregtech:meta_item_1:14304>, <gregtech:meta_item_1:14304>]]);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -283,6 +283,15 @@ assembler.recipeBuilder()
     .outputs(<forestry:crafting_material:6>)
     .duration(30 * 20)
     .EUt(256)
+    .buildAndRegister();
+
+// Полированная палка
+assembler.recipeBuilder()
+    .inputs(<ore:logWood> * 2)
+    .fluidInputs([<liquid:seed.oil> * 100])
+    .outputs(<forestry:oak_stick>)
+    .duration(5 * 20)
+    .EUt(24)
     .buildAndRegister();
 
 // Гибкий корпус

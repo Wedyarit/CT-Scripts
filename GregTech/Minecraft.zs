@@ -54,7 +54,7 @@ assembler.recipeBuilder()
 var tools = [<minecraft:wooden_shovel>, <minecraft:wooden_pickaxe>, <minecraft:wooden_axe>, <minecraft:golden_shovel>, <minecraft:golden_pickaxe>, <minecraft:golden_axe>, <minecraft:wooden_hoe>, <minecraft:golden_hoe>, <minecraft:wooden_sword>, <minecraft:golden_sword>] as IItemStack[];
 for tool in tools {
     mods.jei.JEI.removeAndHide(tool);
-	tool.addTooltip("§cВ данной сборке этот предмет выключен");
+	  tool.addTooltip("§cВ данной сборке этот предмет выключен");
 }
 
 // Щит
@@ -134,14 +134,27 @@ assembler.recipeBuilder()
 
 // Яйцо дракона
 recipes.remove(<minecraft:dragon_egg>);
-assembler.findRecipe(1, [<minecraft:glowstone_dust> * 4, <minecraft:redstone> * 4], null).remove();
 assembler.recipeBuilder()
-    .inputs(<minecraft:nether_star>, <gregtech:meta_item_1:32724>, <gtadditions:ga_meta_item:32018> * 16, <appliedenergistics2:material:8> * 16, <gregtech:meta_item_1:2074> * 16)
+    .inputs(<minecraft:nether_star>, <gregtech:meta_item_1:32724>, <gtadditions:ga_meta_item:32018> * 16, <appliedenergistics2:material:8> * 16, <gregtech:meta_item_1:19074> * 16)
     .fluidInputs([<liquid:uumatter> * 500])
-    .outputs(<minecraft:redstone_lamp>)
+    .outputs(<minecraft:dragon_egg>)
     .duration(360 * 20)
     .EUt(512)
     .buildAndRegister();
+
+// Воронка
+recipes.remove(<minecraft:hopper>);
+recipes.addShaped("minecraft_hopper", <minecraft:hopper>,
+ [[<gregtech:meta_item_1:12033>, wrench, <gregtech:meta_item_1:12033>],
+  [<gregtech:meta_item_1:12033>, <ore:chest>, <gregtech:meta_item_1:12033>],
+  [null, <gregtech:meta_item_1:12033>, null]]);
+
+// Сундук
+recipes.remove(<minecraft:chest>);
+recipes.addShaped("minecraft_chest", <minecraft:chest>,
+ [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+  [<ore:plankWood>, null, <ore:plankWood>],
+  [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]]);
 
 // Алмазная броня
 recipes.remove(<minecraft:diamond_helmet>);

@@ -393,7 +393,29 @@ recipes.addShaped(<thermalfoundation:armor.boots_bronze>, [
 [<ore:plateBronze>, null, <ore:plateBronze>], 
 [<ore:plateCurvedBronze>, hammer, <ore:plateCurvedBronze>]
 ]);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Прочее  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Фито-Гро
+recipes.remove(<thermalfoundation:fertilizer>);
+mixer.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2196>, <gregtech:meta_item_1:2156>, <gregtech:meta_item_1:2101>, <gregtech:meta_item_2:32570>)
+    .outputs(<thermalfoundation:fertilizer>)
+    .duration(5 * 20)
+    .EUt(16)
+    .buildAndRegister();
+
+// Обогащенный Фито-Гро
+recipes.remove(<thermalfoundation:fertilizer:1>);
+mixer.recipeBuilder()
+    .inputs(<thermalfoundation:fertilizer> * 3, <gregtech:meta_item_1:4226>)
+    .outputs(<thermalfoundation:fertilizer:1> * 4)
+    .duration(5 * 20)
+    .EUt(16)
+    .buildAndRegister();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 print("Initialized 'ThermalFoundation'");

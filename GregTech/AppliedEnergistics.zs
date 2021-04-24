@@ -398,7 +398,7 @@ assembler.recipeBuilder()
 // Кварцевое оптическое волокно
 recipes.remove(<appliedenergistics2:part:140>);
 blast_furnace.recipeBuilder()
-    .inputs(<gregtech:meta_item_2:32453>, <appliedenergistics2:material:3>)
+    .inputs(<gregtech:meta_item_2:32453>, <gregtech:meta_item_1:2201>)
     .fluidInputs([<liquid:oxygen> * 1000])
     .outputs(<appliedenergistics2:part:140>)
     .property("temperature", 1200)
@@ -558,7 +558,7 @@ assembler.recipeBuilder()
     .EUt(64)
     .buildAndRegister();
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:1> * 3, <gregtech:cable:237> * 3, <gregtech:cable:237>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12071>)
+    .inputs(<appliedenergistics2:material:23>, <gregtech:cable:1> * 3, <gregtech:cable:237> * 3, <gregtech:meta_item_1:19033>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12071>)
     .fluidInputs([<liquid:soldering_alloy> * 72])
     .outputs(<appliedenergistics2:material:28>)
     .duration(10 * 20)
@@ -1057,6 +1057,15 @@ assembler.recipeBuilder()
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Другое    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Туннель точка-точка
+recipes.remove(<appliedenergistics2:part:460>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12033> * 4, <gregtech:meta_item_1:12219> * 2, <gregtech:cable:26> * 2, <appliedenergistics2:material:9>, <appliedenergistics2:material:24>)
+    .outputs(<appliedenergistics2:part:460>)
+    .duration(10 * 20)
+    .EUt(64)
+    .buildAndRegister();
+
 // МЭ корпус ячейки хранения
 recipes.remove(<appliedenergistics2:material:39>);
 assembler.recipeBuilder()
@@ -1100,6 +1109,22 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:light_detector>)
     .duration(3 * 20)
     .EUt(24)
+    .buildAndRegister();
+
+// Изменчивая пыль
+macerator.recipeBuilder()
+    .inputs(<appliedenergistics2:material:7>)
+    .outputs(<appliedenergistics2:material:8>)
+    .duration(5 * 20)
+    .EUt(8)
+    .buildAndRegister();
+
+// Кристалла истинного кварца пыль
+macerator.recipeBuilder()
+    .inputs(<appliedenergistics2:material>)
+    .outputs(<appliedenergistics2:material:2>)
+    .duration(5 * 20)
+    .EUt(8)
     .buildAndRegister();
 
 // Беспроводной приемник

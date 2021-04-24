@@ -79,6 +79,13 @@ assembler.recipeBuilder()
     .EUt(256)
     .buildAndRegister();
 
+// Фитогенный светильник
+recipes.remove(<thermalexpansion:machine:4>);
+recipes.addShaped("thermalexpansion_phytogenic_lamp", <thermalexpansion:machine:4>,
+ [[<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:12330>, <gregtech:meta_item_1:12183>],
+  [<gregtech:meta_item_1:32681>, <gregtech:machine_casing:2>, <gregtech:meta_item_1:32691>],
+  [<gregtech:meta_item_1:12183>, <gregtech:meta_item_1:32611>, <gregtech:meta_item_1:12183>]]);
+
 // Лесопилка
 recipes.remove(<thermalexpansion:machine:2>);
 recipes.addShaped("thermalexpansion_sawmill", <thermalexpansion:machine:2>,
@@ -158,6 +165,33 @@ recipes.addShaped("thermalexpansion_extension_fragmentation", <thermalexpansion:
  [[<gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>],
   [<thermalfoundation:material:1026>, <thermalfoundation:material:515>, <thermalfoundation:material:1026>],
   [<gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>, <gregtech:meta_item_1:12044>]]);
+
+// Восстановитель питательных веществ
+recipes.remove(<thermalexpansion:augment:320>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12183> * 4, <gregtech:meta_item_1:12330> * 2, <gregtech:meta_item_2:25226> * 2, <thermalfoundation:fertilizer:1> * 2)
+    .outputs(<thermalexpansion:augment:320>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Обогащатель саженцев:
+recipes.remove(<thermalexpansion:augment:323>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12183> * 4, <gregtech:meta_item_1:12330> * 2, <gregtech:meta_item_2:25154> * 2, <thermalfoundation:fertilizer:1> * 2, <gregtech:meta_item_1:2326> * 2, <forestry:mulch> * 2)
+    .outputs(<thermalexpansion:augment:323>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Монокультурный цикл
+recipes.remove(<thermalexpansion:augment:324>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12183> * 4, <gregtech:meta_item_1:12330> * 2, <gregtech:meta_item_1:32630>, <thermalfoundation:fertilizer:2> * 2)
+    .outputs(<thermalexpansion:augment:324>)
+    .duration(15 * 20)
+    .EUt(128)
+    .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
