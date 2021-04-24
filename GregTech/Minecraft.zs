@@ -132,6 +132,16 @@ assembler.recipeBuilder()
     .EUt(1)
     .buildAndRegister();
 
+// Яйцо дракона
+recipes.remove(<minecraft:dragon_egg>);
+assembler.findRecipe(1, [<minecraft:glowstone_dust> * 4, <minecraft:redstone> * 4], null).remove();
+assembler.recipeBuilder()
+    .inputs(<minecraft:nether_star>, <gregtech:meta_item_1:32724>, <gtadditions:ga_meta_item:32018> * 16, <appliedenergistics2:material:8> * 16, <gregtech:meta_item_1:2074> * 16)
+    .fluidInputs([<liquid:uumatter> * 500])
+    .outputs(<minecraft:redstone_lamp>)
+    .duration(360 * 20)
+    .EUt(512)
+    .buildAndRegister();
 
 // Алмазная броня
 recipes.remove(<minecraft:diamond_helmet>);
