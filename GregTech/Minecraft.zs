@@ -51,7 +51,7 @@ assembler.recipeBuilder()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Инструменты    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Взаимозаменяемые предметы (Удаление)
-var tools = [<minecraft:wooden_shovel>, <minecraft:wooden_pickaxe>, <minecraft:wooden_axe>, <minecraft:diamond_shovel>, <minecraft:diamond_pickaxe>, <minecraft:diamond_axe>, <minecraft:golden_shovel>, <minecraft:golden_pickaxe>, <minecraft:golden_axe>, <minecraft:wooden_hoe>, <minecraft:diamond_hoe>, <minecraft:golden_hoe>, <minecraft:wooden_sword>, <minecraft:diamond_sword>, <minecraft:golden_sword>] as IItemStack[];
+var tools = [<minecraft:wooden_shovel>, <minecraft:wooden_pickaxe>, <minecraft:wooden_axe>, <minecraft:golden_shovel>, <minecraft:golden_pickaxe>, <minecraft:golden_axe>, <minecraft:wooden_hoe>, <minecraft:golden_hoe>, <minecraft:wooden_sword>, <minecraft:golden_sword>] as IItemStack[];
 for tool in tools {
     mods.jei.JEI.removeAndHide(tool);
 	tool.addTooltip("§cВ данной сборке этот предмет выключен");
