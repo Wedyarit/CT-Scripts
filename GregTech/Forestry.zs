@@ -321,6 +321,15 @@ assembler.recipeBuilder()
     .EUt(12)
     .buildAndRegister();
 
+// Анализатор
+recipes.remove(<forestry:portable_alyzer>);
+assembler.recipeBuilder()
+    .inputs(<minecraft:glass_pane> * 2, <gregtech:meta_item_1:12071> * 4, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12237> * 2)
+    .outputs(<forestry:portable_alyzer>)
+    .duration(10 * 20)
+    .EUt(32)
+    .buildAndRegister();
+
 // Бывшая среда обитания
 recipes.remove(<forestry:habitat_former>);
 recipes.addShaped("forestry_habitat_former", <forestry:habitat_former>,

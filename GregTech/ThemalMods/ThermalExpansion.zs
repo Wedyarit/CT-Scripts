@@ -187,7 +187,7 @@ assembler.recipeBuilder()
 // Монокультурный цикл
 recipes.remove(<thermalexpansion:augment:324>);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12183> * 4, <gregtech:meta_item_1:12330> * 2, <gregtech:meta_item_1:32630>, <thermalfoundation:fertilizer:2> * 2)
+    .inputs(<gregtech:meta_item_1:12183> * 4, <gregtech:meta_item_1:12330> * 2, <gregtech:meta_item_1:32631>, <thermalfoundation:fertilizer:2> * 2)
     .outputs(<thermalexpansion:augment:324>)
     .duration(15 * 20)
     .EUt(128)

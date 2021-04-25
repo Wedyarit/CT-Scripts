@@ -57,6 +57,11 @@ for tool in tools {
 	  tool.addTooltip("§cВ данной сборке этот предмет выключен");
 }
 
+var d_tools = [<minecraft:diamond_sword>, <minecraft:diamond_pickaxe>, <minecraft:diamond_axe>, <minecraft:diamond_shovel>, <minecraft:diamond_hoe>, <minecraft:iron_sword>, <minecraft:iron_pickaxe>, <minecraft:iron_axe>, <minecraft:iron_shovel>, <minecraft:iron_hoe>] as IItemStack[];
+for d_tool in d_tools {
+    recipes.remove(d_tool); 
+}
+
 // Щит
 recipes.remove(<minecraft:shield>);
 recipes.addShaped("minecraft_shield", <minecraft:shield>,
@@ -140,6 +145,25 @@ assembler.recipeBuilder()
     .outputs(<minecraft:dragon_egg>)
     .duration(360 * 20)
     .EUt(512)
+    .buildAndRegister();
+
+// Слеза гаста
+recipes.remove(<minecraft:ghast_tear>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2050> * 8, <ore:gunpowder> * 8, <gregtech:meta_item_1:2331>)
+    .fluidInputs([<liquid:uumatter> * 32])
+    .outputs(<minecraft:ghast_tear> * 8)
+    .duration(10 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Кристалл энда
+recipes.remove(<minecraft:end_crystal>);
+assembler.recipeBuilder()
+    .inputs(<ore:paneGlass> * 16, <gregtech:meta_item_1:12214> * 6, <minecraft:ender_eye>, <minecraft:ghast_tear>)
+    .outputs(<minecraft:end_crystal>)
+    .duration(15 * 20)
+    .EUt(128)
     .buildAndRegister();
 
 // Воронка

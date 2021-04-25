@@ -24,4 +24,26 @@ mixer.recipeBuilder()
 // Бимасса из пшеницы
 compressor.findRecipe(2, [<minecraft:wheat> * 8], null).remove();
 
+// Селитра из песчаников
+macerator.recipeBuilder()
+    .inputs(<ore:sandstone>)
+    .outputs(<minecraft:sand> * 2)
+    .chancedOutput(<gregtech:meta_item_1:2156>, 3000, 500)
+    .duration(7.5 * 20)
+    .EUt(8)
+    .buildAndRegister();
+
+// Лопасть из кобальта (баг гречки - почему-то нет крафта)
+recipes.addShaped("gregtech_cobalt_blade", <gregtech:meta_item_2:15017>,
+ [[<gregtech:meta_item_1:12017>, <gregtech:meta_item_1:12017>, <gregtech:meta_item_1:12017>],
+  [<gregtech:meta_item_1:17033>, <gregtech:meta_item_1:12017>, <gregtech:meta_item_1:17033>],
+  [wrench, <gregtech:meta_item_1:12017>, file]]);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:12017> * 5, <gregtech:meta_item_1:17033> * 2)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 10}))
+    .outputs(<gregtech:meta_item_2:15017>)
+    .duration(20)
+    .EUt(256)
+    .buildAndRegister();
+
 print("Initialized 'GregTech'");

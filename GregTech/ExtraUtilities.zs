@@ -8,7 +8,7 @@ print("Initializing 'ExtraUtilities'...");
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Удаление предметов  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Запрещенные и ненужные предметы
-var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:powertransmitter>, <extrautils2:machine:*>, <extrautils2:bagofholding>, <extrautils2:goldenlasso>, <extrautils2:chickenring>, <extrautils2:angelring>, <extrautils2:luxsaber>] as IItemStack[];
+var items = [<extrautils2:powermanager>, <extrautils2:wateringcan>, <extrautils2:suncrystal>, <extrautils2:snowglobe>, <extrautils2:interactionproxy>, <extrautils2:biomemarker>, <extrautils2:boomerang>, <extrautils2:unstableingots>, <extrautils2:indexer>, <extrautils2:resonator>, <extrautils2:powerbattery>, <extrautils2:crafter>, <extrautils2:playerchest>, <extrautils2:analogcrafter>, <extrautils2:powertransmitter>, <extrautils2:machine>, <extrautils2:goldenlasso>, <extrautils2:chickenring>, <extrautils2:luxsaber>] as IItemStack[];
 for item in items {
     for subItem in item.definition.subItems {
         mods.jei.JEI.removeAndHide(subItem);
@@ -131,6 +131,59 @@ assembler.recipeBuilder()
     .outputs(<extrautils2:spike_diamond>)
     .duration(15 * 20)
     .EUt(48)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Ангельские кольца  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Ангельское кольцо (Белые крылья)
+recipes.remove(<extrautils2:angelring:1>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:18072>, <gregtech:meta_item_1:2331>, <forestry:crafting_material:1> * 2, <gregtech:meta_item_1:19228> * 4, <forestry:crafting_material:3> * 8, <minecraft:feather> * 16, <minecraft:string> * 32)
+    .fluidInputs([<liquid:uumatter> * 100])
+    .outputs(<extrautils2:angelring:1>)
+    .duration(1500 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Ангельское кольцо (Розовые крылья)
+recipes.remove(<extrautils2:angelring:2>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:18072>, <gregtech:meta_item_1:2331>, <forestry:crafting_material:1> * 2, <gregtech:meta_item_1:19228> * 4, <gregtech:meta_item_2:32504> * 16, <forestry:crafting_material:3> * 16, <gregtech:meta_item_1:32442>)
+    .fluidInputs([<liquid:uumatter> * 100])
+    .outputs(<extrautils2:angelring:2>)
+    .duration(1500 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Ангельское кольцо (Бордовые крылья)
+recipes.remove(<extrautils2:angelring:3>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:18072>, <gregtech:meta_item_1:2331>, <forestry:crafting_material:1> * 2, <gregtech:meta_item_1:19228> * 4, <gregtech:meta_item_2:32504> * 16, <minecraft:leather> * 24, <gregtech:meta_item_1:32458>)
+    .fluidInputs([<liquid:uumatter> * 100])
+    .outputs(<extrautils2:angelring:3>)
+    .duration(1500 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Ангельское кольцо (Золотые крылья)
+recipes.remove(<extrautils2:angelring:4>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:18072>, <gregtech:meta_item_1:2331>, <forestry:crafting_material:1> * 2, <gregtech:meta_item_1:19228> * 4, <minecraft:blaze_rod> * 4, <gregtech:meta_item_1:12228> * 4, <gregtech:meta_item_1:14228> * 8)
+    .fluidInputs([<liquid:uumatter> * 100])
+    .outputs(<extrautils2:angelring:4>)
+    .duration(1500 * 20)
+    .EUt(128)
+    .buildAndRegister();
+
+// Ангельское кольцо (Черные крылья)
+recipes.remove(<extrautils2:angelring:5>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:18072>, <gregtech:meta_item_1:2331>, <forestry:crafting_material:1> * 2, <gregtech:meta_item_1:19228> * 4, <gregtech:meta_item_2:32504> * 16, <minecraft:leather> * 24, <gregtech:meta_item_1:32460>)
+    .fluidInputs([<liquid:uumatter> * 100])
+    .outputs(<extrautils2:angelring:5>)
+    .duration(1500 * 20)
+    .EUt(128)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -361,6 +414,17 @@ assembler.recipeBuilder()
     .EUt(128)
     .buildAndRegister();
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+// Сумка удержания
+recipes.remove(<extrautils2:bagofholding>);
+assembler.recipeBuilder()
+    .inputs(<forestry:crafting_material:3> * 16, <minecraft:leather> * 16, <gregtech:meta_item_1:19228> * 16, <gregtech:meta_item_2:32504> * 8, <minecraft:string> * 8)
+    .fluidInputs([<liquid:glue> * 2000])
+    .outputs(<extrautils2:bagofholding>)
+    .duration(350 * 20)
+    .EUt(32)
+    .buildAndRegister();
 
 // Зачарованный слиток
 recipes.remove(<extrautils2:ingredients:12>);

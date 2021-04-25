@@ -9,7 +9,7 @@ print("Initializing 'Applied Energistics 2'...");
 
 
 // Ненужные предметы
-var items = [<appliedenergistics2:certus_quartz_spade>, <appliedenergistics2:certus_quartz_axe>, <appliedenergistics2:certus_quartz_hoe>, <appliedenergistics2:certus_quartz_sword>, <appliedenergistics2:nether_quartz_pickaxe>, <appliedenergistics2:nether_quartz_spade>, <appliedenergistics2:nether_quartz_axe>, <appliedenergistics2:nether_quartz_hoe>, <appliedenergistics2:nether_quartz_sword>, <appliedenergistics2:certus_quartz_pickaxe>, <appliedenergistics2:inscriber>, <appliedenergistics2:quantum_ring>, <appliedenergistics2:quantum_link>, <appliedenergistics2:condenser>, <appliedenergistics2:entropy_manipulator>, <appliedenergistics2:charged_staff>, <appliedenergistics2:color_applicator>, <threng:machine:2>] as IItemStack[];
+var items = [<appliedenergistics2:certus_quartz_spade>, <appliedenergistics2:certus_quartz_axe>, <appliedenergistics2:certus_quartz_hoe>, <appliedenergistics2:certus_quartz_sword>, <appliedenergistics2:nether_quartz_pickaxe>, <appliedenergistics2:nether_quartz_spade>, <appliedenergistics2:nether_quartz_axe>, <appliedenergistics2:nether_quartz_hoe>, <appliedenergistics2:nether_quartz_sword>, <appliedenergistics2:certus_quartz_pickaxe>, <appliedenergistics2:inscriber>, <appliedenergistics2:entropy_manipulator>, <appliedenergistics2:charged_staff>, <appliedenergistics2:color_applicator>, <threng:machine:2>] as IItemStack[];
 for item in items {
     mods.jei.JEI.removeAndHide(item);
 	item.addTooltip("§cВ данной сборке этот предмет выключен");
@@ -119,14 +119,14 @@ metal_bender.recipeBuilder()
 Inscriber.removeRecipe(<appliedenergistics2:material:22>); 
 Etcher.removeRecipe(<appliedenergistics2:material:22>); 
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:18>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16018> * 2, <gregtech:meta_item_2:32460>, <gregtech:meta_item_2:32458>)
+    .inputs(<appliedenergistics2:material:18>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 4, <gregtech:meta_item_2:16018> * 4)
     .fluidInputs([<liquid:soldering_alloy> * 72])
     .outputs(<appliedenergistics2:material:22>)
     .duration(10 * 20)
     .EUt(48)
     .buildAndRegister();
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:18>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16018> * 2, <gregtech:meta_item_2:32460>, <gregtech:meta_item_2:32458>)
+    .inputs(<appliedenergistics2:material:18>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 4, <gregtech:meta_item_2:16018> * 4)
     .fluidInputs([<liquid:tin> * 144])
     .outputs(<appliedenergistics2:material:22>)
     .duration(10 * 20)
@@ -137,14 +137,14 @@ assembler.recipeBuilder()
 Inscriber.removeRecipe(<appliedenergistics2:material:23>); 
 Etcher.removeRecipe(<appliedenergistics2:material:23>);
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:16>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16026> * 2, <gregtech:meta_item_2:32460>, <gregtech:meta_item_2:32458>, <gregtech:meta_item_2:32459>)
+    .inputs(<appliedenergistics2:material:16>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 4, <gregtech:meta_item_2:16026> * 4)
     .fluidInputs([<liquid:soldering_alloy> * 72])
     .outputs(<appliedenergistics2:material:23>)
     .duration(10 * 20)
     .EUt(64)
     .buildAndRegister();
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:16>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16026> * 2, <gregtech:meta_item_2:32460>, <gregtech:meta_item_2:32458>, <gregtech:meta_item_2:32459>)
+    .inputs(<appliedenergistics2:material:16>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 4, <gregtech:meta_item_2:16026> * 4)
     .fluidInputs([<liquid:tin> * 144])
     .outputs(<appliedenergistics2:material:23>)
     .duration(10 * 20)
@@ -155,14 +155,14 @@ assembler.recipeBuilder()
 Inscriber.removeRecipe(<appliedenergistics2:material:24>); 
 Etcher.removeRecipe(<appliedenergistics2:material:24>); 
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:17>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16051> * 2, <gregtech:meta_item_2:32460>, <gregtech:meta_item_2:32458>, <gregtech:meta_item_2:32459>, <gregtech:meta_item_2:32457>)
+    .inputs(<appliedenergistics2:material:17>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 4, <gregtech:meta_item_2:16051> * 4)
     .fluidInputs([<liquid:soldering_alloy> * 72])
     .outputs(<appliedenergistics2:material:24>)
     .duration(10 * 20)
     .EUt(96)
     .buildAndRegister();
 assembler.recipeBuilder()
-    .inputs(<appliedenergistics2:material:17>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 2, <gregtech:meta_item_2:16051> * 2, <gregtech:meta_item_2:32460>, <gregtech:meta_item_2:32458>, <gregtech:meta_item_2:32459>, <gregtech:meta_item_2:32457>)
+    .inputs(<appliedenergistics2:material:17>, <appliedenergistics2:material:20>, <gregtech:meta_item_2:16237> * 4, <gregtech:meta_item_2:16051> * 4)
     .fluidInputs([<liquid:tin> * 144])
     .outputs(<appliedenergistics2:material:24>)
     .duration(10 * 20)
@@ -827,11 +827,40 @@ assembler.recipeBuilder()
 
 // МЭ интерфейс
 recipes.remove(<appliedenergistics2:interface>);
+recipes.addShapeless(<appliedenergistics2:interface>, [<appliedenergistics2:part:440>]);
 assembler.recipeBuilder()
     .inputs(<gregtech:machine_casing:3>, <appliedenergistics2:material:43>, <appliedenergistics2:material:44>, <gregtech:meta_item_1:32632>, <gregtech:cable:26> * 6)
     .outputs(<appliedenergistics2:interface>)
     .duration(10 * 20)
     .EUt(256)
+    .buildAndRegister();
+
+// Конденсатор материи
+recipes.remove(<appliedenergistics2:condenser>);
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:19032> * 18, <gregtech:meta_item_1:12214> * 6, <gregtech:meta_item_1:32673> * 4, <gregtech:machine:504>)
+    .outputs(<appliedenergistics2:condenser>)
+    .duration(70 * 20)
+    .EUt(2048)
+    .buildAndRegister();
+
+// Квантовое кольцо
+recipes.remove(<appliedenergistics2:quantum_ring>);
+assembler.recipeBuilder()
+    .inputs(<threng:material:4> * 4, <threng:material:14> * 4, <appliedenergistics2:dense_energy_cell>)
+    .outputs(<appliedenergistics2:quantum_ring>)
+    .duration(120 * 20)
+    .EUt(2048)
+    .buildAndRegister();
+
+// Камера квантовой связи
+recipes.remove(<appliedenergistics2:quantum_link>);
+assembler.recipeBuilder()
+    .inputs(<ore:paneGlass> * 6, <gregtech:meta_item_1:32724> * 4)
+    .fluidInputs([<liquid:uumatter> * 100])
+    .outputs(<appliedenergistics2:quantum_link>)
+    .duration(180 * 20)
+    .EUt(2048)
     .buildAndRegister();
 
 // МЭ контроллер
@@ -1110,6 +1139,9 @@ assembler.recipeBuilder()
     .duration(3 * 20)
     .EUt(24)
     .buildAndRegister();
+
+// Кремний
+furnace.addRecipe(<appliedenergistics2:material:5>, <gregtech:meta_item_1:2201>);
 
 // Изменчивая пыль
 macerator.recipeBuilder()
