@@ -107,7 +107,7 @@ assembler.recipeBuilder()
 // Интегральная плата
 recipes.remove(<genetics:misc:8>);
 assembler.recipeBuilder()
-    .inputs(<forestry:thermionic_tubes:11>, <gregtech:meta_item_2:32491>, <forestry:thermionic_tubes:4>, <forestry:chipsets:1>.withTag({T: 1 as short}), <forestry:chipsets:3>.withTag({T: 3 as short}), <forestry:chipsets:1>.withTag({T: 1 as short}), <forestry:thermionic_tubes:4>, <gregtech:meta_item_2:32491>, <forestry:thermionic_tubes:11>)
+    .inputs(<forestry:thermionic_tubes:11>, <gregtech:meta_item_2:32491>, <forestry:thermionic_tubes:4>, <forestry:chipsets:1>, <forestry:chipsets:3>, <forestry:chipsets:1>, <forestry:thermionic_tubes:4>, <gregtech:meta_item_2:32491>, <forestry:thermionic_tubes:11>)
     .outputs(<genetics:misc:8>)
     .duration(10 * 20)
     .EUt(1024)

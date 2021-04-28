@@ -10,7 +10,7 @@ print("Initializing 'Forestry'...");
 
 
 // Ненужные и запрещенные предметы
-var items = [<extratrees:machine>, <forestry:kit_shovel>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:bottler>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>, <forestry:gear_bronze>, <forestry:gear_copper>, <forestry:gear_tin>] as IItemStack[];
+var items = [<binniecore:field_kit:64>, <extratrees:machine>, <forestry:kit_shovel>, <forestry:kit_pickaxe>, <forestry:centrifuge>, <forestry:squeezer>, <forestry:fabricator>, <forestry:carpenter>, <forestry:genetic_filter>, <forestry:gear_bronze>, <forestry:gear_copper>, <forestry:gear_tin>] as IItemStack[];
 for item in items {
     mods.jei.JEI.removeAndHide(item);
 	item.addTooltip("§cВ данной сборке этот предмет выключен");
@@ -336,6 +336,13 @@ recipes.addShaped("forestry_habitat_former", <forestry:habitat_former>,
  [[<ore:blockGlass>, <forestry:chipsets:3>, <ore:blockGlass>],
   [<gregtech:meta_item_1:32612>, <forestry:hardened_machine>, <gregtech:meta_item_1:32612>],
   [<gregtech:meta_item_2:32491>, <gregtech:meta_item_1:32612>, <gregtech:meta_item_2:32491>]]);
+
+// Разливочный механизм 
+recipes.remove(<forestry:bottler>);
+recipes.addShaped("forestry_filling_mechanism", <forestry:bottler>,
+ [[<gregtech:meta_item_1:12184>, <gregtech:machine:813>, <gregtech:meta_item_1:12184>],
+  [<gregtech:meta_item_1:32610>, <forestry:flexible_casing>, <gregtech:meta_item_1:32610>],
+  [<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>, <gregtech:meta_item_1:12184>]]);
 
 // Бак для дождя
 recipes.remove(<forestry:raintank>);

@@ -22,5 +22,5 @@ recipes.addShaped("name-id", output,
 ```
 #### Shapeless Recipe
 ```zenscript
-recipes.addShapeless(output, [input, unput, input]);
+recipes.addShapeless(output, [input, input, input]);
 ```

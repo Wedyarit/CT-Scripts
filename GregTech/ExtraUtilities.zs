@@ -136,6 +136,9 @@ assembler.recipeBuilder()
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Ангельские кольца  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Обычное кольцо из других
+recipes.removeByRecipeName("extrautils2:angel_ring_convert_0");
+
 // Ангельское кольцо (Белые крылья)
 recipes.remove(<extrautils2:angelring:1>);
 assembler.recipeBuilder()

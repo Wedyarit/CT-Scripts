@@ -37,7 +37,7 @@ macerator.recipeBuilder()
 recipes.addShaped("gregtech_cobalt_blade", <gregtech:meta_item_2:15017>,
  [[<gregtech:meta_item_1:12017>, <gregtech:meta_item_1:12017>, <gregtech:meta_item_1:12017>],
   [<gregtech:meta_item_1:17033>, <gregtech:meta_item_1:12017>, <gregtech:meta_item_1:17033>],
-  [wrench, <gregtech:meta_item_1:12017>, file]]);
+  [file, <gregtech:meta_item_1:12017>, wrench]]);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:12017> * 5, <gregtech:meta_item_1:17033> * 2)
     .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 10}))

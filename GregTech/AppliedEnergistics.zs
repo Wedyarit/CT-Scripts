@@ -38,7 +38,7 @@ chemical_reactor.recipeBuilder()
 mixer.recipeBuilder()
     .inputs(<appliedenergistics2:material:1>, <appliedenergistics2:material:3>, <minecraft:redstone>)
     .fluidInputs([<liquid:water> * 200])
-    .outputs(<appliedenergistics2:material:7>)
+    .outputs(<appliedenergistics2:material:7> * 2)
     .duration(5 * 20)
     .EUt(24)
     .buildAndRegister();

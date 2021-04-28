@@ -84,6 +84,9 @@ recipes.addShaped("minecraft_shears", <minecraft:shears>,
   [null, <gregtech:meta_item_1:18033>, null]]);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+// Хлеб из муки GregTech
+furnace.addRecipe(<minecraft:bread>, <gregtech:meta_item_1:2345>);
+
 // Чародейский стол
 recipes.remove(<minecraft:enchanting_table>);
 recipes.addShaped("minecraft_enchanting_table", <minecraft:enchanting_table>,
