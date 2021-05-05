@@ -415,6 +415,26 @@ mixer.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
+// Синаловый слиток
+blast_furnace.recipeBuilder()
+    .inputs(<thermalfoundation:material:101>)
+    .fluidInputs([<liquid:oxygen> * 100])
+    .outputs(<thermalfoundation:material:165>)
+    .property("temperature", 1500)
+    .duration(3 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
+// Эндериумовый слиток
+blast_furnace.recipeBuilder()
+    .inputs(<thermalfoundation:material:103>)
+    .fluidInputs([<liquid:oxygen> * 500])
+    .outputs(<thermalfoundation:material:167>)
+    .property("temperature", 1800)
+    .duration(6 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 

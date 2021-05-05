@@ -1181,7 +1181,7 @@ assembler.recipeBuilder()
 recipes.remove(<appliedenergistics2:material:42>);
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:32692>, <gregtech:cable:26> * 4, <gregtech:meta_item_1:19184> * 4, <gregtech:meta_item_1:19237> * 4, <gregtech:meta_item_1:12025>, <gregtech:meta_item_1:15218>)
-    .outputs(<appliedenergistics2:material:42>)
+    .outputs(<appliedenergistics2:material:42> * 4)
     .duration(10 * 20)
     .EUt(512)
     .buildAndRegister();

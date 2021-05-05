@@ -122,6 +122,9 @@ recipes.addShaped("minecraft_brewing_stand", <minecraft:brewing_stand>,
   [<gregtech:meta_item_1:19018>, <minecraft:blaze_rod>, <gregtech:meta_item_1:19018>],
   [<gregtech:meta_item_1:12328>, <gregtech:meta_item_1:12328>, <gregtech:meta_item_1:12328>]]);
 
+// Земля
+recipes.addShapeless(<minecraft:dirt>, [<thermalfoundation:fertilizer>, <thermalfoundation:fertilizer>, <gregtech:meta_item_2:32570>, <gregtech:meta_item_2:32570>]);
+
 // Жемчуг эндера
 assembler.recipeBuilder()
     .inputs(<gregtech:meta_item_1:15209>, <forestry:crafting_material:1> * 3)
@@ -148,6 +151,16 @@ assembler.recipeBuilder()
     .outputs(<minecraft:dragon_egg>)
     .duration(360 * 20)
     .EUt(512)
+    .buildAndRegister();
+
+// Чепер визер-скелета
+blast_furnace.recipeBuilder()
+    .inputs(<minecraft:skull>)
+    .fluidInputs([<liquid:carbon> * 500])
+    .outputs(<minecraft:skull:1>)
+    .property("temperature", 2500)
+    .duration(350 * 20)
+    .EUt(128)
     .buildAndRegister();
 
 // Слеза гаста

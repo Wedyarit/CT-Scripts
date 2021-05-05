@@ -12,10 +12,10 @@ print("Initializing 'ThermalDynamics'...");
 recipes.remove(<thermaldynamics:filter>);
 recipes.addShaped("thermaldynamics_filter", <thermaldynamics:filter>,
  [[hammer, null, wrench],
-  [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:32729>, <gregtech:meta_item_1:12033>],
-  [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:32628>, <gregtech:meta_item_1:12033>]]);
+  [<gregtech:meta_item_1:12033>, null, <gregtech:meta_item_1:12033>],
+  [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:32729>, <gregtech:meta_item_1:12033>]]);
 assembler.recipeBuilder()
-    .inputs(<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:32729>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:32628>, <gregtech:meta_item_1:12033>)
+    .inputs(<gregtech:meta_item_1:12033> * 4, <gregtech:meta_item_1:32729>)
     .outputs(<thermaldynamics:filter>)
     .duration(25 * 20)
     .EUt(32)
