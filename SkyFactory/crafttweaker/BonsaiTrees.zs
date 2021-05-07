@@ -1,0 +1,1 @@
+mods.bonsaitrees.TreeDrops.addTreeDrop("minecraft:chorus", <minecraft:chorus_flower>, 0.01);
