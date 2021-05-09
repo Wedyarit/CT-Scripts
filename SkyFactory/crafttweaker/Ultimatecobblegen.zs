@@ -26,9 +26,9 @@ val UltimatecobblegenConstructor = {
 
     for key, value in UltimatecobblegenConstructor
     {
-        key.addTooltip("§eДля создания 1 блока требуется 10RF/t");
+        key.addTooltip("§eДля создания 1 блока требуется 250RF/t");
     }
-    <ultimatecobblegen:cobblegenerator>.addTooltip("§eДля создания 1 блока требуется 10RF/t");
+    <ultimatecobblegen:cobblegenerator>.addTooltip("§eДля создания 1 блока требуется 250RF/t");
 
 
 //Полное удаление предметов========================================================================================================

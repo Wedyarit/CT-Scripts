@@ -52,7 +52,7 @@ import crafttweaker.item.IIngredient;
 
     // Replace Calc press in inscriber
         mods.threng.Etcher.removeRecipe(<appliedenergistics2:material:23>);
-        mods.threng.Etcher.addRecipe(<appliedenergistics2:material:23>, <appliedenergistics2:material:11>, <minecraft:redstone>, <appliedenergistics2:material:20>);
+        mods.threng.Etcher.addRecipe(<appliedenergistics2:material:23>, <appliedenergistics2:material:5>, <minecraft:redstone>, <appliedenergistics2:material:20>);
         Inscriber.removeRecipe(<appliedenergistics2:material:16>);
         Inscriber.addRecipe(<appliedenergistics2:material:16>, <appliedenergistics2:material:11>, true, <appliedenergistics2:material:13>);
 
