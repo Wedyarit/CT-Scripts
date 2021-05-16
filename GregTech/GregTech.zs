@@ -46,4 +46,70 @@ assembler.recipeBuilder()
     .EUt(256)
     .buildAndRegister();
 
+// Капсулы
+metal_bender.findRecipe(30, [<gregtech:meta_item_1:12033> * 2, <gregtech:meta_item_1:32766>.withTag({Configuration: 12})], null).remove();
+metal_bender.recipeBuilder()
+    .inputs(<ore:plateIron> * 2)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 12}))
+    .outputs(<gregtech:meta_item_1:32762> * 32)
+    .duration(10 * 20)
+    .EUt(30)
+    .buildAndRegister();
+extruder.findRecipe(30, [<gregtech:meta_item_1:12033> * 2, <gregtech:meta_item_1:32354>], null).remove();
+extruder.recipeBuilder()
+    .inputs(<ore:plateIron> * 2)
+    .notConsumable(<gregtech:meta_item_1:32354>)
+    .outputs(<gregtech:meta_item_1:32762> * 32)
+    .duration(10 * 20)
+    .EUt(30)
+    .buildAndRegister();
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Прочее  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Помпа (UV)
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17071>, <gregtech:meta_item_2:18071>, <gregtech:fluid_pipe:2095>, <gregtech:meta_item_1:32600>, <gregtech:cable:5071>)
+    .fluidInputs([<liquid:rubber> * 864])
+    .outputs(<gregtech:meta_item_1:32610>)
+    .duration(30 * 20)
+    .EUt(15)
+    .buildAndRegister();
+
+// Помпа (MV)
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17095>, <gregtech:meta_item_2:1895>, <gregtech:fluid_pipe:2184>, <gregtech:meta_item_1:32601>, <gregtech:cable:5018>)
+    .fluidInputs([<liquid:rubber> * 864])
+    .outputs(<gregtech:meta_item_1:32611>)
+    .duration(30 * 20)
+    .EUt(60)
+    .buildAndRegister();
+
+// Помпа (HV)
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17184>, <gregtech:meta_item_2:18184>, <gregtech:fluid_pipe:2183>, <gregtech:meta_item_1:32602>, <gregtech:cable:5026>)
+    .fluidInputs([<liquid:rubber> * 864])
+    .outputs(<gregtech:meta_item_1:32612>)
+    .duration(30 * 20)
+    .EUt(240)
+    .buildAndRegister();
+
+// Помпа (EV)
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17183>, <gregtech:meta_item_2:18183>, <gregtech:fluid_pipe:2072>, <gregtech:meta_item_1:32603>, <gregtech:cable:5001>)
+    .fluidInputs([<liquid:rubber> * 864])
+    .outputs(<gregtech:meta_item_1:32613>)
+    .duration(30 * 20)
+    .EUt(960)
+    .buildAndRegister();
+
+// Помпа (IV)
+assembler.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:17235>, <gregtech:meta_item_2:18235>, <gregtech:fluid_pipe:2235>, <gregtech:meta_item_1:32604>, <gregtech:cable:5076>)
+    .fluidInputs([<liquid:rubber> * 864])
+    .outputs(<gregtech:meta_item_1:32614>)
+    .duration(30 * 20)
+    .EUt(3840)
+    .buildAndRegister();
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 print("Initialized 'GregTech'");

@@ -53,7 +53,7 @@
 		recipes.addShaped(<advanced_solar_panels:machines:4>,
 		[[<advanced_solar_panels:crafting:12>, <advanced_solar_panels:crafting:5>, <advanced_solar_panels:crafting:12>],
 		[<forestry:crafting_material:1>, <advanced_solar_panels:machines:3>, <forestry:crafting_material:1>],
-		[<extrautils2:compressednetherrack:5>, <extrautils2:ingredients:16>, <extrautils2:compressednetherrack:5>]]);
+		[<extrautils2:compressednetherrack:4>, <extrautils2:ingredients:16>, <extrautils2:compressednetherrack:4>]]);
 
 
 	//усложнение крафта - Квантовая солнечная панель	

@@ -435,6 +435,16 @@ blast_furnace.recipeBuilder()
     .EUt(48)
     .buildAndRegister();
 
+// Ламиумовый слиток
+blast_furnace.recipeBuilder()
+    .inputs(<thermalfoundation:material:102>)
+    .fluidInputs([<liquid:oxygen> * 500])
+    .outputs(<thermalfoundation:material:166>)
+    .property("temperature", 1500)
+    .duration(6 * 20)
+    .EUt(48)
+    .buildAndRegister();
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 

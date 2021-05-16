@@ -50,12 +50,6 @@ import crafttweaker.item.IIngredient;
         [<ic2:dust:6>, <appliedenergistics2:energy_acceptor>, <ic2:dust:6>],
         [<appliedenergistics2:smooth_sky_stone_block>, <appliedenergistics2:material:23>, <appliedenergistics2:smooth_sky_stone_block>]]);
 
-    // Replace Calc press in inscriber
-        mods.threng.Etcher.removeRecipe(<appliedenergistics2:material:23>);
-        mods.threng.Etcher.addRecipe(<appliedenergistics2:material:23>, <appliedenergistics2:material:5>, <minecraft:redstone>, <appliedenergistics2:material:20>);
-        Inscriber.removeRecipe(<appliedenergistics2:material:16>);
-        Inscriber.addRecipe(<appliedenergistics2:material:16>, <appliedenergistics2:material:11>, true, <appliedenergistics2:material:13>);
-
     //SF4
         recipes.remove(<appliedenergistics2:material:35>);
         recipes.addShaped(<appliedenergistics2:material:35>,

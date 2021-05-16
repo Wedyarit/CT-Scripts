@@ -16,6 +16,7 @@ global centrifuge as RecipeMap = RecipeMap.getByName("centrifuge");
 global mixer as RecipeMap = RecipeMap.getByName("mixer");
 global macerator as RecipeMap = RecipeMap.getByName("macerator");
 global compressor as RecipeMap = RecipeMap.getByName("compressor");
+global extruder as RecipeMap = RecipeMap.getByName("extruder");
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Crafting Tools  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
