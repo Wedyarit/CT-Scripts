@@ -15,7 +15,7 @@ recipes.remove(output, NBTMatch);
 
 #### Shaped Recipe
 ```zenscript
-recipes.addShaped("name-id", output,
+recipes.addShaped(output,
  [[input, input, input],
   [input, input, input],
   [input, input, input]]);
